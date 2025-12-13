@@ -140,11 +140,8 @@
 
         header {
             background: rgba(0, 0, 0, 0.7);
-            padding: 15px 0;
+            padding: 20px 0;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
         }
 
         .header-content {
@@ -192,49 +189,6 @@
             background: rgba(255, 154, 0, 0.1);
         }
 
-        /* Logo Login Admin */
-        .admin-login-icon {
-            position: relative;
-            cursor: pointer;
-        }
-
-        .admin-login-icon i {
-            font-size: 24px;
-            color: #ff9a00;
-            transition: all 0.3s;
-            padding: 8px;
-            border-radius: 50%;
-            background: rgba(255, 154, 0, 0.1);
-        }
-
-        .admin-login-icon:hover i {
-            transform: scale(1.1);
-            background: rgba(255, 154, 0, 0.2);
-            box-shadow: 0 0 10px rgba(255, 154, 0, 0.3);
-        }
-
-        .admin-login-icon .tooltip {
-            position: absolute;
-            top: 100%;
-            right: 0;
-            background: rgba(0, 0, 0, 0.9);
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 12px;
-            white-space: nowrap;
-            opacity: 0;
-            transform: translateY(10px);
-            transition: all 0.3s;
-            pointer-events: none;
-            z-index: 1001;
-        }
-
-        .admin-login-icon:hover .tooltip {
-            opacity: 1;
-            transform: translateY(5px);
-        }
-
         .btn {
             display: inline-block;
             background: linear-gradient(90deg, #ff9a00, #ff2e63);
@@ -280,33 +234,6 @@
 
         .btn-whatsapp:hover {
             box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
-        }
-
-        .btn-warning {
-            background: linear-gradient(90deg, #ff9500, #ff5e3a);
-            box-shadow: 0 4px 15px rgba(255, 149, 0, 0.4);
-        }
-
-        .btn-warning:hover {
-            box-shadow: 0 6px 20px rgba(255, 149, 0, 0.6);
-        }
-
-        .btn-danger {
-            background: linear-gradient(90deg, #ff416c, #ff4b2b);
-            box-shadow: 0 4px 15px rgba(255, 65, 108, 0.4);
-        }
-
-        .btn-danger:hover {
-            box-shadow: 0 6px 20px rgba(255, 65, 108, 0.6);
-        }
-
-        .btn-purple {
-            background: linear-gradient(90deg, #8e2de2, #4a00e0);
-            box-shadow: 0 4px 15px rgba(142, 45, 226, 0.4);
-        }
-
-        .btn-purple:hover {
-            box-shadow: 0 6px 20px rgba(142, 45, 226, 0.6);
         }
 
         .section-title {
@@ -398,7 +325,6 @@
             text-align: center;
             transition: transform 0.3s, box-shadow 0.3s;
             border: 1px solid rgba(255, 255, 255, 0.2);
-            position: relative;
         }
 
         .package:hover {
@@ -408,6 +334,7 @@
 
         .package.popular {
             border: 2px solid #ff9a00;
+            position: relative;
         }
 
         .package.popular::before {
@@ -422,25 +349,6 @@
             border-radius: 15px;
             font-size: 12px;
             font-weight: bold;
-        }
-
-        .package .discount-badge {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: linear-gradient(90deg, #ff416c, #ff4b2b);
-            color: white;
-            padding: 3px 10px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: bold;
-        }
-
-        .package .original-price {
-            text-decoration: line-through;
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 16px;
-            margin-right: 5px;
         }
 
         .package h3 {
@@ -539,10 +447,6 @@
             overflow-y: auto;
         }
 
-        .modal-content.large {
-            max-width: 800px;
-        }
-
         .modal-header {
             display: flex;
             justify-content: space-between;
@@ -577,7 +481,7 @@
             font-weight: 500;
         }
 
-        .form-group input, .form-group select, .form-group textarea {
+        .form-group input, .form-group select {
             width: 100%;
             padding: 12px 15px;
             border-radius: 8px;
@@ -587,7 +491,7 @@
             font-size: 16px;
         }
 
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+        .form-group input:focus, .form-group select:focus {
             outline: none;
             border-color: #ff9a00;
         }
@@ -833,199 +737,6 @@
             font-size: 14px;
         }
 
-        /* Admin Login Specific Styles */
-        .login-error {
-            background: rgba(255, 65, 108, 0.1);
-            border: 1px solid rgba(255, 65, 108, 0.3);
-            color: #ff416c;
-            padding: 10px 15px;
-            border-radius: 8px;
-            margin: 15px 0;
-            text-align: center;
-            display: none;
-        }
-
-        .admin-dashboard-btn {
-            background: linear-gradient(90deg, #8e2de2, #4a00e0);
-            box-shadow: 0 4px 15px rgba(142, 45, 226, 0.4);
-            margin-top: 20px;
-            width: 100%;
-        }
-
-        .admin-dashboard-btn:hover {
-            box-shadow: 0 6px 20px rgba(142, 45, 226, 0.6);
-        }
-
-        /* Admin Dashboard Styles */
-        .admin-dashboard {
-            display: none;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            padding: 30px;
-            margin: 30px 0;
-            border: 1px solid rgba(255, 154, 0, 0.3);
-        }
-
-        .admin-dashboard.active {
-            display: block;
-        }
-
-        .admin-tabs {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 30px;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-            padding-bottom: 10px;
-        }
-
-        .admin-tab {
-            background: rgba(255, 255, 255, 0.1);
-            border: none;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 10px;
-            font-weight: bold;
-            font-size: 16px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .admin-tab:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        .admin-tab.active {
-            background: linear-gradient(90deg, #ff9a00, #ff2e63);
-        }
-
-        .admin-tab-content {
-            display: none;
-        }
-
-        .admin-tab-content.active {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-
-        .admin-section-title {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #ff9a00;
-            border-bottom: 2px solid rgba(255, 154, 0, 0.3);
-            padding-bottom: 10px;
-        }
-
-        .admin-controls {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-
-        .admin-controls .btn {
-            padding: 10px 20px;
-            font-size: 16px;
-        }
-
-        .admin-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .admin-table th {
-            background: rgba(255, 154, 0, 0.2);
-            padding: 15px;
-            text-align: left;
-            font-weight: bold;
-            color: #ff9a00;
-        }
-
-        .admin-table td {
-            padding: 12px 15px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .admin-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .admin-table tr:hover {
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        .admin-action-buttons {
-            display: flex;
-            gap: 8px;
-        }
-
-        .admin-action-buttons .btn {
-            padding: 6px 12px;
-            font-size: 14px;
-        }
-
-        .admin-form-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-bottom: 15px;
-        }
-
-        .admin-form-group {
-            margin-bottom: 15px;
-        }
-
-        .admin-form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 500;
-            color: #ff9a00;
-        }
-
-        .admin-form-group input, .admin-form-group select {
-            width: 100%;
-            padding: 10px;
-            border-radius: 6px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-        }
-
-        .admin-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .admin-stat-card {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .admin-stat-card i {
-            font-size: 36px;
-            color: #ff9a00;
-            margin-bottom: 15px;
-        }
-
-        .admin-stat-card h3 {
-            font-size: 24px;
-            margin-bottom: 5px;
-            color: #ff2e63;
-        }
-
-        .admin-stat-card p {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 14px;
-        }
-
         /* Responsive Design */
         @media (max-width: 768px) {
             .header-content {
@@ -1101,23 +812,6 @@
             .event-collab-note {
                 font-size: 12px;
                 padding: 8px 12px;
-            }
-
-            .admin-tabs {
-                flex-wrap: wrap;
-            }
-
-            .admin-table {
-                display: block;
-                overflow-x: auto;
-            }
-
-            .admin-form-row {
-                grid-template-columns: 1fr;
-            }
-
-            .admin-stats {
-                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -1200,12 +894,6 @@
                         <li><a href="#contact">Kontak</a></li>
                     </ul>
                 </nav>
-
-                <!-- Logo Login Admin -->
-                <div class="admin-login-icon" id="adminLoginIcon">
-                    <i class="fas fa-user-shield"></i>
-                    <div class="tooltip">Login Admin</div>
-                </div>
             </div>
         </div>
     </header>
@@ -1219,328 +907,6 @@
                     <h4 id="stockStatusTitle">Status Stok</h4>
                     <p id="stockStatusMessage">Memuat status stok...</p>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Admin Dashboard (Awalnya Tersembunyi) -->
-    <div id="adminDashboard" class="admin-dashboard container">
-        <div class="admin-tabs">
-            <button class="admin-tab active" data-tab="dashboard">Dashboard</button>
-            <button class="admin-tab" data-tab="products">Kelola Produk</button>
-            <button class="admin-tab" data-tab="prices">Harga & Diskon</button>
-            <button class="admin-tab" data-tab="orders">Pesanan</button>
-            <button class="admin-tab" data-tab="sync">Sinkronisasi</button>
-        </div>
-
-        <!-- Tab Dashboard -->
-        <div class="admin-tab-content active" id="dashboardTab">
-            <h2 class="admin-section-title">Dashboard Admin</h2>
-            
-            <div class="admin-stats">
-                <div class="admin-stat-card">
-                    <i class="fas fa-coins"></i>
-                    <h3 id="totalProducts">0</h3>
-                    <p>Total Produk</p>
-                </div>
-                <div class="admin-stat-card">
-                    <i class="fas fa-shopping-cart"></i>
-                    <h3 id="totalOrders">0</h3>
-                    <p>Pesanan Hari Ini</p>
-                </div>
-                <div class="admin-stat-card">
-                    <i class="fas fa-money-bill-wave"></i>
-                    <h3 id="totalRevenue">Rp 0</h3>
-                    <p>Pendapatan Bulan Ini</p>
-                </div>
-                <div class="admin-stat-card">
-                    <i class="fas fa-users"></i>
-                    <h3 id="activeUsers">0</h3>
-                    <p>Pengguna Aktif</p>
-                </div>
-            </div>
-
-            <div class="admin-controls">
-                <button class="btn btn-success" id="refreshStats">
-                    <i class="fas fa-sync-alt"></i> Refresh Stats
-                </button>
-                <button class="btn btn-warning" id="exportData">
-                    <i class="fas fa-file-export"></i> Export Data
-                </button>
-                <button class="btn btn-danger" id="logoutAdmin">
-                    <i class="fas fa-sign-out-alt"></i> Logout
-                </button>
-            </div>
-
-            <h3 class="admin-section-title">Status Database</h3>
-            <div class="order-summary">
-                <p><strong>Database:</strong> <span id="dbStatus">Loading...</span></p>
-                <p><strong>Total Data:</strong> <span id="dbCount">0</span> produk</p>
-                <p><strong>Update Terakhir:</strong> <span id="lastUpdate">-</span></p>
-                <p><strong>Storage:</strong> <span id="storageUsed">0</span> KB digunakan</p>
-            </div>
-
-            <h3 class="admin-section-title">Aksi Cepat</h3>
-            <div class="admin-controls">
-                <button class="btn" id="addNewProduct">
-                    <i class="fas fa-plus"></i> Tambah Produk Baru
-                </button>
-                <button class="btn btn-warning" id="updatePrices">
-                    <i class="fas fa-tags"></i> Update Semua Harga
-                </button>
-                <button class="btn btn-success" id="addDiscount">
-                    <i class="fas fa-percentage"></i> Tambah Diskon
-                </button>
-                <button class="btn btn-purple" id="syncAllDevices">
-                    <i class="fas fa-sync-alt"></i> Sinkronisasi Semua
-                </button>
-            </div>
-        </div>
-
-        <!-- Tab Kelola Produk -->
-        <div class="admin-tab-content" id="productsTab">
-            <h2 class="admin-section-title">Kelola Produk</h2>
-            
-            <div class="admin-controls">
-                <button class="btn" id="addProductBtn">
-                    <i class="fas fa-plus"></i> Tambah Produk
-                </button>
-                <button class="btn btn-warning" id="editMultipleBtn">
-                    <i class="fas fa-edit"></i> Edit Multiple
-                </button>
-                <button class="btn btn-danger" id="deleteSelectedBtn">
-                    <i class="fas fa-trash"></i> Hapus Terpilih
-                </button>
-                <button class="btn btn-success" id="saveToDatabase">
-                    <i class="fas fa-save"></i> Simpan ke Database
-                </button>
-            </div>
-
-            <table class="admin-table">
-                <thead>
-                    <tr>
-                        <th><input type="checkbox" id="selectAll"></th>
-                        <th>Nama Produk</th>
-                        <th>Kategori</th>
-                        <th>BBC Amount</th>
-                        <th>Harga</th>
-                        <th>Diskon</th>
-                        <th>Status</th>
-                        <th>Aksi</th>
-                    </tr>
-                </thead>
-                <tbody id="productsTable">
-                    <!-- Data produk akan di-load di sini -->
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Tab Harga & Diskon -->
-        <div class="admin-tab-content" id="pricesTab">
-            <h2 class="admin-section-title">Kelola Harga & Diskon</h2>
-            
-            <div class="order-summary">
-                <p><strong>Informasi:</strong> Perubahan harga akan langsung diterapkan ke semua pengguna yang membuka website ini.</p>
-                <p><strong>Penyimpanan:</strong> Data harga disimpan di browser pengguna (localStorage) sehingga tetap ada setelah refresh.</p>
-            </div>
-
-            <div class="admin-form-row">
-                <div class="admin-form-group">
-                    <label for="discountType">Tipe Diskon</label>
-                    <select id="discountType">
-                        <option value="percentage">Persentase (%)</option>
-                        <option value="fixed">Potongan Tetap (Rp)</option>
-                    </select>
-                </div>
-                <div class="admin-form-group">
-                    <label for="discountValue">Nilai Diskon</label>
-                    <input type="number" id="discountValue" placeholder="Contoh: 10 atau 5000">
-                </div>
-                <div class="admin-form-group">
-                    <label for="applyTo">Terapkan ke</label>
-                    <select id="applyTo">
-                        <option value="all">Semua Produk</option>
-                        <option value="bbc">BBC Packages</option>
-                        <option value="skins">Skins/Items</option>
-                        <option value="charisma">Charisma</option>
-                        <option value="selected">Produk Terpilih</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="admin-controls">
-                <button class="btn btn-success" id="applyDiscountBtn">
-                    <i class="fas fa-check"></i> Terapkan Diskon
-                </button>
-                <button class="btn btn-danger" id="removeDiscountBtn">
-                    <i class="fas fa-times"></i> Hapus Diskon
-                </button>
-                <button class="btn btn-warning" id="bulkUpdatePrices">
-                    <i class="fas fa-edit"></i> Update Massal
-                </button>
-            </div>
-
-            <h3 class="admin-section-title">Daftar Harga BBC</h3>
-            <table class="admin-table">
-                <thead>
-                    <tr>
-                        <th>BBC Amount</th>
-                        <th>Harga Normal</th>
-                        <th>Harga Diskon</th>
-                        <th>Diskon</th>
-                        <th>Aksi</th>
-                    </tr>
-                </thead>
-                <tbody id="priceTable">
-                    <!-- Data harga akan di-load di sini -->
-                </tbody>
-            </table>
-
-            <h3 class="admin-section-title">Update Harga Individual</h3>
-            <div class="admin-form-row">
-                <div class="admin-form-group">
-                    <label for="selectProduct">Pilih Produk</label>
-                    <select id="selectProduct">
-                        <option value="">Pilih produk...</option>
-                    </select>
-                </div>
-                <div class="admin-form-group">
-                    <label for="newPrice">Harga Baru (Rp)</label>
-                    <input type="number" id="newPrice" placeholder="Masukkan harga baru">
-                </div>
-                <div class="admin-form-group">
-                    <label for="newDiscount">Diskon Baru (%)</label>
-                    <input type="number" id="newDiscount" placeholder="0-100" min="0" max="100">
-                </div>
-            </div>
-            <div class="admin-controls">
-                <button class="btn btn-success" id="updateSinglePrice">
-                    <i class="fas fa-save"></i> Update Harga
-                </button>
-            </div>
-        </div>
-
-        <!-- Tab Pesanan -->
-        <div class="admin-tab-content" id="ordersTab">
-            <h2 class="admin-section-title">Kelola Pesanan</h2>
-            
-            <div class="admin-controls">
-                <select id="orderFilter">
-                    <option value="all">Semua Pesanan</option>
-                    <option value="pending">Pending</option>
-                    <option value="paid">Sudah Bayar</option>
-                    <option value="processed">Diproses</option>
-                    <option value="completed">Selesai</option>
-                    <option value="cancelled">Dibatalkan</option>
-                </select>
-                <input type="date" id="orderDate">
-                <button class="btn" id="filterOrders">
-                    <i class="fas fa-filter"></i> Filter
-                </button>
-                <button class="btn btn-success" id="exportOrders">
-                    <i class="fas fa-file-excel"></i> Export
-                </button>
-            </div>
-
-            <table class="admin-table">
-                <thead>
-                    <tr>
-                        <th>ID Pesanan</th>
-                        <th>Produk</th>
-                        <th>Customer</th>
-                        <th>Total</th>
-                        <th>Status</th>
-                        <th>Tanggal</th>
-                        <th>Aksi</th>
-                    </tr>
-                </thead>
-                <tbody id="ordersTable">
-                    <!-- Data pesanan akan di-load di sini -->
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Tab Sinkronisasi -->
-        <div class="admin-tab-content" id="syncTab">
-            <h2 class="admin-section-title">Sinkronisasi Database</h2>
-            
-            <div class="order-summary">
-                <p><strong>Sistem Database Lokal:</strong> Data harga disimpan di localStorage browser pengguna.</p>
-                <p><strong>Keuntungan:</strong> Semua pengguna melihat harga yang sama, data tetap setelah refresh.</p>
-                <p><strong>Limit Storage:</strong> 5-10MB per browser (cukup untuk ribuan produk).</p>
-            </div>
-
-            <div class="admin-stats">
-                <div class="admin-stat-card">
-                    <i class="fas fa-database"></i>
-                    <h3 id="totalStorage">0 KB</h3>
-                    <p>Total Storage</p>
-                </div>
-                <div class="admin-stat-card">
-                    <i class="fas fa-users"></i>
-                    <h3 id="userCount">0</h3>
-                    <p>Pengguna Terdaftar</p>
-                </div>
-                <div class="admin-stat-card">
-                    <i class="fas fa-sync-alt"></i>
-                    <h3 id="syncCount">0</h3>
-                    <p>Sinkronisasi</p>
-                </div>
-                <div class="admin-stat-card">
-                    <i class="fas fa-check-circle"></i>
-                    <h3 id="dataIntegrity">100%</h3>
-                    <p>Integritas Data</p>
-                </div>
-            </div>
-
-            <h3 class="admin-section-title">Aksi Database</h3>
-            <div class="admin-controls">
-                <button class="btn btn-success" id="backupDatabase">
-                    <i class="fas fa-download"></i> Backup Database
-                </button>
-                <button class="btn btn-warning" id="restoreDatabase">
-                    <i class="fas fa-upload"></i> Restore Database
-                </button>
-                <button class="btn btn-danger" id="clearDatabase">
-                    <i class="fas fa-trash"></i> Reset Database
-                </button>
-                <button class="btn btn-purple" id="exportDatabase">
-                    <i class="fas fa-file-export"></i> Export JSON
-                </button>
-            </div>
-
-            <h3 class="admin-section-title">Import/Export Data</h3>
-            <div class="admin-form-row">
-                <div class="admin-form-group">
-                    <label for="importFile">Import File JSON</label>
-                    <input type="file" id="importFile" accept=".json">
-                </div>
-                <div class="admin-form-group">
-                    <label for="exportType">Tipe Export</label>
-                    <select id="exportType">
-                        <option value="all">Semua Data</option>
-                        <option value="products">Produk Saja</option>
-                        <option value="prices">Harga Saja</option>
-                        <option value="orders">Pesanan Saja</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="admin-controls">
-                <button class="btn btn-success" id="importDataBtn">
-                    <i class="fas fa-file-import"></i> Import Data
-                </button>
-                <button class="btn btn-warning" id="exportDataBtn">
-                    <i class="fas fa-file-export"></i> Export Data
-                </button>
-            </div>
-
-            <h3 class="admin-section-title">Status Real-time</h3>
-            <div class="order-summary">
-                <p><strong>Status:</strong> <span id="realtimeStatus">Aktif</span></p>
-                <p><strong>Update Terakhir:</strong> <span id="realtimeUpdate">-</span></p>
-                <p><strong>Pesan Broadcast:</strong> <span id="broadcastMessage">-</span></p>
-                <p><strong>Pengguna Online:</strong> <span id="onlineUsers">1</span> orang</p>
             </div>
         </div>
     </div>
@@ -1567,21 +933,163 @@
         <!-- BBC Product List -->
         <div id="product-bbc" class="product-list active">
             <div class="packages" id="bbc-packages">
-                <!-- Packages akan di-load dari database -->
+                <!-- BBC Packages -->
+                <div class="package">
+                    <h3>Paket Pemula</h3>
+                    <div class="bbc-amount">1,000 BBC</div>
+                    <div class="price">Rp 4,000</div>
+                    <button class="btn btn-buy" data-bbc="1000" data-price="4000" data-type="BBC">Beli Sekarang</button>
+                </div>
+
+                <div class="package">
+                    <h3>Paket Reguler</h3>
+                    <div class="bbc-amount">5,000 BBC</div>
+                    <div class="price">Rp 18,000</div>
+                    <button class="btn btn-buy" data-bbc="5000" data-price="18000" data-type="BBC">Beli Sekarang</button>
+                </div>
+
+                <div class="package popular">
+                    <h3>Paket Advanced</h3>
+                    <div class="bbc-amount">10,000 BBC</div>
+                    <div class="price">Rp 35,000</div>
+                    <button class="btn btn-buy" data-bbc="10000" data-price="35000" data-type="BBC">Beli Sekarang</button>
+                </div>
+
+                <div class="package">
+                    <h3>Paket Elite</h3>
+                    <div class="bbc-amount">15,000 BBC</div>
+                    <div class="price">Rp 52,000</div>
+                    <button class="btn btn-buy" data-bbc="15000" data-price="52000" data-type="BBC">Beli Sekarang</button>
+                </div>
+
+                <div class="package">
+                    <h3>Paket Pro</h3>
+                    <div class="bbc-amount">20,000 BBC</div>
+                    <div class="price">Rp 68,000</div>
+                    <button class="btn btn-buy" data-bbc="20000" data-price="68000" data-type="BBC">Beli Sekarang</button>
+                </div>
+
+                <div class="package">
+                    <h3>Paket Ultimate</h3>
+                    <div class="bbc-amount">50,000 BBC</div>
+                    <div class="price">Rp 165,000</div>
+                    <button class="btn btn-buy" data-bbc="50000" data-price="165000" data-type="BBC">Beli Sekarang</button>
+                </div>
+
+                <div class="package">
+                    <h3>Paket Max</h3>
+                    <div class="bbc-amount">100,000 BBC</div>
+                    <div class="price">Rp 320,000</div>
+                    <button class="btn btn-buy" data-bbc="100000" data-price="320000" data-type="BBC">Beli Sekarang</button>
+                </div>
             </div>
         </div>
 
         <!-- Skins/Items Product List -->
         <div id="product-skins" class="product-list">
-            <div class="packages" id="skins-packages">
-                <!-- Packages akan di-load dari database -->
+            <div class="packages">
+                <div class="package">
+                    <h3>Event / Collab</h3>
+                    <div class="bbc-amount">70k - 200k</div>
+                    <div class="price">Harga bervariasi</div>
+                    <button class="btn btn-buy" data-bbc="Event/Collab" data-price="70000" data-type="SKIN">Beli Sekarang</button>
+                </div>
+
+                <div class="package">
+                    <h3>Lightborn</h3>
+                    <div class="bbc-amount">Skin</div>
+                    <div class="price">Rp 17.000</div>
+                    <button class="btn btn-buy" data-bbc="Lightborn Skin" data-price="17000" data-type="SKIN">Beli Sekarang</button>
+                </div>
+
+                <div class="package popular">
+                    <h3>Epic</h3>
+                    <div class="bbc-amount">Skin</div>
+                    <div class="price">Rp 15.000</div>
+                    <button class="btn btn-buy" data-bbc="Epic Skin" data-price="15000" data-type="SKIN">Beli Sekarang</button>
+                </div>
+
+                <div class="package">
+                    <h3>Special</h3>
+                    <div class="bbc-amount">Skin</div>
+                    <div class="price">Rp 10.000</div>
+                    <button class="btn btn-buy" data-bbc="Special Skin" data-price="10000" data-type="SKIN">Beli Sekarang</button>
+                </div>
+
+                <div class="package">
+                    <h3>Elite</h3>
+                    <div class="bbc-amount">Skin</div>
+                    <div class="price">Rp 5.000</div>
+                    <button class="btn btn-buy" data-bbc="Elite Skin" data-price="5000" data-type="SKIN">Beli Sekarang</button>
+                </div>
+
+                <div class="package">
+                    <h3>Starlight Basic</h3>
+                    <div class="bbc-amount">Skin</div>
+                    <div class="price">Rp 5.000</div>
+                    <button class="btn btn-buy" data-bbc="Starlight Basic" data-price="5000" data-type="SKIN">Beli Sekarang</button>
+                </div>
+
+                <div class="package">
+                    <h3>Starlight Premium</h3>
+                    <div class="bbc-amount">Skin</div>
+                    <div class="price">Rp 10.000</div>
+                    <button class="btn btn-buy" data-bbc="Starlight Premium" data-price="10000" data-type="SKIN">Beli Sekarang</button>
+                </div>
+
+                <div class="package">
+                    <h3>Rename Card</h3>
+                    <div class="bbc-amount">Item</div>
+                    <div class="price">Rp 5.000</div>
+                    <button class="btn btn-buy" data-bbc="Rename Card" data-price="5000" data-type="ITEM">Beli Sekarang</button>
+                </div>
+
+                <div class="package">
+                    <h3>Flag Card</h3>
+                    <div class="bbc-amount">Item</div>
+                    <div class="price">Rp 5.000</div>
+                    <button class="btn btn-buy" data-bbc="Flag Card" data-price="5000" data-type="ITEM">Beli Sekarang</button>
+                </div>
+
+                <div class="package">
+                    <h3>CN Squad</h3>
+                    <div class="bbc-amount">Item</div>
+                    <div class="price">Rp 5.000</div>
+                    <button class="btn btn-buy" data-bbc="CN Squad" data-price="5000" data-type="ITEM">Beli Sekarang</button>
+                </div>
+
+                <div class="package">
+                    <h3>Emote</h3>
+                    <div class="bbc-amount">Item</div>
+                    <div class="price">Rp 1.000</div>
+                    <button class="btn btn-buy" data-bbc="Emote" data-price="1000" data-type="ITEM">Beli Sekarang</button>
+                </div>
             </div>
         </div>
 
         <!-- Charisma Product List -->
         <div id="product-charisma" class="product-list">
-            <div class="packages" id="charisma-packages">
-                <!-- Packages akan di-load dari database -->
+            <div class="packages">
+                <div class="package">
+                    <h3>Angel Ark</h3>
+                    <div class="bbc-amount">Charisma</div>
+                    <div class="price">Rp 5.000</div>
+                    <button class="btn btn-buy" data-bbc="Angel Ark" data-price="5000" data-type="CHARISMA">Beli Sekarang</button>
+                </div>
+
+                <div class="package">
+                    <h3>Paradise Island</h3>
+                    <div class="bbc-amount">Charisma</div>
+                    <div class="price">Rp 5.000</div>
+                    <button class="btn btn-buy" data-bbc="Paradise Island" data-price="5000" data-type="CHARISMA">Beli Sekarang</button>
+                </div>
+
+                <div class="package">
+                    <h3>Goldmoon Lantren</h3>
+                    <div class="bbc-amount">Charisma</div>
+                    <div class="price">Rp 10.000</div>
+                    <button class="btn btn-buy" data-bbc="Goldmoon Lantren" data-price="10000" data-type="CHARISMA">Beli Sekarang</button>
+                </div>
             </div>
         </div>
     </section>
@@ -1597,122 +1105,8 @@
                 <i class="fab fa-whatsapp"></i>
                 <a href="#" id="footerWhatsAppBtn">WhatsApp: 6289521142740</a>
             </div>
-            <div class="contact-item">
-                <i class="fas fa-database"></i>
-                <span id="footerDbStatus">Database: Loading...</span>
-            </div>
         </div>
     </footer>
-
-    <!-- Modal Login Admin -->
-    <div id="adminLoginModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Admin Login</h2>
-                <span class="close-admin">&times;</span>
-            </div>
-
-            <div class="login-error" id="loginError">
-                Username atau password salah!
-            </div>
-
-            <div class="form-group">
-                <label for="adminUsername">Username</label>
-                <input type="text" id="adminUsername" placeholder="Masukkan username">
-            </div>
-
-            <div class="form-group">
-                <label for="adminPassword">Password</label>
-                <input type="password" id="adminPassword" placeholder="Masukkan password">
-            </div>
-
-            <button class="btn admin-dashboard-btn" id="submitLogin">
-                <i class="fas fa-sign-in-alt"></i> Login
-            </button>
-        </div>
-    </div>
-
-    <!-- Modal Tambah/Edit Produk -->
-    <div id="productModal" class="modal">
-        <div class="modal-content large">
-            <div class="modal-header">
-                <h2 id="productModalTitle">Tambah Produk Baru</h2>
-                <span class="close-product">&times;</span>
-            </div>
-
-            <div class="form-group">
-                <label for="productName">Nama Produk</label>
-                <input type="text" id="productName" placeholder="Contoh: Epic Skin, 1000 BBC, dll">
-            </div>
-
-            <div class="admin-form-row">
-                <div class="form-group">
-                    <label for="productCategory">Kategori</label>
-                    <select id="productCategory">
-                        <option value="bbc">BBC</option>
-                        <option value="skins">Skins/Items</option>
-                        <option value="charisma">Charisma</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="productType">Tipe Produk</label>
-                    <select id="productType">
-                        <option value="BBC">BBC</option>
-                        <option value="SKIN">Skin</option>
-                        <option value="ITEM">Item</option>
-                        <option value="CHARISMA">Charisma</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="admin-form-row">
-                <div class="form-group">
-                    <label for="bbcAmount">Jumlah BBC</label>
-                    <input type="number" id="bbcAmount" placeholder="Kosongkan jika bukan BBC">
-                </div>
-                <div class="form-group">
-                    <label for="productPrice">Harga (Rp)</label>
-                    <input type="number" id="productPrice" placeholder="Contoh: 5000">
-                </div>
-                <div class="form-group">
-                    <label for="productDiscount">Diskon (%)</label>
-                    <input type="number" id="productDiscount" placeholder="0-100" min="0" max="100">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="productDescription">Deskripsi Produk</label>
-                <textarea id="productDescription" rows="3" placeholder="Deskripsi singkat tentang produk"></textarea>
-            </div>
-
-            <div class="admin-form-row">
-                <div class="form-group">
-                    <label for="productStatus">Status</label>
-                    <select id="productStatus">
-                        <option value="active">Aktif</option>
-                        <option value="inactive">Nonaktif</option>
-                        <option value="out_of_stock">Stok Habis</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="isPopular">Popular?</label>
-                    <select id="isPopular">
-                        <option value="false">Tidak</option>
-                        <option value="true">Ya</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="admin-controls">
-                <button class="btn btn-success" id="saveProductBtn">
-                    <i class="fas fa-save"></i> Simpan Produk
-                </button>
-                <button class="btn btn-secondary" id="cancelProductBtn">
-                    <i class="fas fa-times"></i> Batal
-                </button>
-            </div>
-        </div>
-    </div>
 
     <!-- Modal Pembelian -->
     <div id="purchaseModal" class="modal">
@@ -1831,1296 +1225,276 @@
     </div>
 
     <script>
-        // ============================================
-        // SISTEM DATABASE LOKAL (LocalStorage)
-        // ============================================
-
-        const DATABASE_KEYS = {
-            PRODUCTS: 'bbc_store_products',
-            ORDERS: 'bbc_store_orders',
-            SETTINGS: 'bbc_store_settings',
-            USERS: 'bbc_store_users',
-            SYNC: 'bbc_store_sync'
-        };
-
-        // Credential Admin
-        const ADMIN_CREDENTIALS = {
-            username: "SaktiStore",
-            password: "Admin123#"
-        };
-
-        // Data default jika database kosong
-        const DEFAULT_PRODUCTS = {
-            bbc: [
-                { id: 1, name: "Paket Pemula", amount: "1000", price: 4000, discount: 0, type: "BBC", category: "bbc", status: "active", popular: false, description: "Paket BBC untuk pemula" },
-                { id: 2, name: "Paket Reguler", amount: "5000", price: 18000, discount: 0, type: "BBC", category: "bbc", status: "active", popular: false, description: "Paket BBC reguler" },
-                { id: 3, name: "Paket Advanced", amount: "10000", price: 48000, discount: 10, type: "BBC", category: "bbc", status: "active", popular: true, description: "Paket BBC advanced dengan diskon" },
-                { id: 4, name: "Paket Elite", amount: "15000", price: 71000, discount: 15, type: "BBC", category: "bbc", status: "active", popular: false, description: "Paket BBC elite" },
-                { id: 5, name: "Paket Pro", amount: "20000", price: 96000, discount: 0, type: "BBC", category: "bbc", status: "active", popular: false, description: "Paket BBC pro" },
-                { id: 6, name: "Paket Ultimate", amount: "50000", price: 226000, discount: 20, type: "BBC", category: "bbc", status: "active", popular: false, description: "Paket BBC ultimate" },
-                { id: 7, name: "Paket Max", amount: "100000", price: 460000, discount: 25, type: "BBC", category: "bbc", status: "active", popular: false, description: "Paket BBC maksimal" }
-            ],
-            skins: [
-                { id: 8, name: "Event / Collab", amount: "70k - 200k", price: 70000, discount: 0, type: "SKIN", category: "skins", status: "active", popular: false, description: "Skin event atau kolaborasi" },
-                { id: 9, name: "Lightborn Skin", amount: "Skin", price: 17000, discount: 15, type: "SKIN", category: "skins", status: "active", popular: false, description: "Skin Lightborn" },
-                { id: 10, name: "Epic Skin", amount: "Skin", price: 15000, discount: 20, type: "SKIN", category: "skins", status: "active", popular: true, description: "Skin epic dengan diskon" },
-                { id: 11, name: "Special Skin", amount: "Skin", price: 10000, discount: 10, type: "SKIN", category: "skins", status: "active", popular: false, description: "Skin special" },
-                { id: 12, name: "Elite Skin", amount: "Skin", price: 5000, discount: 0, type: "SKIN", category: "skins", status: "active", popular: false, description: "Skin elite" },
-                { id: 13, name: "Starlight Basic", amount: "Skin", price: 5000, discount: 0, type: "SKIN", category: "skins", status: "active", popular: false, description: "Skin starlight basic" },
-                { id: 14, name: "Starlight Premium", amount: "Skin", price: 10000, discount: 10, type: "SKIN", category: "skins", status: "active", popular: false, description: "Skin starlight premium" },
-                { id: 15, name: "Rename Card", amount: "Item", price: 5000, discount: 0, type: "ITEM", category: "skins", status: "active", popular: false, description: "Rename card untuk ganti nama" },
-                { id: 16, name: "Flag Card", amount: "Item", price: 5000, discount: 0, type: "ITEM", category: "skins", status: "active", popular: false, description: "Flag card untuk bendera" },
-                { id: 17, name: "CN Squad", amount: "Item", price: 5000, discount: 0, type: "ITEM", category: "skins", status: "active", popular: false, description: "CN squad item" },
-                { id: 18, name: "Emote", amount: "Item", price: 1000, discount: 50, type: "ITEM", category: "skins", status: "active", popular: false, description: "Emote dengan diskon 50%" }
-            ],
-            charisma: [
-                { id: 19, name: "Angel Ark", amount: "Charisma", price: 5000, discount: 0, type: "CHARISMA", category: "charisma", status: "active", popular: false, description: "Charisma Angel Ark" },
-                { id: 20, name: "Paradise Island", amount: "Charisma", price: 5000, discount: 10, type: "CHARISMA", category: "charisma", status: "active", popular: false, description: "Charisma Paradise Island" },
-                { id: 21, name: "Goldmoon Lantren", amount: "Charisma", price: 10000, discount: 25, type: "CHARISMA", category: "charisma", status: "active", popular: false, description: "Charisma Goldmoon Lantren dengan diskon" }
-            ]
-        };
-
-        // Data default untuk pesanan
-        const DEFAULT_ORDERS = [
-            { id: "ORD-001", product: "10000 BBC", customer: "Player123", amount: 50000, status: "completed", date: "2023-12-01", whatsapp: "628123456789" },
-            { id: "ORD-002", product: "Epic Skin", customer: "Gamer456", amount: 15000, status: "processed", date: "2023-12-02", whatsapp: "628234567890" },
-            { id: "ORD-003", product: "5000 BBC", customer: "MLBBPro", amount: 25000, status: "paid", date: "2023-12-02", whatsapp: "628345678901" },
-            { id: "ORD-004", product: "Lightborn Skin", customer: "SkinLover", amount: 17000, status: "pending", date: "2023-12-03", whatsapp: "628456789012" },
-            { id: "ORD-005", product: "Goldmoon Lantren", customer: "CharismaKing", amount: 10000, status: "completed", date: "2023-12-03", whatsapp: "628567890123" }
-        ];
-
-        // ============================================
-        // FUNGSI DATABASE
-        // ============================================
-
-        // Inisialisasi database
-        function initializeDatabase() {
-            console.log("🔄 Menginisialisasi database...");
-            
-            // Cek apakah database sudah ada
-            if (!localStorage.getItem(DATABASE_KEYS.PRODUCTS)) {
-                console.log("📦 Database tidak ditemukan, membuat yang baru...");
-                saveProductsToDatabase(DEFAULT_PRODUCTS);
-            }
-            
-            if (!localStorage.getItem(DATABASE_KEYS.ORDERS)) {
-                saveOrdersToDatabase(DEFAULT_ORDERS);
-            }
-            
-            if (!localStorage.getItem(DATABASE_KEYS.SETTINGS)) {
-                const settings = {
-                    lastUpdate: new Date().toISOString(),
-                    version: "1.0.0",
-                    currency: "IDR",
-                    taxRate: 0,
-                    adminUsername: ADMIN_CREDENTIALS.username
-                };
-                localStorage.setItem(DATABASE_KEYS.SETTINGS, JSON.stringify(settings));
-            }
-            
-            console.log("✅ Database siap digunakan");
-            updateDatabaseStatus();
-        }
-
-        // Ambil produk dari database
-        function getProductsFromDatabase() {
-            try {
-                const productsData = localStorage.getItem(DATABASE_KEYS.PRODUCTS);
-                if (!productsData) return DEFAULT_PRODUCTS;
-                
-                return JSON.parse(productsData);
-            } catch (error) {
-                console.error("❌ Gagal membaca produk dari database:", error);
-                return DEFAULT_PRODUCTS;
-            }
-        }
-
-        // Simpan produk ke database
-        function saveProductsToDatabase(products) {
-            try {
-                localStorage.setItem(DATABASE_KEYS.PRODUCTS, JSON.stringify(products));
-                updateDatabaseStatus();
-                console.log("💾 Produk disimpan ke database");
-                
-                // Update timestamp
-                updateSettingsTimestamp();
-                
-                return true;
-            } catch (error) {
-                console.error("❌ Gagal menyimpan produk ke database:", error);
-                showNotification("Gagal menyimpan produk!", "error");
-                return false;
-            }
-        }
-
-        // Ambil pesanan dari database
-        function getOrdersFromDatabase() {
-            try {
-                const ordersData = localStorage.getItem(DATABASE_KEYS.ORDERS);
-                if (!ordersData) return DEFAULT_ORDERS;
-                
-                return JSON.parse(ordersData);
-            } catch (error) {
-                console.error("❌ Gagal membaca pesanan dari database:", error);
-                return DEFAULT_ORDERS;
-            }
-        }
-
-        // Simpan pesanan ke database
-        function saveOrdersToDatabase(orders) {
-            try {
-                localStorage.setItem(DATABASE_KEYS.ORDERS, JSON.stringify(orders));
-                updateDatabaseStatus();
-                return true;
-            } catch (error) {
-                console.error("❌ Gagal menyimpan pesanan ke database:", error);
-                return false;
-            }
-        }
-
-        // Update timestamp settings
-        function updateSettingsTimestamp() {
-            try {
-                const settings = JSON.parse(localStorage.getItem(DATABASE_KEYS.SETTINGS) || '{}');
-                settings.lastUpdate = new Date().toISOString();
-                localStorage.setItem(DATABASE_KEYS.SETTINGS, JSON.stringify(settings));
-            } catch (error) {
-                console.error("❌ Gagal update timestamp:", error);
-            }
-        }
-
-        // Update status database di UI
-        function updateDatabaseStatus() {
-            try {
-                const totalProducts = Object.values(getProductsFromDatabase()).flat().length;
-                const totalOrders = getOrdersFromDatabase().length;
-                const settings = JSON.parse(localStorage.getItem(DATABASE_KEYS.SETTINGS) || '{}');
-                const lastUpdate = settings.lastUpdate ? new Date(settings.lastUpdate).toLocaleString('id-ID') : '-';
-                
-                // Hitung storage yang digunakan
-                let totalSize = 0;
-                for (let key in DATABASE_KEYS) {
-                    const data = localStorage.getItem(DATABASE_KEYS[key]);
-                    if (data) {
-                        totalSize += new Blob([data]).size;
-                    }
-                }
-                const sizeInKB = (totalSize / 1024).toFixed(2);
-                
-                // Update UI
-                if (document.getElementById('dbStatus')) {
-                    document.getElementById('dbStatus').textContent = 'Aktif';
-                    document.getElementById('dbCount').textContent = totalProducts;
-                    document.getElementById('lastUpdate').textContent = lastUpdate;
-                    document.getElementById('storageUsed').textContent = sizeInKB;
-                }
-                
-                if (document.getElementById('footerDbStatus')) {
-                    document.getElementById('footerDbStatus').textContent = `Database: ${totalProducts} produk`;
-                }
-                
-                if (document.getElementById('totalStorage')) {
-                    document.getElementById('totalStorage').textContent = `${sizeInKB} KB`;
-                }
-                
-            } catch (error) {
-                console.error("❌ Gagal update status database:", error);
-            }
-        }
-
-        // Backup database
-        function backupDatabase() {
-            try {
-                const backupData = {};
-                for (let key in DATABASE_KEYS) {
-                    backupData[DATABASE_KEYS[key]] = localStorage.getItem(DATABASE_KEYS[key]);
-                }
-                
-                const backupStr = JSON.stringify(backupData, null, 2);
-                const blob = new Blob([backupStr], { type: 'application/json' });
-                const url = URL.createObjectURL(blob);
-                
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = `bbc_store_backup_${new Date().toISOString().split('T')[0]}.json`;
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                URL.revokeObjectURL(url);
-                
-                showNotification("Backup database berhasil!", "success");
-                return true;
-            } catch (error) {
-                console.error("❌ Gagal backup database:", error);
-                showNotification("Gagal backup database!", "error");
-                return false;
-            }
-        }
-
-        // Restore database dari file
-        function restoreDatabase(file) {
-            return new Promise((resolve, reject) => {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    try {
-                        const backupData = JSON.parse(e.target.result);
-                        let restoredCount = 0;
-                        
-                        for (let key in backupData) {
-                            if (backupData[key] !== null) {
-                                localStorage.setItem(key, backupData[key]);
-                                restoredCount++;
-                            }
-                        }
-                        
-                        showNotification(`Database berhasil direstore! (${restoredCount} data)`, "success");
-                        initializeDatabase(); // Reload data
-                        resolve(true);
-                    } catch (error) {
-                        console.error("❌ Gagal restore database:", error);
-                        showNotification("Format file backup tidak valid!", "error");
-                        reject(error);
-                    }
-                };
-                reader.readAsText(file);
-            });
-        }
-
-        // Export data sebagai JSON
-        function exportData(type = 'all') {
-            try {
-                let exportData = {};
-                
-                switch(type) {
-                    case 'all':
-                        for (let key in DATABASE_KEYS) {
-                            exportData[DATABASE_KEYS[key]] = localStorage.getItem(DATABASE_KEYS[key]);
-                        }
-                        break;
-                    case 'products':
-                        exportData.products = getProductsFromDatabase();
-                        break;
-                    case 'prices':
-                        const products = getProductsFromDatabase();
-                        const prices = {};
-                        for (let category in products) {
-                            prices[category] = products[category].map(p => ({
-                                name: p.name,
-                                price: p.price,
-                                discount: p.discount
-                            }));
-                        }
-                        exportData.prices = prices;
-                        break;
-                    case 'orders':
-                        exportData.orders = getOrdersFromDatabase();
-                        break;
-                }
-                
-                const exportStr = JSON.stringify(exportData, null, 2);
-                const blob = new Blob([exportStr], { type: 'application/json' });
-                const url = URL.createObjectURL(blob);
-                
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = `bbc_store_${type}_${new Date().toISOString().split('T')[0]}.json`;
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                URL.revokeObjectURL(url);
-                
-                showNotification(`Data ${type} berhasil diexport!`, "success");
-                return true;
-            } catch (error) {
-                console.error("❌ Gagal export data:", error);
-                showNotification("Gagal export data!", "error");
-                return false;
-            }
-        }
-
-        // Clear database
-        function clearDatabase() {
-            if (confirm("Apakah Anda yakin ingin menghapus semua data? Tindakan ini tidak dapat dibatalkan!")) {
-                for (let key in DATABASE_KEYS) {
-                    localStorage.removeItem(DATABASE_KEYS[key]);
-                }
-                showNotification("Database berhasil direset!", "success");
-                setTimeout(() => {
-                    location.reload(); // Reload halaman untuk inisialisasi ulang
-                }, 1500);
-            }
-        }
-
-        // ============================================
-        // VARIABEL GLOBAL
-        // ============================================
-
+        // Data untuk website
         let websiteData = null;
         let currentStockStatus = '';
         let selectedPackage = null;
         let selectedPaymentMethod = null;
-        let isAdminLoggedIn = false;
-        let currentEditingProduct = null;
-        let products = getProductsFromDatabase();
-        let orders = getOrdersFromDatabase();
 
-        // ============================================
-        // FUNGSI UTAMA
-        // ============================================
+        // Carousel Functionality
+        const carousel = document.querySelector('.photo-carousel');
+        const slides = document.querySelectorAll('.photo-slide');
+        const dots = document.querySelectorAll('.carousel-dot');
+        const prevBtn = document.querySelector('.carousel-arrow.prev');
+        const nextBtn = document.querySelector('.carousel-arrow.next');
 
-        // Load semua data saat halaman dimuat
-        function loadAllData() {
-            products = getProductsFromDatabase();
-            orders = getOrdersFromDatabase();
-            
-            updateAllProducts();
-            updateAdminStats();
-            updateDatabaseStatus();
-        }
+        let currentSlide = 0;
+        const totalSlides = slides.length;
 
-        // Update semua tampilan produk
-        function updateAllProducts() {
-            updateProductPackages('bbc');
-            updateProductPackages('skins');
-            updateProductPackages('charisma');
-            updateAdminProductsTable();
-            updateAdminPriceTable();
-            updateAdminOrdersTable();
-            updateProductSelectOptions();
-        }
+        // Function to update carousel position
+        function updateCarousel() {
+            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
 
-        // Update tampilan produk berdasarkan kategori
-        function updateProductPackages(category) {
-            const packagesContainer = document.getElementById(`${category}-packages`);
-            if (!packagesContainer) return;
-
-            const categoryProducts = products[category] || [];
-            let packagesHTML = '';
-
-            categoryProducts.forEach(product => {
-                const discountedPrice = product.discount > 0 
-                    ? Math.round(product.price - (product.price * product.discount / 100))
-                    : product.price;
-
-                packagesHTML += `
-                    <div class="package ${product.popular ? 'popular' : ''}" data-id="${product.id}">
-                        ${product.discount > 0 ? `<div class="discount-badge">${product.discount}% OFF</div>` : ''}
-                        <h3>${product.name}</h3>
-                        <div class="bbc-amount">${product.amount}</div>
-                        <div class="price">
-                            ${product.discount > 0 ? `<span class="original-price">Rp ${product.price.toLocaleString('id-ID')}</span>` : ''}
-                            Rp ${discountedPrice.toLocaleString('id-ID')}
-                        </div>
-                        <button class="btn btn-buy" 
-                            data-bbc="${product.name}" 
-                            data-price="${discountedPrice}" 
-                            data-type="${product.type}"
-                            data-original-price="${product.price}"
-                            data-discount="${product.discount}">
-                            Beli Sekarang
-                        </button>
-                    </div>
-                `;
+            // Update active dot
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
             });
-
-            packagesContainer.innerHTML = packagesHTML;
-            attachBuyButtonEvents();
         }
 
-        // Update tabel produk di admin
-        function updateAdminProductsTable() {
-            const tableBody = document.getElementById('productsTable');
-            if (!tableBody) return;
+        // Next slide
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }
 
-            let allProducts = Object.values(products).flat();
-            let tableHTML = '';
+        // Previous slide
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
 
-            allProducts.forEach(product => {
-                tableHTML += `
-                    <tr>
-                        <td><input type="checkbox" class="product-checkbox" data-id="${product.id}"></td>
-                        <td>${product.name}</td>
-                        <td>${product.category.toUpperCase()}</td>
-                        <td>${product.amount}</td>
-                        <td>Rp ${product.price.toLocaleString('id-ID')}</td>
-                        <td>${product.discount}%</td>
-                        <td>
-                            <span class="status-badge ${product.status === 'active' ? 'active' : 'inactive'}">
-                                ${product.status === 'active' ? 'Aktif' : 'Nonaktif'}
-                            </span>
-                        </td>
-                        <td>
-                            <div class="admin-action-buttons">
-                                <button class="btn btn-secondary edit-product" data-id="${product.id}">
-                                    <i class="fas fa-edit"></i>
-                                </button>
-                                <button class="btn btn-danger delete-product" data-id="${product.id}">
-                                    <i class="fas fa-trash"></i>
-                                </button>
-                            </div>
-                        </td>
-                    </tr>
-                `;
+        // Go to specific slide
+        function goToSlide(slideIndex) {
+            currentSlide = slideIndex;
+            updateCarousel();
+        }
+
+        // Event listeners
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => goToSlide(index));
+        });
+
+        // Auto slide every 5 seconds
+        let slideInterval = setInterval(nextSlide, 5000);
+
+        // Pause auto slide on hover
+        const carouselContainer = document.querySelector('.photo-carousel-container');
+        carouselContainer.addEventListener('mouseenter', () => {
+            clearInterval(slideInterval);
+        });
+
+        carouselContainer.addEventListener('mouseleave', () => {
+            slideInterval = setInterval(nextSlide, 5000);
+        });
+
+        // Category Button Functionality
+        const categoryBtns = document.querySelectorAll('.category-btn');
+        const productLists = document.querySelectorAll('.product-list');
+
+        categoryBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons and lists
+                categoryBtns.forEach(b => b.classList.remove('active'));
+                productLists.forEach(l => l.classList.remove('active'));
+
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                // Show corresponding product list
+                const category = btn.getAttribute('data-category');
+                document.getElementById(`product-${category}`).classList.add('active');
             });
+        });
 
-            tableBody.innerHTML = tableHTML;
-            attachAdminProductEventListeners();
+        // WhatsApp Functionality
+        const hubungiKamiBtn = document.getElementById('hubungiKamiBtn');
+        const footerWhatsAppBtn = document.getElementById('footerWhatsAppBtn');
+
+        // Function to open WhatsApp
+        function openWhatsApp(phoneNumber = "6289521142740", message = "Halo, saya ingin bertanya tentang Top Up BBC MLBB Advance Server") {
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
         }
 
-        // Update tabel harga di admin
-        function updateAdminPriceTable() {
-            const tableBody = document.getElementById('priceTable');
-            if (!tableBody) return;
-
-            let bbcProducts = products.bbc || [];
-            let tableHTML = '';
-
-            bbcProducts.forEach(product => {
-                const discountedPrice = product.discount > 0 
-                    ? Math.round(product.price - (product.price * product.discount / 100))
-                    : product.price;
-
-                tableHTML += `
-                    <tr>
-                        <td>${product.amount} BBC</td>
-                        <td>Rp ${product.price.toLocaleString('id-ID')}</td>
-                        <td>Rp ${discountedPrice.toLocaleString('id-ID')}</td>
-                        <td>${product.discount}%</td>
-                        <td>
-                            <button class="btn btn-secondary edit-price" data-id="${product.id}">
-                                <i class="fas fa-edit"></i> Edit
-                            </button>
-                        </td>
-                    </tr>
-                `;
+        // Event listeners for WhatsApp buttons
+        if (hubungiKamiBtn) {
+            hubungiKamiBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                openWhatsApp();
             });
-
-            tableBody.innerHTML = tableHTML;
         }
 
-        // Update tabel pesanan di admin
-        function updateAdminOrdersTable() {
-            const tableBody = document.getElementById('ordersTable');
-            if (!tableBody) return;
-
-            let tableHTML = '';
-
-            orders.forEach(order => {
-                tableHTML += `
-                    <tr>
-                        <td>${order.id}</td>
-                        <td>${order.product}</td>
-                        <td>${order.customer}</td>
-                        <td>Rp ${order.amount.toLocaleString('id-ID')}</td>
-                        <td>
-                            <span class="status-badge ${order.status}">
-                                ${order.status === 'pending' ? 'Pending' : 
-                                  order.status === 'paid' ? 'Sudah Bayar' : 
-                                  order.status === 'processed' ? 'Diproses' : 
-                                  order.status === 'completed' ? 'Selesai' : 'Dibatalkan'}
-                            </span>
-                        </td>
-                        <td>${order.date}</td>
-                        <td>
-                            <button class="btn btn-secondary view-order" data-id="${order.id}">
-                                <i class="fas fa-eye"></i>
-                            </button>
-                        </td>
-                    </tr>
-                `;
+        if (footerWhatsAppBtn) {
+            footerWhatsAppBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                openWhatsApp();
             });
-
-            tableBody.innerHTML = tableHTML;
         }
 
-        // Update stats admin
-        function updateAdminStats() {
-            const totalProducts = Object.values(products).flat().length;
-            const totalOrders = orders.length;
-            const totalRevenue = orders.reduce((sum, order) => sum + order.amount, 0);
-            const activeUsers = new Set(orders.map(order => order.customer)).size;
+        // Load data dari website_data.json
+        async function loadWebsiteData() {
+            try {
+                const response = await fetch('./website_data.json');
+                if (!response.ok) throw new Error('File tidak ditemukan');
 
-            if (document.getElementById('totalProducts')) {
-                document.getElementById('totalProducts').textContent = totalProducts;
-                document.getElementById('totalOrders').textContent = totalOrders;
-                document.getElementById('totalRevenue').textContent = `Rp ${totalRevenue.toLocaleString('id-ID')}`;
-                document.getElementById('activeUsers').textContent = activeUsers;
+                websiteData = await response.json();
+                updateWebsiteContent();
+                console.log('✅ Data website berhasil dimuat');
+            } catch (error) {
+                console.error('❌ Gagal memuat data website:', error);
+                // Gunakan data default jika gagal load
+                websiteData = {
+                    prices: {
+                        '1000': 4000,
+                        '5000': 18000,
+                        '10000': 35000,
+                        '15000': 52000,
+                        '20000': 68000,
+                        '50000': 165000,
+                        '100000': 320000
+                    },
+                    stock_status: 'Tersedia',
+                    stock_status_with_emoji: '🟢 Tersedia',
+                    timestamp: new Date().toLocaleString('id-ID')
+                };
+                updateWebsiteContent();
             }
         }
 
-        // Update opsi select produk
-        function updateProductSelectOptions() {
-            const select = document.getElementById('selectProduct');
-            if (!select) return;
+        // Update konten website dengan data terbaru
+        function updateWebsiteContent() {
+            if (!websiteData) return;
 
-            let allProducts = Object.values(products).flat();
-            let optionsHTML = '<option value="">Pilih produk...</option>';
-            
-            allProducts.forEach(product => {
-                optionsHTML += `<option value="${product.id}">${product.name} - Rp ${product.price.toLocaleString('id-ID')}</option>`;
-            });
-            
-            select.innerHTML = optionsHTML;
+            // Update status stok banner
+            updateStockStatusBanner(websiteData.stock_status_with_emoji);
+
+            // Update timestamp
+            console.log('Data terakhir diupdate:', websiteData.timestamp);
         }
 
-        // ============================================
-        // FUNGSI PRODUK
-        // ============================================
+        // Update status stok banner
+        function updateStockStatusBanner(stockStatus) {
+            const banner = document.getElementById('stockStatusBanner');
+            const title = document.getElementById('stockStatusTitle');
+            const message = document.getElementById('stockStatusMessage');
 
-        // Tambah produk baru
-        function addProduct(productData) {
-            const newProduct = {
-                id: Date.now(),
-                ...productData
-            };
+            if (!banner) return;
 
-            if (!products[productData.category]) {
-                products[productData.category] = [];
-            }
+            currentStockStatus = stockStatus;
 
-            products[productData.category].push(newProduct);
-            
-            if (saveProductsToDatabase(products)) {
-                updateAllProducts();
-                showNotification("Produk berhasil ditambahkan!", "success");
-                return true;
-            }
-            return false;
-        }
+            // Reset classes
+            banner.className = 'stock-status-banner';
 
-        // Edit produk
-        function editProduct(productId, productData) {
-            let updated = false;
-            
-            for (let category in products) {
-                products[category] = products[category].map(product => {
-                    if (product.id === productId) {
-                        updated = true;
-                        return { ...product, ...productData };
-                    }
-                    return product;
-                });
-            }
-            
-            if (updated && saveProductsToDatabase(products)) {
-                updateAllProducts();
-                showNotification("Produk berhasil diperbarui!", "success");
-                return true;
-            }
-            return false;
-        }
-
-        // Hapus produk
-        function deleteProduct(productId) {
-            if (!confirm("Apakah Anda yakin ingin menghapus produk ini?")) return false;
-            
-            for (let category in products) {
-                products[category] = products[category].filter(product => product.id !== productId);
-            }
-            
-            if (saveProductsToDatabase(products)) {
-                updateAllProducts();
-                showNotification("Produk berhasil dihapus!", "success");
-                return true;
-            }
-            return false;
-        }
-
-        // Update harga produk
-        function updateProductPrice(productId, newPrice, newDiscount) {
-            let updated = false;
-            
-            for (let category in products) {
-                products[category] = products[category].map(product => {
-                    if (product.id === productId) {
-                        updated = true;
-                        return {
-                            ...product,
-                            price: parseInt(newPrice) || product.price,
-                            discount: parseInt(newDiscount) || product.discount
-                        };
-                    }
-                    return product;
-                });
-            }
-            
-            if (updated && saveProductsToDatabase(products)) {
-                updateAllProducts();
-                showNotification("Harga produk berhasil diperbarui!", "success");
-                return true;
-            }
-            return false;
-        }
-
-        // Terapkan diskon massal
-        function applyBulkDiscount(discountType, discountValue, applyTo) {
-            let selectedProducts = [];
-            let updatedProducts = { ...products };
-
-            if (applyTo === 'all') {
-                for (let category in updatedProducts) {
-                    selectedProducts = [...selectedProducts, ...updatedProducts[category]];
-                }
-            } else if (applyTo === 'selected') {
-                const checkboxes = document.querySelectorAll('.product-checkbox:checked');
-                checkboxes.forEach(checkbox => {
-                    const productId = parseInt(checkbox.getAttribute('data-id'));
-                    for (let category in updatedProducts) {
-                        const product = updatedProducts[category].find(p => p.id === productId);
-                        if (product) selectedProducts.push(product);
-                    }
-                });
+            if (stockStatus.includes('🔴') || stockStatus.toLowerCase().includes('habis')) {
+                banner.classList.add('warning');
+                title.innerHTML = '⚠️ Stok Sedang Habis';
+                message.innerHTML = 'Pembelian BBC sementara tidak dapat diproses. Silakan coba lagi nanti.';
+            } else if (stockStatus.includes('🟡') || stockStatus.toLowerCase().includes('diisi')) {
+                banner.classList.add('info');
+                title.innerHTML = 'ℹ️ Stok Sedang Diisi Ulang';
+                message.innerHTML = 'Proses pembelian mungkin memakan waktu lebih lama dari biasanya.';
             } else {
-                selectedProducts = updatedProducts[applyTo] || [];
+                title.innerHTML = '✅ Stok Tersedia';
+                message.innerHTML = 'Pembelian BBC dapat dilakukan secara normal.';
             }
 
-            if (selectedProducts.length === 0) {
-                showNotification("Tidak ada produk yang dipilih!", "error");
-                return false;
-            }
-
-            // Terapkan diskon
-            selectedProducts.forEach(product => {
-                for (let category in updatedProducts) {
-                    updatedProducts[category] = updatedProducts[category].map(p => {
-                        if (p.id === product.id) {
-                            if (discountType === 'percentage') {
-                                p.discount = Math.min(100, Math.max(0, discountValue));
-                            } else {
-                                const discountPercentage = (discountValue / p.price) * 100;
-                                p.discount = Math.min(100, Math.max(0, discountPercentage));
-                            }
-                        }
-                        return p;
-                    });
-                }
-            });
-
-            if (saveProductsToDatabase(updatedProducts)) {
-                products = updatedProducts;
-                updateAllProducts();
-                showNotification(`Diskon diterapkan ke ${selectedProducts.length} produk!`, "success");
-                return true;
-            }
-            return false;
+            banner.style.display = 'block';
         }
-
-        // Hapus diskon massal
-        function removeBulkDiscount(applyTo) {
-            let selectedProducts = [];
-            let updatedProducts = { ...products };
-
-            if (applyTo === 'all') {
-                for (let category in updatedProducts) {
-                    selectedProducts = [...selectedProducts, ...updatedProducts[category]];
-                }
-            } else if (applyTo === 'selected') {
-                const checkboxes = document.querySelectorAll('.product-checkbox:checked');
-                checkboxes.forEach(checkbox => {
-                    const productId = parseInt(checkbox.getAttribute('data-id'));
-                    for (let category in updatedProducts) {
-                        const product = updatedProducts[category].find(p => p.id === productId);
-                        if (product) selectedProducts.push(product);
-                    }
-                });
-            } else {
-                selectedProducts = updatedProducts[applyTo] || [];
-            }
-
-            if (selectedProducts.length === 0) {
-                showNotification("Tidak ada produk yang dipilih!", "error");
-                return false;
-            }
-
-            // Hapus diskon
-            selectedProducts.forEach(product => {
-                for (let category in updatedProducts) {
-                    updatedProducts[category] = updatedProducts[category].map(p => {
-                        if (p.id === product.id) {
-                            p.discount = 0;
-                        }
-                        return p;
-                    });
-                }
-            });
-
-            if (saveProductsToDatabase(updatedProducts)) {
-                products = updatedProducts;
-                updateAllProducts();
-                showNotification(`Diskon dihapus dari ${selectedProducts.length} produk!`, "success");
-                return true;
-            }
-            return false;
-        }
-
-        // ============================================
-        // EVENT LISTENERS
-        // ============================================
 
         // Attach event listeners untuk tombol beli
         function attachBuyButtonEvents() {
             const buyButtons = document.querySelectorAll('.btn-buy');
+
             buyButtons.forEach(button => {
                 button.addEventListener('click', function() {
                     const bbcAmount = this.getAttribute('data-bbc');
                     const price = this.getAttribute('data-price');
                     const type = this.getAttribute('data-type');
-                    const originalPrice = this.getAttribute('data-original-price');
-                    const discount = this.getAttribute('data-discount');
 
                     selectedPackage = {
                         bbc: bbcAmount,
                         price: price,
-                        type: type,
-                        originalPrice: originalPrice,
-                        discount: discount
+                        type: type
                     };
 
-                    showPurchaseModal();
-                });
-            });
-        }
+                    // Update ringkasan pesanan
+                    document.getElementById('summaryBBC').textContent = `Paket: ${bbcAmount}`;
+                    document.getElementById('summaryPrice').textContent = `Harga: Rp ${parseInt(price).toLocaleString('id-ID')}`;
+                    document.getElementById('summaryType').textContent = `Tipe: ${type}`;
 
-        // Attach event listeners untuk produk admin
-        function attachAdminProductEventListeners() {
-            document.querySelectorAll('.edit-product').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const productId = parseInt(this.getAttribute('data-id'));
-                    showEditProductModal(productId);
-                });
-            });
-
-            document.querySelectorAll('.delete-product').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const productId = parseInt(this.getAttribute('data-id'));
-                    deleteProduct(productId);
-                });
-            });
-        }
-
-        // ============================================
-        // MODAL FUNCTIONS
-        // ============================================
-
-        // Tampilkan modal pembelian
-        function showPurchaseModal() {
-            if (!selectedPackage) return;
-
-            document.getElementById('summaryBBC').textContent = `Paket: ${selectedPackage.bbc}`;
-            document.getElementById('summaryPrice').textContent = `Harga: Rp ${parseInt(selectedPackage.price).toLocaleString('id-ID')}`;
-            document.getElementById('summaryType').textContent = `Tipe: ${selectedPackage.type}`;
-
-            const modalTitle = document.getElementById('modalTitle');
-            if (selectedPackage.type === 'BBC') {
-                modalTitle.textContent = 'Top Up BBC';
-            } else if (selectedPackage.type === 'SKIN' || selectedPackage.type === 'ITEM') {
-                modalTitle.textContent = 'Beli Skin/Item';
-            } else if (selectedPackage.type === 'CHARISMA') {
-                modalTitle.textContent = 'Beli Charisma';
-            }
-
-            const warningMessage = document.getElementById('warningMessage');
-            const warningText = document.getElementById('warningText');
-            
-            if (selectedPackage.type === 'BBC') {
-                warningText.innerHTML = '<strong>PERINGATAN UNTUK TOP UP BBC:</strong><br>Pastikan id server anda benar dan jangan lupa untuk aktifkan fitur live di mlbb anda';
-                warningMessage.style.display = 'block';
-            } else if (selectedPackage.type === 'SKIN' || selectedPackage.type === 'ITEM') {
-                warningText.innerHTML = '<strong>PERINGATAN UNTUK GIVE SKINS/ITEM:</strong><br>Untuk pembelian SKINS/ITEM wajib berteman selama 7 hari<br><strong>Beli = paham!</strong>';
-                warningMessage.style.display = 'block';
-            } else {
-                warningMessage.style.display = 'none';
-            }
-
-            resetPurchaseForm();
-            document.getElementById('purchaseModal').style.display = 'flex';
-        }
-
-        // Tampilkan modal edit produk
-        function showEditProductModal(productId) {
-            let allProducts = Object.values(products).flat();
-            const product = allProducts.find(p => p.id === productId);
-            
-            if (!product) return;
-
-            currentEditingProduct = product;
-
-            document.getElementById('productModalTitle').textContent = 'Edit Produk';
-            document.getElementById('productName').value = product.name;
-            document.getElementById('productCategory').value = product.category;
-            document.getElementById('productType').value = product.type;
-            document.getElementById('bbcAmount').value = product.amount;
-            document.getElementById('productPrice').value = product.price;
-            document.getElementById('productDiscount').value = product.discount;
-            document.getElementById('productDescription').value = product.description || '';
-            document.getElementById('productStatus').value = product.status;
-            document.getElementById('isPopular').value = product.popular.toString();
-
-            document.getElementById('productModal').style.display = 'flex';
-        }
-
-        // Reset form pembelian
-        function resetPurchaseForm() {
-            document.getElementById('playerId').value = '';
-            document.getElementById('serverId').value = '';
-            document.getElementById('nickname').value = '';
-            document.getElementById('whatsapp').value = '';
-            document.getElementById('skinName').value = '';
-            document.getElementById('customPrice').value = '';
-            document.getElementById('paymentInstruction').style.display = 'none';
-            document.getElementById('successMessage').style.display = 'none';
-
-            const errorMessages = document.querySelectorAll('.error-message');
-            errorMessages.forEach(error => error.style.display = 'none');
-
-            const errorInputs = document.querySelectorAll('.error');
-            errorInputs.forEach(input => input.classList.remove('error'));
-        }
-
-        // ============================================
-        // FUNGSI NOTIFIKASI
-        // ============================================
-
-        // Tampilkan notifikasi
-        function showNotification(message, type = 'info') {
-            const notification = document.createElement('div');
-            notification.className = `notification ${type}`;
-            notification.innerHTML = `
-                <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-circle' : 'info-circle'}"></i>
-                <span>${message}</span>
-            `;
-
-            notification.style.cssText = `
-                position: fixed;
-                top: 20px;
-                right: 20px;
-                background: ${type === 'success' ? 'rgba(40, 167, 69, 0.9)' : 
-                            type === 'error' ? 'rgba(255, 65, 108, 0.9)' : 
-                            'rgba(255, 193, 7, 0.9)'};
-                color: white;
-                padding: 15px 20px;
-                border-radius: 10px;
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                z-index: 2000;
-                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-                animation: slideIn 0.3s ease;
-            `;
-
-            document.body.appendChild(notification);
-
-            setTimeout(() => {
-                notification.style.animation = 'slideOut 0.3s ease';
-                setTimeout(() => {
-                    if (notification.parentNode) {
-                        notification.parentNode.removeChild(notification);
+                    // Update judul modal berdasarkan tipe produk
+                    const modalTitle = document.getElementById('modalTitle');
+                    if (type === 'BBC') {
+                        modalTitle.textContent = 'Top Up BBC';
+                    } else if (type === 'SKIN' || type === 'ITEM') {
+                        modalTitle.textContent = 'Beli Skin/Item';
+                    } else if (type === 'CHARISMA') {
+                        modalTitle.textContent = 'Beli Charisma';
+                    } else {
+                        modalTitle.textContent = 'Beli Produk';
                     }
-                }, 300);
-            }, 3000);
-        }
 
-        // ============================================
-        // INISIALISASI
-        // ============================================
+                    // Tampilkan/sembunyikan fields Event/Collab
+                    const eventCollabFields = document.getElementById('eventCollabFields');
+                    if (bbcAmount === 'Event/Collab') {
+                        eventCollabFields.style.display = 'block';
+                        // Set placeholder harga berdasarkan data-price
+                        document.getElementById('customPrice').placeholder = `Masukkan harga (minimal Rp ${parseInt(price).toLocaleString('id-ID')})`;
+                    } else {
+                        eventCollabFields.style.display = 'none';
+                    }
 
-        document.addEventListener('DOMContentLoaded', function() {
-            // Inisialisasi database
-            initializeDatabase();
-            loadAllData();
+                    // Tampilkan peringatan berdasarkan tipe produk
+                    const warningMessage = document.getElementById('warningMessage');
+                    const warningText = document.getElementById('warningText');
 
-            // Carousel
-            initializeCarousel();
+                    if (type === 'BBC') {
+                        warningText.innerHTML = '<strong>PERINGATAN UNTUK TOP UP BBC:</strong><br>Pastikan id server anda benar dan jangan lupa untuk aktifkan fitur live di mlbb anda';
+                        warningMessage.style.display = 'block';
+                    } else if (type === 'SKIN' || type === 'ITEM') {
+                        warningText.innerHTML = '<strong>PERINGATAN UNTUK GIVE SKINS/ITEM:</strong><br>Untuk pembelian SKINS/ITEM wajib berteman selama 7 hari<br><strong>Beli = paham!</strong>';
+                        warningMessage.style.display = 'block';
+                    } else {
+                        warningMessage.style.display = 'none';
+                    }
 
-            // Category buttons
-            initializeCategoryButtons();
+                    // Reset form
+                    document.getElementById('playerId').value = '';
+                    document.getElementById('serverId').value = '';
+                    document.getElementById('nickname').value = '';
+                    document.getElementById('whatsapp').value = '';
+                    document.getElementById('skinName').value = '';
+                    document.getElementById('customPrice').value = '';
+                    document.getElementById('paymentInstruction').style.display = 'none';
+                    document.getElementById('successMessage').style.display = 'none';
 
-            // WhatsApp functionality
-            initializeWhatsApp();
+                    // Reset error states
+                    const errorMessages = document.querySelectorAll('.error-message');
+                    errorMessages.forEach(error => error.style.display = 'none');
 
-            // Admin login
-            initializeAdminLogin();
+                    const errorInputs = document.querySelectorAll('.error');
+                    errorInputs.forEach(input => input.classList.remove('error'));
 
-            // Admin tabs
-            initializeAdminTabs();
-
-            // Product modal
-            initializeProductModal();
-
-            // Purchase modal
-            initializePurchaseModal();
-
-            // Database actions
-            initializeDatabaseActions();
-        });
-
-        // Inisialisasi carousel
-        function initializeCarousel() {
-            const carousel = document.querySelector('.photo-carousel');
-            const slides = document.querySelectorAll('.photo-slide');
-            const dots = document.querySelectorAll('.carousel-dot');
-            const prevBtn = document.querySelector('.carousel-arrow.prev');
-            const nextBtn = document.querySelector('.carousel-arrow.next');
-
-            let currentSlide = 0;
-            const totalSlides = slides.length;
-
-            function updateCarousel() {
-                carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
-                dots.forEach((dot, index) => {
-                    dot.classList.toggle('active', index === currentSlide);
-                });
-            }
-
-            function nextSlide() {
-                currentSlide = (currentSlide + 1) % totalSlides;
-                updateCarousel();
-            }
-
-            function prevSlide() {
-                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-                updateCarousel();
-            }
-
-            prevBtn.addEventListener('click', prevSlide);
-            nextBtn.addEventListener('click', nextSlide);
-
-            dots.forEach((dot, index) => {
-                dot.addEventListener('click', () => {
-                    currentSlide = index;
-                    updateCarousel();
-                });
-            });
-
-            let slideInterval = setInterval(nextSlide, 5000);
-            const carouselContainer = document.querySelector('.photo-carousel-container');
-            
-            carouselContainer.addEventListener('mouseenter', () => clearInterval(slideInterval));
-            carouselContainer.addEventListener('mouseleave', () => {
-                slideInterval = setInterval(nextSlide, 5000);
-            });
-        }
-
-        // Inisialisasi category buttons
-        function initializeCategoryButtons() {
-            const categoryBtns = document.querySelectorAll('.category-btn');
-            const productLists = document.querySelectorAll('.product-list');
-
-            categoryBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    categoryBtns.forEach(b => b.classList.remove('active'));
-                    productLists.forEach(l => l.classList.remove('active'));
-                    
-                    btn.classList.add('active');
-                    const category = btn.getAttribute('data-category');
-                    document.getElementById(`product-${category}`).classList.add('active');
+                    // Tampilkan modal
+                    document.getElementById('purchaseModal').style.display = 'flex';
                 });
             });
         }
 
-        // Inisialisasi WhatsApp
-        function initializeWhatsApp() {
-            const hubungiKamiBtn = document.getElementById('hubungiKamiBtn');
-            const footerWhatsAppBtn = document.getElementById('footerWhatsAppBtn');
-
-            function openWhatsApp(phoneNumber = "6289521142740", message = "Halo, saya ingin bertanya tentang Top Up BBC MLBB Advance Server") {
-                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-                window.open(whatsappUrl, '_blank');
+        // Fungsi untuk menampilkan peringatan berdasarkan status stok
+        function showStockWarning() {
+            if (currentStockStatus.includes('🔴') || currentStockStatus.toLowerCase().includes('habis')) {
+                return "⚠️ *PERINGATAN:* Stok BBC sedang habis. Pembelian sementara tidak dapat diproses.\n\n";
+            } else if (currentStockStatus.includes('🟡') || currentStockStatus.toLowerCase().includes('diisi')) {
+                return "ℹ️ *INFORMASI:* Stok BBC sedang diisi ulang. Proses pembelian mungkin sedikit lebih lambat.\n\n";
             }
-
-            if (hubungiKamiBtn) {
-                hubungiKamiBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    openWhatsApp();
-                });
-            }
-
-            if (footerWhatsAppBtn) {
-                footerWhatsAppBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    openWhatsApp();
-                });
-            }
+            return "";
         }
 
-        // Inisialisasi admin login
-        function initializeAdminLogin() {
-            const adminModal = document.getElementById('adminLoginModal');
-            const adminLoginIcon = document.getElementById('adminLoginIcon');
-            const closeAdminBtn = document.querySelector('.close-admin');
-            const submitLoginBtn = document.getElementById('submitLogin');
-
-            adminLoginIcon.addEventListener('click', () => {
-                adminModal.style.display = 'flex';
-                document.getElementById('loginError').style.display = 'none';
-            });
-
-            closeAdminBtn.addEventListener('click', () => {
-                adminModal.style.display = 'none';
-            });
-
-            submitLoginBtn.addEventListener('click', () => {
-                const username = document.getElementById('adminUsername').value.trim();
-                const password = document.getElementById('adminPassword').value.trim();
-                const loginError = document.getElementById('loginError');
-
-                if (!username || !password) {
-                    loginError.textContent = "Username dan password harus diisi!";
-                    loginError.style.display = 'block';
-                    return;
-                }
-
-                if (username === ADMIN_CREDENTIALS.username && password === ADMIN_CREDENTIALS.password) {
-                    adminModal.style.display = 'none';
-                    isAdminLoggedIn = true;
-                    document.getElementById('adminDashboard').classList.add('active');
-                    document.getElementById('adminDashboard').style.display = 'block';
-                    showNotification("Login admin berhasil!", "success");
-                } else {
-                    loginError.textContent = "Username atau password salah!";
-                    loginError.style.display = 'block';
-                }
-            });
-        }
-
-        // Inisialisasi admin tabs
-        function initializeAdminTabs() {
-            document.querySelectorAll('.admin-tab').forEach(tab => {
-                tab.addEventListener('click', function() {
-                    const tabId = this.getAttribute('data-tab');
-                    
-                    document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    document.querySelectorAll('.admin-tab-content').forEach(content => {
-                        content.classList.remove('active');
-                    });
-                    document.getElementById(`${tabId}Tab`).classList.add('active');
-                });
-            });
-        }
-
-        // Inisialisasi product modal
-        function initializeProductModal() {
-            const productModal = document.getElementById('productModal');
-            const closeProductBtn = document.querySelector('.close-product');
-            const saveProductBtn = document.getElementById('saveProductBtn');
-            const cancelProductBtn = document.getElementById('cancelProductBtn');
-            const addProductBtn = document.getElementById('addProductBtn');
-            const addNewProductBtn = document.getElementById('addNewProduct');
-
-            closeProductBtn.addEventListener('click', () => {
-                productModal.style.display = 'none';
-                currentEditingProduct = null;
-            });
-
-            cancelProductBtn.addEventListener('click', () => {
-                productModal.style.display = 'none';
-                currentEditingProduct = null;
-            });
-
-            saveProductBtn.addEventListener('click', () => {
-                const productData = {
-                    name: document.getElementById('productName').value.trim(),
-                    category: document.getElementById('productCategory').value,
-                    type: document.getElementById('productType').value,
-                    amount: document.getElementById('bbcAmount').value.trim() || "Item",
-                    price: parseInt(document.getElementById('productPrice').value) || 0,
-                    discount: parseInt(document.getElementById('productDiscount').value) || 0,
-                    description: document.getElementById('productDescription').value.trim(),
-                    status: document.getElementById('productStatus').value,
-                    popular: document.getElementById('isPopular').value === 'true'
-                };
-
-                if (!productData.name || productData.price <= 0) {
-                    showNotification("Nama produk dan harga harus valid!", "error");
-                    return;
-                }
-
-                if (currentEditingProduct) {
-                    editProduct(currentEditingProduct.id, productData);
-                } else {
-                    addProduct(productData);
-                }
-
-                productModal.style.display = 'none';
-                currentEditingProduct = null;
-            });
-
-            if (addProductBtn) {
-                addProductBtn.addEventListener('click', () => {
-                    currentEditingProduct = null;
-                    document.getElementById('productModalTitle').textContent = 'Tambah Produk Baru';
-                    resetProductForm();
-                    productModal.style.display = 'flex';
-                });
-            }
-
-            if (addNewProductBtn) {
-                addNewProductBtn.addEventListener('click', () => {
-                    currentEditingProduct = null;
-                    document.getElementById('productModalTitle').textContent = 'Tambah Produk Baru';
-                    resetProductForm();
-                    productModal.style.display = 'flex';
-                });
-            }
-        }
-
-        // Inisialisasi purchase modal
-        function initializePurchaseModal() {
-            const modal = document.getElementById('purchaseModal');
-            const closeBtn = document.querySelector('.close');
-            const payQRISBtn = document.getElementById('payQRIS');
-            const alreadyPaidBtn = document.getElementById('alreadyPaid');
-
-            closeBtn.addEventListener('click', () => {
-                modal.style.display = 'none';
-            });
-
-            window.addEventListener('click', (event) => {
-                if (event.target === modal) {
-                    modal.style.display = 'none';
-                }
-            });
-
-            payQRISBtn.addEventListener('click', () => {
-                if (!validateForm()) {
-                    showNotification("Harap perbaiki data yang masih error!", "error");
-                    return;
-                }
-
-                startPaymentProcess('QRIS');
-            });
-
-            alreadyPaidBtn.addEventListener('click', () => {
-                if (!selectedPaymentMethod) {
-                    showNotification("Silakan pilih metode pembayaran terlebih dahulu!", "error");
-                    return;
-                }
-
-                document.getElementById('paymentInstruction').style.display = 'none';
-                document.getElementById('successMessage').style.display = 'block';
-
-                setTimeout(() => {
-                    sendPaymentConfirmation();
-                    setTimeout(() => {
-                        modal.style.display = 'none';
-                        document.getElementById('successMessage').style.display = 'none';
-                        showNotification(`Pembelian ${selectedPackage.bbc} berhasil! Pesanan akan diproses dalam 5 menit.`, "success");
-                    }, 2000);
-                }, 3000);
-            });
-        }
-
-        // Inisialisasi database actions
-        function initializeDatabaseActions() {
-            // Backup database
-            document.getElementById('backupDatabase')?.addEventListener('click', backupDatabase);
-            
-            // Restore database
-            document.getElementById('restoreDatabase')?.addEventListener('click', () => {
-                document.getElementById('importFile').click();
-            });
-            
-            document.getElementById('importFile')?.addEventListener('change', (e) => {
-                if (e.target.files.length > 0) {
-                    restoreDatabase(e.target.files[0]);
-                }
-            });
-            
-            // Clear database
-            document.getElementById('clearDatabase')?.addEventListener('click', clearDatabase);
-            
-            // Export database
-            document.getElementById('exportDatabase')?.addEventListener('click', () => exportData('all'));
-            
-            // Import data
-            document.getElementById('importDataBtn')?.addEventListener('click', () => {
-                document.getElementById('importFile').click();
-            });
-            
-            // Export data
-            document.getElementById('exportDataBtn')?.addEventListener('click', () => {
-                const type = document.getElementById('exportType').value;
-                exportData(type);
-            });
-            
-            // Apply discount
-            document.getElementById('applyDiscountBtn')?.addEventListener('click', () => {
-                const discountType = document.getElementById('discountType').value;
-                const discountValue = parseFloat(document.getElementById('discountValue').value);
-                const applyTo = document.getElementById('applyTo').value;
-                
-                if (!discountValue || discountValue < 0) {
-                    showNotification("Masukkan nilai diskon yang valid!", "error");
-                    return;
-                }
-                
-                applyBulkDiscount(discountType, discountValue, applyTo);
-            });
-            
-            // Remove discount
-            document.getElementById('removeDiscountBtn')?.addEventListener('click', () => {
-                const applyTo = document.getElementById('applyTo').value;
-                removeBulkDiscount(applyTo);
-            });
-            
-            // Update single price
-            document.getElementById('updateSinglePrice')?.addEventListener('click', () => {
-                const productId = parseInt(document.getElementById('selectProduct').value);
-                const newPrice = document.getElementById('newPrice').value;
-                const newDiscount = document.getElementById('newDiscount').value;
-                
-                if (!productId) {
-                    showNotification("Pilih produk terlebih dahulu!", "error");
-                    return;
-                }
-                
-                if (!newPrice || newPrice <= 0) {
-                    showNotification("Masukkan harga yang valid!", "error");
-                    return;
-                }
-                
-                updateProductPrice(productId, newPrice, newDiscount);
-            });
-            
-            // Logout admin
-            document.getElementById('logoutAdmin')?.addEventListener('click', () => {
-                isAdminLoggedIn = false;
-                document.getElementById('adminDashboard').classList.remove('active');
-                document.getElementById('adminDashboard').style.display = 'none';
-                showNotification("Anda telah logout dari dashboard admin.", "info");
-            });
-        }
-
-        // Reset product form
-        function resetProductForm() {
-            document.getElementById('productName').value = '';
-            document.getElementById('productCategory').value = 'bbc';
-            document.getElementById('productType').value = 'BBC';
-            document.getElementById('bbcAmount').value = '';
-            document.getElementById('productPrice').value = '';
-            document.getElementById('productDiscount').value = '0';
-            document.getElementById('productDescription').value = '';
-            document.getElementById('productStatus').value = 'active';
-            document.getElementById('isPopular').value = 'false';
-        }
-
-        // ============================================
-        // FUNGSI PEMBAYARAN
-        // ============================================
-
-        function startPaymentProcess(method) {
-            selectedPaymentMethod = method;
-
-            const paymentCode = `QRIS-${Math.floor(1000 + Math.random() * 9000)}`;
-            document.getElementById('paymentCode').textContent = paymentCode;
-            document.getElementById('paymentAmount').textContent = `Rp ${parseInt(selectedPackage.price).toLocaleString('id-ID')}`;
-
-            document.getElementById('paymentInstruction').style.display = 'block';
-            document.getElementById('paymentInstruction').scrollIntoView({ behavior: 'smooth' });
-        }
-
+        // Modifikasi fungsi sendPaymentConfirmation untuk menambahkan peringatan stok
         function sendPaymentConfirmation() {
             const phoneNumber = "6289521142740";
             const bbcAmount = selectedPackage.bbc;
@@ -3131,11 +1505,29 @@
             const type = selectedPackage.type;
             const price = selectedPackage.price;
 
+            // Tambahkan informasi khusus untuk Event/Collab
+            let eventCollabInfo = "";
+            if (bbcAmount === 'Event/Collab') {
+                const skinName = document.getElementById('skinName').value;
+                eventCollabInfo = `Nama Skin Collab: ${skinName}\n`;
+            }
+
+            // Tambahkan peringatan berdasarkan status stok
+            const stockWarning = showStockWarning();
+
+            // Tambahkan peringatan berdasarkan tipe produk
+            let productWarning = "";
+            if (type === "BBC") {
+                productWarning = "⚠️ *PERINGATAN UNTUK TOP UP BBC:*\nPastikan id server anda benar dan jangan lupa untuk aktifkan fitur live di mlbb anda\n\n";
+            } else if (type === "SKIN" || type === "ITEM") {
+                productWarning = "⚠️ *PERINGATAN UNTUK GIVE SKINS/ITEM:*\nUntuk pembelian SKINS/ITEM wajib berteman selama 7 hari\nBeli = paham!\n\n";
+            }
+
             const message = `Halo, saya sudah melakukan pembayaran untuk ${type}:
 
-*DETAIL PESANAN:*
+${stockWarning}${productWarning}*DETAIL PESANAN:*
 Nominal pembelian: ${bbcAmount}
-Harga: Rp ${parseInt(price).toLocaleString('id-ID')}
+${eventCollabInfo}Harga: Rp ${parseInt(price).toLocaleString('id-ID')}
 Tipe: ${type}
 
 *DATA AKUN:*
@@ -3144,15 +1536,110 @@ ID Server: ${serverId}
 WhatsApp: ${whatsapp}
 Nickname: ${nickname}
 
+Status Stok Saat Ini: ${currentStockStatus}
+
 Silakan proses pesanan saya. Bukti transfer akan saya kirimkan di chat ini.`;
 
-            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-            window.open(whatsappUrl, '_blank');
+            openWhatsApp(phoneNumber, message);
         }
 
+        // Load data saat halaman dimuat
+        document.addEventListener('DOMContentLoaded', function() {
+            loadWebsiteData();
+
+            // Attach event listeners untuk tombol beli
+            attachBuyButtonEvents();
+
+            // Auto-refresh data setiap 30 detik
+            setInterval(loadWebsiteData, 30000);
+
+            // Modal functionality
+            const modal = document.getElementById('purchaseModal');
+            const closeBtn = document.querySelector('.close');
+
+            // Tutup modal
+            closeBtn.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+
+            // Tutup modal jika klik di luar konten
+            window.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+
+            // Tombol Pembayaran QRIS
+            document.getElementById('payQRIS').addEventListener('click', function() {
+                startPaymentProcess('QRIS');
+            });
+
+            // Tombol Sudah Membayar
+            document.getElementById('alreadyPaid').addEventListener('click', function() {
+                // Validasi jika belum memilih metode pembayaran
+                if (!selectedPaymentMethod) {
+                    alert('Silakan pilih metode pembayaran terlebih dahulu!');
+                    return;
+                }
+
+                // Tampilkan pesan sukses
+                document.getElementById('paymentInstruction').style.display = 'none';
+                document.getElementById('successMessage').style.display = 'block';
+
+                // Simulasi pengiriman notifikasi WhatsApp
+                console.log(`Notifikasi WhatsApp dikirim`);
+
+                // Redirect ke WhatsApp setelah 3 detik
+                setTimeout(function() {
+                    sendPaymentConfirmation();
+
+                    // Reset form dan tutup modal setelah 5 detik
+                    setTimeout(function() {
+                        modal.style.display = 'none';
+                        document.getElementById('successMessage').style.display = 'none';
+
+                        // Tampilkan notifikasi
+                        alert(`Pembelian ${selectedPackage.bbc} ${selectedPackage.type} berhasil! Pesanan akan diproses dalam 5 menit.`);
+                    }, 2000);
+                }, 3000);
+            });
+        });
+
+        // Fungsi untuk memulai proses pembayaran
+        function startPaymentProcess(method) {
+            // Validasi form sebelum melanjutkan
+            if (!validateForm()) {
+                alert('Harap perbaiki data yang masih error sebelum melanjutkan!');
+                return;
+            }
+
+            const playerId = document.getElementById('playerId').value.trim();
+            const serverId = document.getElementById('serverId').value.trim();
+            const nickname = document.getElementById('nickname').value.trim();
+            const whatsapp = document.getElementById('whatsapp').value;
+
+            selectedPaymentMethod = method;
+
+            // Generate kode pembayaran dengan nomor WhatsApp
+            const paymentCode = `QRIS-${Math.floor(1000 + Math.random() * 9000)}`;
+            document.getElementById('paymentCode').textContent = paymentCode;
+            document.getElementById('paymentAmount').textContent = `Rp ${parseInt(selectedPackage.price).toLocaleString('id-ID')}`;
+
+            // Tampilkan QRIS yang sudah ditentukan
+            document.getElementById('paymentQr').src = "https://files.catbox.moe/v1494f.jpg";
+
+            // Tampilkan instruksi pembayaran
+            document.getElementById('paymentInstruction').style.display = 'block';
+
+            // Scroll ke instruksi pembayaran
+            document.getElementById('paymentInstruction').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Fungsi validasi form
         function validateForm() {
             let isValid = true;
 
+            // Reset error messages
             const errorMessages = document.querySelectorAll('.error-message');
             errorMessages.forEach(error => error.style.display = 'none');
 
@@ -3173,6 +1660,29 @@ Silakan proses pesanan saya. Bukti transfer akan saya kirimkan di chat ini.`;
                 document.getElementById('serverIdError').style.display = 'block';
                 serverIdInput.classList.add('error');
                 isValid = false;
+            }
+
+            // Validasi khusus untuk Event/Collab
+            if (selectedPackage.bbc === 'Event/Collab') {
+                // Validasi Nama Skin
+                const skinNameInput = document.getElementById('skinName');
+                if (!skinNameInput.value.trim()) {
+                    document.getElementById('skinNameError').style.display = 'block';
+                    skinNameInput.classList.add('error');
+                    isValid = false;
+                }
+
+                // Validasi Harga Custom
+                const customPriceInput = document.getElementById('customPrice');
+                const customPrice = parseInt(customPriceInput.value);
+                if (!customPriceInput.value.trim() || customPrice < 70000) {
+                    document.getElementById('customPriceError').style.display = 'block';
+                    customPriceInput.classList.add('error');
+                    isValid = false;
+                } else {
+                    // Update harga yang dipilih dengan harga custom
+                    selectedPackage.price = customPrice;
+                }
             }
 
             // Validasi Nickname
@@ -3196,67 +1706,23 @@ Silakan proses pesanan saya. Bukti transfer akan saya kirimkan di chat ini.`;
             return isValid;
         }
 
+        // Fungsi validasi nomor WhatsApp
         function validateWhatsApp(number) {
+            // Hapus karakter selain angka
             const cleaned = number.replace(/[^0-9]/g, '');
-            
+
+            // Validasi panjang nomor dan kode negara
             if (cleaned.length < 10 || cleaned.length > 15) {
                 return { isValid: false, message: "Nomor WhatsApp harus 10-15 digit" };
             }
-            
+
+            // Pastikan diawali 62
             if (!cleaned.startsWith('62')) {
                 return { isValid: false, message: "Harus menggunakan kode negara 62" };
             }
-            
+
             return { isValid: true, cleaned: cleaned };
         }
-
-        // Tambahkan style untuk animasi
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes slideIn {
-                from { transform: translateX(100%); opacity: 0; }
-                to { transform: translateX(0); opacity: 1; }
-            }
-            @keyframes slideOut {
-                from { transform: translateX(0); opacity: 1; }
-                to { transform: translateX(100%); opacity: 0; }
-            }
-            .status-badge {
-                padding: 3px 10px;
-                border-radius: 12px;
-                font-size: 12px;
-                font-weight: bold;
-            }
-            .status-badge.active {
-                background: rgba(40, 167, 69, 0.2);
-                color: #28a745;
-            }
-            .status-badge.inactive {
-                background: rgba(255, 193, 7, 0.2);
-                color: #ffc107;
-            }
-            .status-badge.pending {
-                background: rgba(255, 193, 7, 0.2);
-                color: #ffc107;
-            }
-            .status-badge.paid {
-                background: rgba(0, 123, 255, 0.2);
-                color: #007bff;
-            }
-            .status-badge.processed {
-                background: rgba(23, 162, 184, 0.2);
-                color: #17a2b8;
-            }
-            .status-badge.completed {
-                background: rgba(40, 167, 69, 0.2);
-                color: #28a745;
-            }
-            .status-badge.cancelled {
-                background: rgba(220, 53, 69, 0.2);
-                color: #dc3545;
-            }
-        `;
-        document.head.appendChild(style);
     </script>
 </body>
 </html>
