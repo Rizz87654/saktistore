@@ -934,56 +934,55 @@
         <div id="product-bbc" class="product-list active">
             <div class="packages" id="bbc-packages">
                 <!-- BBC Packages -->
-                <div class="package">
-                    <h3>Paket Pemula</h3>
-                    <div class="bbc-amount">1,000 BBC</div>
-                    <div class="price">Rp 4,000</div>
-                    <button class="btn btn-buy" data-bbc="1000" data-price="4000" data-type="BBC">Beli Sekarang</button>
-                </div>
+                <!-- BBC Packages -->
+<div class="package">
+    <h3>Paket Pemula</h3>
+    <div class="bbc-amount">1,000 BBC</div>
+    <div class="price">Rp 4,000</div>
+    <button class="btn btn-buy" data-bbc="1000" data-price="4000" data-type="BBC">Beli Sekarang</button>
+</div>
 
-                <div class="package">
-                    <h3>Paket Reguler</h3>
-                    <div class="bbc-amount">5,000 BBC</div>
-                    <div class="price">Rp 18,000</div>
-                    <button class="btn btn-buy" data-bbc="5000" data-price="18000" data-type="BBC">Beli Sekarang</button>
-                </div>
+<div class="package">
+    <h3>Paket Reguler</h3>
+    <div class="bbc-amount">5,000 BBC</div>
+    <div class="price">Rp 18,000</div>
+    <button class="btn btn-buy" data-bbc="5000" data-price="18000" data-type="BBC">Beli Sekarang</button>
+</div>
 
-                <div class="package popular">
-                    <h3>Paket Advanced</h3>
-                    <div class="bbc-amount">10,000 BBC</div>
-                    <div class="price">Rp 35,000</div>
-                    <button class="btn btn-buy" data-bbc="10000" data-price="35000" data-type="BBC">Beli Sekarang</button>
-                </div>
+<div class="package popular">
+    <h3>Paket Advanced</h3>
+    <div class="bbc-amount">10,000 BBC</div>
+    <div class="price">Rp 36,000</div>
+    <button class="btn btn-buy" data-bbc="10000" data-price="36000" data-type="BBC">Beli Sekarang</button>
+</div>
 
-                <div class="package">
-                    <h3>Paket Elite</h3>
-                    <div class="bbc-amount">15,000 BBC</div>
-                    <div class="price">Rp 52,000</div>
-                    <button class="btn btn-buy" data-bbc="15000" data-price="52000" data-type="BBC">Beli Sekarang</button>
-                </div>
+<div class="package">
+    <h3>Paket Elite</h3>
+    <div class="bbc-amount">15,000 BBC</div>
+    <div class="price">Rp 54,000</div>
+    <button class="btn btn-buy" data-bbc="15000" data-price="54000" data-type="BBC">Beli Sekarang</button>
+</div>
 
-                <div class="package">
-                    <h3>Paket Pro</h3>
-                    <div class="bbc-amount">20,000 BBC</div>
-                    <div class="price">Rp 68,000</div>
-                    <button class="btn btn-buy" data-bbc="20000" data-price="68000" data-type="BBC">Beli Sekarang</button>
-                </div>
+<div class="package">
+    <h3>Paket Pro</h3>
+    <div class="bbc-amount">20,000 BBC</div>
+    <div class="price">Rp 72,000</div>
+    <button class="btn btn-buy" data-bbc="20000" data-price="72000" data-type="BBC">Beli Sekarang</button>
+</div>
 
-                <div class="package">
-                    <h3>Paket Ultimate</h3>
-                    <div class="bbc-amount">50,000 BBC</div>
-                    <div class="price">Rp 165,000</div>
-                    <button class="btn btn-buy" data-bbc="50000" data-price="165000" data-type="BBC">Beli Sekarang</button>
-                </div>
+<div class="package">
+    <h3>Paket Ultimate</h3>
+    <div class="bbc-amount">50,000 BBC</div>
+    <div class="price">Rp 180,000</div>
+    <button class="btn btn-buy" data-bbc="50000" data-price="180000" data-type="BBC">Beli Sekarang</button>
+</div>
 
-                <div class="package">
-                    <h3>Paket Max</h3>
-                    <div class="bbc-amount">100,000 BBC</div>
-                    <div class="price">Rp 320,000</div>
-                    <button class="btn btn-buy" data-bbc="100000" data-price="320000" data-type="BBC">Beli Sekarang</button>
-                </div>
-            </div>
-        </div>
+<div class="package">
+    <h3>Paket Max</h3>
+    <div class="bbc-amount">100,000 BBC</div>
+    <div class="price">Rp 360,000</div>
+    <button class="btn btn-buy" data-bbc="100000" data-price="360000" data-type="BBC">Beli Sekarang</button>
+</div>
 
         <!-- Skins/Items Product List -->
         <div id="product-skins" class="product-list">
@@ -1345,21 +1344,21 @@
                 console.log('✅ Data website berhasil dimuat');
             } catch (error) {
                 console.error('❌ Gagal memuat data website:', error);
-                // Gunakan data default jika gagal load
-                websiteData = {
-                    prices: {
-                        '1000': 4000,
-                        '5000': 18000,
-                        '10000': 35000,
-                        '15000': 52000,
-                        '20000': 68000,
-                        '50000': 165000,
-                        '100000': 320000
-                    },
-                    stock_status: 'Tersedia',
-                    stock_status_with_emoji: '🟢 Tersedia',
-                    timestamp: new Date().toLocaleString('id-ID')
-                };
+                // // Update bagian websiteData default:
+websiteData = {
+    prices: {
+        '1000': 4000,
+        '5000': 18000,
+        '10000': 36000,
+        '15000': 54000,
+        '20000': 72000,
+        '50000': 180000,
+        '100000': 360000
+    },
+    stock_status: 'Tersedia',
+    stock_status_with_emoji: '🟢 Tersedia',
+    timestamp: new Date().toLocaleString('id-ID')
+};
                 updateWebsiteContent();
             }
         }
