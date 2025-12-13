@@ -12,20 +12,20 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         body {
             background: linear-gradient(135deg, #1a1a2e, #16213e);
             color: #fff;
             min-height: 100vh;
             padding-bottom: 20px;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
+
         /* Photo Carousel Styles */
         .photo-carousel-container {
             width: 100%;
@@ -34,25 +34,25 @@
             overflow: hidden;
             margin-bottom: 0;
         }
-        
+
         .photo-carousel {
             display: flex;
             transition: transform 0.5s ease;
             height: 100%;
         }
-        
+
         .photo-slide {
             min-width: 100%;
             height: 100%;
             position: relative;
         }
-        
+
         .photo-slide img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        
+
         .photo-overlay {
             position: absolute;
             top: 0;
@@ -67,20 +67,20 @@
             text-align: center;
             padding: 20px;
         }
-        
+
         .photo-overlay h2 {
             font-size: 36px;
             margin-bottom: 15px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
-        
+
         .photo-overlay p {
             font-size: 18px;
             max-width: 600px;
             margin-bottom: 20px;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
-        
+
         .carousel-nav {
             display: flex;
             justify-content: center;
@@ -91,7 +91,7 @@
             right: 0;
             z-index: 10;
         }
-        
+
         .carousel-dot {
             width: 12px;
             height: 12px;
@@ -100,12 +100,12 @@
             cursor: pointer;
             transition: all 0.3s;
         }
-        
+
         .carousel-dot.active {
             background: #ff9a00;
             transform: scale(1.2);
         }
-        
+
         .carousel-arrow {
             position: absolute;
             top: 50%;
@@ -124,57 +124,60 @@
             transition: all 0.3s;
             z-index: 10;
         }
-        
+
         .carousel-arrow:hover {
             background: rgba(0, 0, 0, 0.8);
             transform: translateY(-50%) scale(1.1);
         }
-        
+
         .carousel-arrow.prev {
             left: 20px;
         }
-        
+
         .carousel-arrow.next {
             right: 20px;
         }
-        
+
         header {
             background: rgba(0, 0, 0, 0.7);
-            padding: 20px 0;
+            padding: 15px 0;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
-        
+
         .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .logo {
             display: flex;
             align-items: center;
             gap: 15px;
         }
-        
+
         .logo img {
             width: 50px;
             height: 50px;
             border-radius: 10px;
         }
-        
+
         .logo h1 {
             font-size: 24px;
             background: linear-gradient(90deg, #ff9a00, #ff2e63);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        
+
         .desktop-nav ul {
             display: flex;
             list-style: none;
             gap: 25px;
         }
-        
+
         .desktop-nav a {
             color: #fff;
             text-decoration: none;
@@ -183,12 +186,55 @@
             padding: 8px 15px;
             border-radius: 5px;
         }
-        
+
         .desktop-nav a:hover {
             color: #ff9a00;
             background: rgba(255, 154, 0, 0.1);
         }
-        
+
+        /* Logo Login Admin */
+        .admin-login-icon {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .admin-login-icon i {
+            font-size: 24px;
+            color: #ff9a00;
+            transition: all 0.3s;
+            padding: 8px;
+            border-radius: 50%;
+            background: rgba(255, 154, 0, 0.1);
+        }
+
+        .admin-login-icon:hover i {
+            transform: scale(1.1);
+            background: rgba(255, 154, 0, 0.2);
+            box-shadow: 0 0 10px rgba(255, 154, 0, 0.3);
+        }
+
+        .admin-login-icon .tooltip {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s;
+            pointer-events: none;
+            z-index: 1001;
+        }
+
+        .admin-login-icon:hover .tooltip {
+            opacity: 1;
+            transform: translateY(5px);
+        }
+
         .btn {
             display: inline-block;
             background: linear-gradient(90deg, #ff9a00, #ff2e63);
@@ -203,39 +249,66 @@
             border: none;
             cursor: pointer;
         }
-        
+
         .btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(255, 46, 99, 0.6);
         }
-        
+
         .btn-secondary {
             background: rgba(255, 255, 255, 0.1);
             box-shadow: none;
         }
-        
+
         .btn-secondary:hover {
             background: rgba(255, 255, 255, 0.2);
         }
-        
+
         .btn-success {
             background: linear-gradient(90deg, #00b09b, #96c93d);
             box-shadow: 0 4px 15px rgba(0, 176, 155, 0.4);
         }
-        
+
         .btn-success:hover {
             box-shadow: 0 6px 20px rgba(0, 176, 155, 0.6);
         }
-        
+
         .btn-whatsapp {
             background: linear-gradient(90deg, #25D366, #128C7E);
             box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
         }
-        
+
         .btn-whatsapp:hover {
             box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
         }
-        
+
+        .btn-warning {
+            background: linear-gradient(90deg, #ff9500, #ff5e3a);
+            box-shadow: 0 4px 15px rgba(255, 149, 0, 0.4);
+        }
+
+        .btn-warning:hover {
+            box-shadow: 0 6px 20px rgba(255, 149, 0, 0.6);
+        }
+
+        .btn-danger {
+            background: linear-gradient(90deg, #ff416c, #ff4b2b);
+            box-shadow: 0 4px 15px rgba(255, 65, 108, 0.4);
+        }
+
+        .btn-danger:hover {
+            box-shadow: 0 6px 20px rgba(255, 65, 108, 0.6);
+        }
+
+        .btn-purple {
+            background: linear-gradient(90deg, #8e2de2, #4a00e0);
+            box-shadow: 0 4px 15px rgba(142, 45, 226, 0.4);
+        }
+
+        .btn-purple:hover {
+            box-shadow: 0 6px 20px rgba(142, 45, 226, 0.6);
+        }
+
         .section-title {
             text-align: center;
             margin: 50px 0 30px;
@@ -243,7 +316,7 @@
             position: relative;
             padding-bottom: 15px;
         }
-        
+
         .section-title::after {
             content: '';
             position: absolute;
@@ -255,7 +328,7 @@
             background: linear-gradient(90deg, #ff9a00, #ff2e63);
             border-radius: 2px;
         }
-        
+
         /* Category Buttons */
         .category-buttons {
             display: flex;
@@ -264,7 +337,7 @@
             margin: 40px 0;
             flex-wrap: wrap;
         }
-        
+
         .category-btn {
             background: rgba(255, 255, 255, 0.1);
             border: none;
@@ -281,43 +354,43 @@
             min-width: 200px;
             justify-content: center;
         }
-        
+
         .category-btn:hover {
             background: rgba(255, 255, 255, 0.2);
             transform: translateY(-5px);
         }
-        
+
         .category-btn.active {
             background: linear-gradient(90deg, #ff9a00, #ff2e63);
             box-shadow: 0 4px 15px rgba(255, 46, 99, 0.4);
         }
-        
+
         .category-btn i {
             font-size: 24px;
         }
-        
+
         /* Product Lists */
         .product-list {
             display: none;
             animation: fadeIn 0.5s ease;
         }
-        
+
         .product-list.active {
             display: block;
         }
-        
+
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        
+
         .packages {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 25px;
             margin-top: 30px;
         }
-        
+
         .package {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
@@ -325,18 +398,18 @@
             text-align: center;
             transition: transform 0.3s, box-shadow 0.3s;
             border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
         }
-        
+
         .package:hover {
             transform: translateY(-10px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
-        
+
         .package.popular {
             border: 2px solid #ff9a00;
-            position: relative;
         }
-        
+
         .package.popular::before {
             content: 'POPULAR';
             position: absolute;
@@ -350,31 +423,50 @@
             font-size: 12px;
             font-weight: bold;
         }
-        
+
+        .package .discount-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: linear-gradient(90deg, #ff416c, #ff4b2b);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .package .original-price {
+            text-decoration: line-through;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 16px;
+            margin-right: 5px;
+        }
+
         .package h3 {
             font-size: 24px;
             margin-bottom: 15px;
             color: #ff9a00;
         }
-        
+
         .package .bbc-amount {
             font-size: 32px;
             font-weight: bold;
             margin: 15px 0;
             color: #ff2e63;
         }
-        
+
         .package .price {
             font-size: 20px;
             margin-bottom: 20px;
         }
-        
+
         .package .btn {
             padding: 10px 25px;
             font-size: 16px;
             width: 100%;
         }
-        
+
         footer {
             text-align: center;
             margin-top: 60px;
@@ -382,7 +474,7 @@
             background: rgba(0, 0, 0, 0.7);
             border-radius: 10px;
         }
-        
+
         .contact-info {
             display: flex;
             justify-content: center;
@@ -390,7 +482,7 @@
             margin-top: 20px;
             flex-wrap: wrap;
         }
-        
+
         .contact-item {
             display: flex;
             align-items: center;
@@ -400,27 +492,27 @@
             border-radius: 10px;
             transition: all 0.3s;
         }
-        
+
         .contact-item:hover {
             background: rgba(255, 255, 255, 0.1);
             transform: translateY(-3px);
         }
-        
+
         .contact-item i {
             font-size: 24px;
             color: #ff9a00;
         }
-        
+
         .contact-item.whatsapp i {
             color: #25D366;
         }
-        
+
         .contact-item a {
             color: #fff;
             text-decoration: none;
             font-weight: 500;
         }
-        
+
         /* Modal Styles */
         .modal {
             display: none;
@@ -434,7 +526,7 @@
             align-items: center;
             justify-content: center;
         }
-        
+
         .modal-content {
             background: linear-gradient(135deg, #1a1a2e, #16213e);
             border-radius: 15px;
@@ -446,19 +538,23 @@
             max-height: 90vh;
             overflow-y: auto;
         }
-        
+
+        .modal-content.large {
+            max-width: 800px;
+        }
+
         .modal-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 20px;
         }
-        
+
         .modal-header h2 {
             font-size: 24px;
             color: #ff9a00;
         }
-        
+
         .close {
             color: #fff;
             font-size: 28px;
@@ -466,22 +562,22 @@
             cursor: pointer;
             transition: color 0.3s;
         }
-        
+
         .close:hover {
             color: #ff2e63;
         }
-        
+
         .form-group {
             margin-bottom: 20px;
         }
-        
+
         .form-group label {
             display: block;
             margin-bottom: 8px;
             font-weight: 500;
         }
-        
-        .form-group input, .form-group select {
+
+        .form-group input, .form-group select, .form-group textarea {
             width: 100%;
             padding: 12px 15px;
             border-radius: 8px;
@@ -490,40 +586,40 @@
             color: #fff;
             font-size: 16px;
         }
-        
-        .form-group input:focus, .form-group select:focus {
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
             outline: none;
             border-color: #ff9a00;
         }
-        
+
         .form-group input.error {
             border-color: #ff416c;
             box-shadow: 0 0 5px rgba(255, 65, 108, 0.5);
         }
-        
+
         .error-message {
             color: #ff416c;
             font-size: 14px;
             margin-top: 5px;
             display: none;
         }
-        
+
         .order-summary {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 10px;
             padding: 15px;
             margin: 20px 0;
         }
-        
+
         .order-summary h3 {
             margin-bottom: 10px;
             color: #ff9a00;
         }
-        
+
         .order-summary p {
             margin: 5px 0;
         }
-        
+
         .payment-instruction {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 10px;
@@ -531,46 +627,46 @@
             margin: 20px 0;
             display: none;
         }
-        
+
         .payment-instruction h3 {
             margin-bottom: 10px;
             color: #ff9a00;
         }
-        
+
         .payment-instruction p {
             margin: 5px 0;
             line-height: 1.6;
         }
-        
+
         .qr-code {
             text-align: center;
             margin: 15px 0;
         }
-        
+
         .qr-code img {
             width: 200px;
             height: 200px;
             border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 10px;
         }
-        
+
         .payment-status {
             text-align: center;
             padding: 20px;
             border-radius: 10px;
             margin: 20px 0;
         }
-        
+
         .payment-status.pending {
             background: rgba(255, 193, 7, 0.1);
             border: 1px solid rgba(255, 193, 7, 0.3);
         }
-        
+
         .payment-status.success {
             background: rgba(40, 167, 69, 0.1);
             border: 1px solid rgba(40, 167, 69, 0.3);
         }
-        
+
         .transaction-id {
             font-family: monospace;
             background: rgba(0, 0, 0, 0.3);
@@ -578,14 +674,14 @@
             border-radius: 5px;
             margin: 10px 0;
         }
-        
+
         .payment-apps {
             display: flex;
             flex-direction: column;
             gap: 10px;
             margin-top: 15px;
         }
-        
+
         .payment-button {
             display: flex;
             align-items: center;
@@ -600,19 +696,19 @@
             transition: transform 0.3s;
             color: white;
         }
-        
+
         .payment-button:hover {
             transform: translateY(-3px);
         }
-        
+
         .qris-button {
             background: linear-gradient(135deg, #6a11cb, #2575fc);
         }
-        
+
         .payment-button i {
             font-size: 24px;
         }
-        
+
         .whatsapp-info {
             display: flex;
             align-items: center;
@@ -623,12 +719,12 @@
             border-radius: 8px;
             border: 1px solid rgba(37, 211, 102, 0.3);
         }
-        
+
         .whatsapp-info i {
             color: #25D366;
             font-size: 20px;
         }
-        
+
         /* Warning Message Styles */
         .warning-message {
             background: rgba(255, 193, 7, 0.1);
@@ -637,31 +733,31 @@
             padding: 15px;
             margin: 20px 0;
         }
-        
+
         .warning-content {
             display: flex;
             align-items: flex-start;
             gap: 15px;
         }
-        
+
         .warning-content i {
             color: #ffc107;
             font-size: 24px;
             margin-top: 2px;
         }
-        
+
         .warning-text h4 {
             color: #ffc107;
             margin-bottom: 5px;
             font-size: 16px;
         }
-        
+
         .warning-text p {
             margin: 0;
             line-height: 1.5;
             font-size: 14px;
         }
-        
+
         /* Event/Collab Specific Styles */
         .event-collab-fields {
             display: none;
@@ -671,13 +767,13 @@
             padding: 15px;
             margin: 15px 0;
         }
-        
+
         .event-collab-fields h4 {
             color: #ff9a00;
             margin-bottom: 15px;
             font-size: 16px;
         }
-        
+
         .event-collab-note {
             background: rgba(255, 193, 7, 0.1);
             border-left: 4px solid #ff9a00;
@@ -686,7 +782,7 @@
             font-size: 14px;
             border-radius: 4px;
         }
-        
+
         /* Stock Status Banner */
         .stock-status-banner {
             background: rgba(255, 193, 7, 0.1);
@@ -696,122 +792,332 @@
             margin: 20px 0;
             text-align: center;
         }
-        
+
         .stock-status-banner.warning {
             background: rgba(255, 87, 87, 0.1);
             border: 1px solid rgba(255, 87, 87, 0.3);
         }
-        
+
         .stock-status-banner.info {
             background: rgba(0, 150, 255, 0.1);
             border: 1px solid rgba(0, 150, 255, 0.3);
         }
-        
+
         .stock-status-content {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 15px;
         }
-        
+
         .stock-status-content i {
             font-size: 24px;
         }
-        
+
         .stock-status-banner.warning i {
             color: #ff5757;
         }
-        
+
         .stock-status-banner.info i {
             color: #0096ff;
         }
-        
+
         .stock-status-text h4 {
             margin-bottom: 5px;
             font-size: 16px;
         }
-        
+
         .stock-status-text p {
             margin: 0;
             line-height: 1.5;
             font-size: 14px;
         }
-        
+
+        /* Admin Login Specific Styles */
+        .login-error {
+            background: rgba(255, 65, 108, 0.1);
+            border: 1px solid rgba(255, 65, 108, 0.3);
+            color: #ff416c;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            text-align: center;
+            display: none;
+        }
+
+        .admin-dashboard-btn {
+            background: linear-gradient(90deg, #8e2de2, #4a00e0);
+            box-shadow: 0 4px 15px rgba(142, 45, 226, 0.4);
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .admin-dashboard-btn:hover {
+            box-shadow: 0 6px 20px rgba(142, 45, 226, 0.6);
+        }
+
+        /* Admin Dashboard Styles */
+        .admin-dashboard {
+            display: none;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 1px solid rgba(255, 154, 0, 0.3);
+        }
+
+        .admin-dashboard.active {
+            display: block;
+        }
+
+        .admin-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 10px;
+        }
+
+        .admin-tab {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .admin-tab:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .admin-tab.active {
+            background: linear-gradient(90deg, #ff9a00, #ff2e63);
+        }
+
+        .admin-tab-content {
+            display: none;
+        }
+
+        .admin-tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .admin-section-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #ff9a00;
+            border-bottom: 2px solid rgba(255, 154, 0, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .admin-controls {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .admin-controls .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        .admin-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .admin-table th {
+            background: rgba(255, 154, 0, 0.2);
+            padding: 15px;
+            text-align: left;
+            font-weight: bold;
+            color: #ff9a00;
+        }
+
+        .admin-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .admin-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .admin-table tr:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .admin-action-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .admin-action-buttons .btn {
+            padding: 6px 12px;
+            font-size: 14px;
+        }
+
+        .admin-form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .admin-form-group {
+            margin-bottom: 15px;
+        }
+
+        .admin-form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #ff9a00;
+        }
+
+        .admin-form-group input, .admin-form-group select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .admin-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .admin-stat-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .admin-stat-card i {
+            font-size: 36px;
+            color: #ff9a00;
+            margin-bottom: 15px;
+        }
+
+        .admin-stat-card h3 {
+            font-size: 24px;
+            margin-bottom: 5px;
+            color: #ff2e63;
+        }
+
+        .admin-stat-card p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
                 gap: 15px;
             }
-            
+
             .desktop-nav ul {
                 flex-wrap: wrap;
                 justify-content: center;
             }
-            
+
             .photo-carousel-container {
                 height: 300px;
             }
-            
+
             .photo-overlay h2 {
                 font-size: 28px;
             }
-            
+
             .photo-overlay p {
                 font-size: 16px;
             }
-            
+
             .modal-content {
                 padding: 20px;
                 width: 95%;
             }
-            
+
             .carousel-arrow {
                 width: 40px;
                 height: 40px;
                 font-size: 18px;
             }
-            
+
             .carousel-arrow.prev {
                 left: 10px;
             }
-            
+
             .carousel-arrow.next {
                 right: 10px;
             }
-            
+
             .contact-info {
                 flex-direction: column;
                 align-items: center;
             }
-            
+
             .category-buttons {
                 flex-direction: column;
                 align-items: center;
             }
-            
+
             .category-btn {
                 width: 100%;
                 max-width: 300px;
             }
-            
+
             .warning-content {
                 flex-direction: column;
                 text-align: center;
                 gap: 10px;
             }
-            
+
             .warning-content i {
                 margin-top: 0;
             }
-            
+
             .event-collab-fields {
                 padding: 10px;
             }
-            
+
             .event-collab-note {
                 font-size: 12px;
                 padding: 8px 12px;
+            }
+
+            .admin-tabs {
+                flex-wrap: wrap;
+            }
+
+            .admin-table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            .admin-form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .admin-stats {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -829,7 +1135,7 @@
                     <a href="#packages" class="btn">Lihat Paket</a>
                 </div>
             </div>
-            
+
             <!-- Slide 2 -->
             <div class="photo-slide">
                 <img src="https://files.catbox.moe/t7gzw6.jpg" alt="Gaming Setup">
@@ -839,7 +1145,7 @@
                     <a href="#packages" class="btn">Pilih Paket</a>
                 </div>
             </div>
-            
+
             <!-- Slide 3 -->
             <div class="photo-slide">
                 <img src="https://files.catbox.moe/4e7dz2.jpg" alt="MLBB Characters">
@@ -849,7 +1155,7 @@
                     <a href="#packages" class="btn">Pilih Paket</a>
                 </div>
             </div>
-            
+
             <!-- Slide 4 -->
             <div class="photo-slide">
                 <img src="https://files.catbox.moe/4zds36.jpg" alt="Gaming Community">
@@ -862,7 +1168,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Carousel Navigation -->
         <button class="carousel-arrow prev">
             <i class="fas fa-chevron-left"></i>
@@ -870,7 +1176,7 @@
         <button class="carousel-arrow next">
             <i class="fas fa-chevron-right"></i>
         </button>
-        
+
         <div class="carousel-nav">
             <div class="carousel-dot active" data-slide="0"></div>
             <div class="carousel-dot" data-slide="1"></div>
@@ -886,7 +1192,7 @@
                     <img src="https://cdn-icons-png.flaticon.com/512/686/686589.png" alt="MLBB Advance Server Logo">
                     <h1>TopUp BBC</h1>
                 </div>
-                
+
                 <nav class="desktop-nav">
                     <ul>
                         <li><a href="#">Beranda</a></li>
@@ -894,6 +1200,12 @@
                         <li><a href="#contact">Kontak</a></li>
                     </ul>
                 </nav>
+
+                <!-- Logo Login Admin -->
+                <div class="admin-login-icon" id="adminLoginIcon">
+                    <i class="fas fa-user-shield"></i>
+                    <div class="tooltip">Login Admin</div>
+                </div>
             </div>
         </div>
     </header>
@@ -911,9 +1223,201 @@
         </div>
     </div>
 
+    <!-- Admin Dashboard (Awalnya Tersembunyi) -->
+    <div id="adminDashboard" class="admin-dashboard container">
+        <div class="admin-tabs">
+            <button class="admin-tab active" data-tab="dashboard">Dashboard</button>
+            <button class="admin-tab" data-tab="products">Kelola Produk</button>
+            <button class="admin-tab" data-tab="prices">Harga & Diskon</button>
+            <button class="admin-tab" data-tab="orders">Pesanan</button>
+        </div>
+
+        <!-- Tab Dashboard -->
+        <div class="admin-tab-content active" id="dashboardTab">
+            <h2 class="admin-section-title">Dashboard Admin</h2>
+            
+            <div class="admin-stats">
+                <div class="admin-stat-card">
+                    <i class="fas fa-coins"></i>
+                    <h3 id="totalProducts">0</h3>
+                    <p>Total Produk</p>
+                </div>
+                <div class="admin-stat-card">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3 id="totalOrders">0</h3>
+                    <p>Pesanan Hari Ini</p>
+                </div>
+                <div class="admin-stat-card">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <h3 id="totalRevenue">Rp 0</h3>
+                    <p>Pendapatan Bulan Ini</p>
+                </div>
+                <div class="admin-stat-card">
+                    <i class="fas fa-users"></i>
+                    <h3 id="activeUsers">0</h3>
+                    <p>Pengguna Aktif</p>
+                </div>
+            </div>
+
+            <div class="admin-controls">
+                <button class="btn btn-success" id="refreshStats">
+                    <i class="fas fa-sync-alt"></i> Refresh Stats
+                </button>
+                <button class="btn btn-warning" id="exportData">
+                    <i class="fas fa-file-export"></i> Export Data
+                </button>
+                <button class="btn btn-danger" id="logoutAdmin">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+
+            <h3 class="admin-section-title">Aksi Cepat</h3>
+            <div class="admin-controls">
+                <button class="btn" id="addNewProduct">
+                    <i class="fas fa-plus"></i> Tambah Produk Baru
+                </button>
+                <button class="btn btn-warning" id="updatePrices">
+                    <i class="fas fa-tags"></i> Update Semua Harga
+                </button>
+                <button class="btn btn-success" id="addDiscount">
+                    <i class="fas fa-percentage"></i> Tambah Diskon
+                </button>
+            </div>
+        </div>
+
+        <!-- Tab Kelola Produk -->
+        <div class="admin-tab-content" id="productsTab">
+            <h2 class="admin-section-title">Kelola Produk</h2>
+            
+            <div class="admin-controls">
+                <button class="btn" id="addProductBtn">
+                    <i class="fas fa-plus"></i> Tambah Produk
+                </button>
+                <button class="btn btn-warning" id="editMultipleBtn">
+                    <i class="fas fa-edit"></i> Edit Multiple
+                </button>
+                <button class="btn btn-danger" id="deleteSelectedBtn">
+                    <i class="fas fa-trash"></i> Hapus Terpilih
+                </button>
+            </div>
+
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" id="selectAll"></th>
+                        <th>Nama Produk</th>
+                        <th>Kategori</th>
+                        <th>BBC Amount</th>
+                        <th>Harga</th>
+                        <th>Diskon</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="productsTable">
+                    <!-- Data produk akan di-load di sini -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Tab Harga & Diskon -->
+        <div class="admin-tab-content" id="pricesTab">
+            <h2 class="admin-section-title">Kelola Harga & Diskon</h2>
+            
+            <div class="admin-form-row">
+                <div class="admin-form-group">
+                    <label for="discountType">Tipe Diskon</label>
+                    <select id="discountType">
+                        <option value="percentage">Persentase (%)</option>
+                        <option value="fixed">Potongan Tetap (Rp)</option>
+                    </select>
+                </div>
+                <div class="admin-form-group">
+                    <label for="discountValue">Nilai Diskon</label>
+                    <input type="number" id="discountValue" placeholder="Contoh: 10 atau 5000">
+                </div>
+                <div class="admin-form-group">
+                    <label for="applyTo">Terapkan ke</label>
+                    <select id="applyTo">
+                        <option value="all">Semua Produk</option>
+                        <option value="bbc">BBC Packages</option>
+                        <option value="skins">Skins/Items</option>
+                        <option value="charisma">Charisma</option>
+                        <option value="selected">Produk Terpilih</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="admin-controls">
+                <button class="btn btn-success" id="applyDiscountBtn">
+                    <i class="fas fa-check"></i> Terapkan Diskon
+                </button>
+                <button class="btn btn-danger" id="removeDiscountBtn">
+                    <i class="fas fa-times"></i> Hapus Diskon
+                </button>
+            </div>
+
+            <h3 class="admin-section-title">Daftar Harga BBC</h3>
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>BBC Amount</th>
+                        <th>Harga Normal</th>
+                        <th>Harga Diskon</th>
+                        <th>Diskon</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="priceTable">
+                    <!-- Data harga akan di-load di sini -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Tab Pesanan -->
+        <div class="admin-tab-content" id="ordersTab">
+            <h2 class="admin-section-title">Kelola Pesanan</h2>
+            
+            <div class="admin-controls">
+                <select id="orderFilter">
+                    <option value="all">Semua Pesanan</option>
+                    <option value="pending">Pending</option>
+                    <option value="paid">Sudah Bayar</option>
+                    <option value="processed">Diproses</option>
+                    <option value="completed">Selesai</option>
+                    <option value="cancelled">Dibatalkan</option>
+                </select>
+                <input type="date" id="orderDate">
+                <button class="btn" id="filterOrders">
+                    <i class="fas fa-filter"></i> Filter
+                </button>
+                <button class="btn btn-success" id="exportOrders">
+                    <i class="fas fa-file-excel"></i> Export
+                </button>
+            </div>
+
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>ID Pesanan</th>
+                        <th>Produk</th>
+                        <th>Customer</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                        <th>Tanggal</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="ordersTable">
+                    <!-- Data pesanan akan di-load di sini -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
     <section class="container">
         <h2 class="section-title" id="packages">Pilih Kategori</h2>
-        
+
         <!-- Category Buttons -->
         <div class="category-buttons">
             <button class="category-btn active" data-category="bbc">
@@ -929,119 +1433,25 @@
                 <span>CHARISMA</span>
             </button>
         </div>
-        
+
         <!-- BBC Product List -->
         <div id="product-bbc" class="product-list active">
             <div class="packages" id="bbc-packages">
                 <!-- Packages akan di-load secara dinamis -->
             </div>
         </div>
-        
+
         <!-- Skins/Items Product List -->
         <div id="product-skins" class="product-list">
-            <div class="packages">
-                <div class="package">
-                    <h3>Event / Collab</h3>
-                    <div class="bbc-amount">70k - 200k</div>
-                    <div class="price">Harga bervariasi</div>
-                    <button class="btn btn-buy" data-bbc="Event/Collab" data-price="70000" data-type="SKIN">Beli Sekarang</button>
-                </div>
-                
-                <div class="package">
-                    <h3>Lightborn</h3>
-                    <div class="bbc-amount">Skin</div>
-                    <div class="price">Rp 17.000</div>
-                    <button class="btn btn-buy" data-bbc="Lightborn Skin" data-price="17000" data-type="SKIN">Beli Sekarang</button>
-                </div>
-                
-                <div class="package popular">
-                    <h3>Epic</h3>
-                    <div class="bbc-amount">Skin</div>
-                    <div class="price">Rp 15.000</div>
-                    <button class="btn btn-buy" data-bbc="Epic Skin" data-price="15000" data-type="SKIN">Beli Sekarang</button>
-                </div>
-                
-                <div class="package">
-                    <h3>Special</h3>
-                    <div class="bbc-amount">Skin</div>
-                    <div class="price">Rp 10.000</div>
-                    <button class="btn btn-buy" data-bbc="Special Skin" data-price="10000" data-type="SKIN">Beli Sekarang</button>
-                </div>
-                
-                <div class="package">
-                    <h3>Elite</h3>
-                    <div class="bbc-amount">Skin</div>
-                    <div class="price">Rp 5.000</div>
-                    <button class="btn btn-buy" data-bbc="Elite Skin" data-price="5000" data-type="SKIN">Beli Sekarang</button>
-                </div>
-                
-                <div class="package">
-                    <h3>Starlight Basic</h3>
-                    <div class="bbc-amount">Skin</div>
-                    <div class="price">Rp 5.000</div>
-                    <button class="btn btn-buy" data-bbc="Starlight Basic" data-price="5000" data-type="SKIN">Beli Sekarang</button>
-                </div>
-                
-                <div class="package">
-                    <h3>Starlight Premium</h3>
-                    <div class="bbc-amount">Skin</div>
-                    <div class="price">Rp 10.000</div>
-                    <button class="btn btn-buy" data-bbc="Starlight Premium" data-price="10000" data-type="SKIN">Beli Sekarang</button>
-                </div>
-                
-                <div class="package">
-                    <h3>Rename Card</h3>
-                    <div class="bbc-amount">Item</div>
-                    <div class="price">Rp 5.000</div>
-                    <button class="btn btn-buy" data-bbc="Rename Card" data-price="5000" data-type="ITEM">Beli Sekarang</button>
-                </div>
-                
-                <div class="package">
-                    <h3>Flag Card</h3>
-                    <div class="bbc-amount">Item</div>
-                    <div class="price">Rp 5.000</div>
-                    <button class="btn btn-buy" data-bbc="Flag Card" data-price="5000" data-type="ITEM">Beli Sekarang</button>
-                </div>
-                
-                <div class="package">
-                    <h3>CN Squad</h3>
-                    <div class="bbc-amount">Item</div>
-                    <div class="price">Rp 5.000</div>
-                    <button class="btn btn-buy" data-bbc="CN Squad" data-price="5000" data-type="ITEM">Beli Sekarang</button>
-                </div>
-                
-                <div class="package">
-                    <h3>Emote</h3>
-                    <div class="bbc-amount">Item</div>
-                    <div class="price">Rp 1.000</div>
-                    <button class="btn btn-buy" data-bbc="Emote" data-price="1000" data-type="ITEM">Beli Sekarang</button>
-                </div>
+            <div class="packages" id="skins-packages">
+                <!-- Packages akan di-load secara dinamis -->
             </div>
         </div>
-        
+
         <!-- Charisma Product List -->
         <div id="product-charisma" class="product-list">
-            <div class="packages">
-                <div class="package">
-                    <h3>Angel Ark</h3>
-                    <div class="bbc-amount">Charisma</div>
-                    <div class="price">Rp 5.000</div>
-                    <button class="btn btn-buy" data-bbc="Angel Ark" data-price="5000" data-type="CHARISMA">Beli Sekarang</button>
-                </div>
-                
-                <div class="package">
-                    <h3>Paradise Island</h3>
-                    <div class="bbc-amount">Charisma</div>
-                    <div class="price">Rp 5.000</div>
-                    <button class="btn btn-buy" data-bbc="Paradise Island" data-price="5000" data-type="CHARISMA">Beli Sekarang</button>
-                </div>
-                
-                <div class="package">
-                    <h3>Goldmoon Lantren</h3>
-                    <div class="bbc-amount">Charisma</div>
-                    <div class="price">Rp 10.000</div>
-                    <button class="btn btn-buy" data-bbc="Goldmoon Lantren" data-price="10000" data-type="CHARISMA">Beli Sekarang</button>
-                </div>
+            <div class="packages" id="charisma-packages">
+                <!-- Packages akan di-load secara dinamis -->
             </div>
         </div>
     </section>
@@ -1060,6 +1470,116 @@
         </div>
     </footer>
 
+    <!-- Modal Login Admin -->
+    <div id="adminLoginModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Admin Login</h2>
+                <span class="close-admin">&times;</span>
+            </div>
+
+            <div class="login-error" id="loginError">
+                Username atau password salah!
+            </div>
+
+            <div class="form-group">
+                <label for="adminUsername">Username</label>
+                <input type="text" id="adminUsername" placeholder="Masukkan username">
+            </div>
+
+            <div class="form-group">
+                <label for="adminPassword">Password</label>
+                <input type="password" id="adminPassword" placeholder="Masukkan password">
+            </div>
+
+            <button class="btn admin-dashboard-btn" id="submitLogin">
+                <i class="fas fa-sign-in-alt"></i> Login
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal Tambah/Edit Produk -->
+    <div id="productModal" class="modal">
+        <div class="modal-content large">
+            <div class="modal-header">
+                <h2 id="productModalTitle">Tambah Produk Baru</h2>
+                <span class="close-product">&times;</span>
+            </div>
+
+            <div class="form-group">
+                <label for="productName">Nama Produk</label>
+                <input type="text" id="productName" placeholder="Contoh: Epic Skin, 1000 BBC, dll">
+            </div>
+
+            <div class="admin-form-row">
+                <div class="form-group">
+                    <label for="productCategory">Kategori</label>
+                    <select id="productCategory">
+                        <option value="bbc">BBC</option>
+                        <option value="skins">Skins/Items</option>
+                        <option value="charisma">Charisma</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="productType">Tipe Produk</label>
+                    <select id="productType">
+                        <option value="BBC">BBC</option>
+                        <option value="SKIN">Skin</option>
+                        <option value="ITEM">Item</option>
+                        <option value="CHARISMA">Charisma</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="admin-form-row">
+                <div class="form-group">
+                    <label for="bbcAmount">Jumlah BBC</label>
+                    <input type="number" id="bbcAmount" placeholder="Kosongkan jika bukan BBC">
+                </div>
+                <div class="form-group">
+                    <label for="productPrice">Harga (Rp)</label>
+                    <input type="number" id="productPrice" placeholder="Contoh: 5000">
+                </div>
+                <div class="form-group">
+                    <label for="productDiscount">Diskon (%)</label>
+                    <input type="number" id="productDiscount" placeholder="0-100" min="0" max="100">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="productDescription">Deskripsi Produk</label>
+                <textarea id="productDescription" rows="3" placeholder="Deskripsi singkat tentang produk"></textarea>
+            </div>
+
+            <div class="admin-form-row">
+                <div class="form-group">
+                    <label for="productStatus">Status</label>
+                    <select id="productStatus">
+                        <option value="active">Aktif</option>
+                        <option value="inactive">Nonaktif</option>
+                        <option value="out_of_stock">Stok Habis</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="isPopular">Popular?</label>
+                    <select id="isPopular">
+                        <option value="false">Tidak</option>
+                        <option value="true">Ya</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="admin-controls">
+                <button class="btn btn-success" id="saveProductBtn">
+                    <i class="fas fa-save"></i> Simpan Produk
+                </button>
+                <button class="btn btn-secondary" id="cancelProductBtn">
+                    <i class="fas fa-times"></i> Batal
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Modal Pembelian -->
     <div id="purchaseModal" class="modal">
         <div class="modal-content">
@@ -1067,48 +1587,48 @@
                 <h2 id="modalTitle">Beli Produk</h2>
                 <span class="close">&times;</span>
             </div>
-            
+
             <div class="form-group">
                 <label for="playerId">ID MLBB Advance Server</label>
                 <input type="text" id="playerId" placeholder="Masukkan ID MLBB Advance Server (contoh: 123456789)">
                 <div class="error-message" id="playerIdError">ID MLBB Advance Server harus diisi dan minimal 9 digit</div>
             </div>
-            
+
             <div class="form-group">
                 <label for="serverId">ID Server</label>
                 <input type="text" id="serverId" placeholder="Masukkan ID Server (contoh: 1234)">
                 <div class="error-message" id="serverIdError">ID Server harus diisi</div>
             </div>
-            
+
             <!-- Fields Khusus Event/Collab -->
             <div class="event-collab-fields" id="eventCollabFields">
                 <h4>Informasi Event/Collab</h4>
-                
+
                 <div class="form-group">
                     <label for="skinName">Nama Skin Collab</label>
                     <input type="text" id="skinName" placeholder="Masukkan nama skin collab yang diinginkan">
                     <div class="error-message" id="skinNameError">Nama skin collab harus diisi</div>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="customPrice">Harga (Rp)</label>
                     <input type="number" id="customPrice" placeholder="Masukkan harga sesuai kesepakatan">
                     <div class="error-message" id="customPriceError">Harga harus diisi dan minimal Rp 70.000</div>
                 </div>
-                
+
                 <div class="event-collab-note">
                     <i class="fas fa-info-circle"></i>
                     <strong>Note:</strong> Untuk pembelian Event/Collab, harga dapat bervariasi antara Rp 70.000 - Rp 200.000. 
                     Pastikan sudah diskusi harga terlebih dahulu.
                 </div>
             </div>
-            
+
             <div class="form-group">
                 <label for="nickname">Nickname</label>
                 <input type="text" id="nickname" placeholder="Masukkan Nickname (contoh: Player123)">
                 <div class="error-message" id="nicknameError">Nickname harus diisi</div>
             </div>
-            
+
             <div class="form-group">
                 <label for="whatsapp">Nomor WhatsApp</label>
                 <input type="tel" id="whatsapp" placeholder="Contoh: 628123456789" pattern="^62\d{9,12}$">
@@ -1118,7 +1638,7 @@
                     <span>Nomor WhatsApp akan digunakan untuk konfirmasi dan notifikasi</span>
                 </div>
             </div>
-            
+
             <div class="order-summary">
                 <h3>Ringkasan Pesanan</h3>
                 <p id="summaryBBC">Paket: -</p>
@@ -1129,7 +1649,7 @@
                 <p id="summaryNickname">Nickname: -</p>
                 <p id="summaryWhatsApp">WhatsApp: -</p>
             </div>
-            
+
             <!-- Tambahkan elemen peringatan -->
             <div class="warning-message" id="warningMessage" style="display: none;">
                 <div class="warning-content">
@@ -1140,9 +1660,9 @@
                     </div>
                 </div>
             </div>
-            
+
             <h3>Pilih Metode Pembayaran</h3>
-            
+
             <!-- Tombol Pembayaran QRIS -->
             <div class="payment-apps">
                 <button class="payment-button qris-button" id="payQRIS">
@@ -1150,7 +1670,7 @@
                     <span>Bayar dengan QRIS</span>
                 </button>
             </div>
-            
+
             <!-- Instruksi Pembayaran -->
             <div class="payment-instruction" id="paymentInstruction">
                 <h3>Instruksi Pembayaran QRIS</h3>
@@ -1160,13 +1680,13 @@
                 </div>
                 <p>Kode Pembayaran: <span class="transaction-id" id="paymentCode">-</span></p>
                 <p>Total: <strong id="paymentAmount">Rp 0</strong></p>
-                
+
                 <div class="payment-status pending" id="paymentStatus">
                     <p>Menunggu pembayaran...</p>
                     <button class="btn btn-success" id="alreadyPaid" style="margin-top: 15px;">Sudah Membayar</button>
                 </div>
             </div>
-            
+
             <div class="payment-status success" id="successMessage" style="display: none;">
                 <h3>Pembayaran Berhasil!</h3>
                 <p>BBC akan dikirim ke akun Anda dalam waktu 5 menit.</p>
@@ -1182,6 +1702,54 @@
         let currentStockStatus = '';
         let selectedPackage = null;
         let selectedPaymentMethod = null;
+        let isAdminLoggedIn = false;
+        let currentEditingProduct = null;
+
+        // Credential Admin (jangan diubah di frontend)
+        const ADMIN_CREDENTIALS = {
+            username: "SaktiStore",
+            password: "Admin123#"
+        };
+
+        // Data Produk (Simulasi Database)
+        let products = {
+            bbc: [
+                { id: 1, name: "Paket Pemula", amount: "1000", price: 5000, discount: 0, type: "BBC", category: "bbc", status: "active", popular: false },
+                { id: 2, name: "Paket Reguler", amount: "5000", price: 25000, discount: 0, type: "BBC", category: "bbc", status: "active", popular: false },
+                { id: 3, name: "Paket Advanced", amount: "10000", price: 50000, discount: 0, type: "BBC", category: "bbc", status: "active", popular: true },
+                { id: 4, name: "Paket Elite", amount: "15000", price: 75000, discount: 10, type: "BBC", category: "bbc", status: "active", popular: false },
+                { id: 5, name: "Paket Pro", amount: "20000", price: 100000, discount: 0, type: "BBC", category: "bbc", status: "active", popular: false },
+                { id: 6, name: "Paket Ultimate", amount: "50000", price: 250000, discount: 15, type: "BBC", category: "bbc", status: "active", popular: false },
+                { id: 7, name: "Paket Max", amount: "100000", price: 500000, discount: 0, type: "BBC", category: "bbc", status: "active", popular: false }
+            ],
+            skins: [
+                { id: 8, name: "Event / Collab", amount: "70k - 200k", price: 70000, discount: 0, type: "SKIN", category: "skins", status: "active", popular: false },
+                { id: 9, name: "Lightborn Skin", amount: "Skin", price: 17000, discount: 0, type: "SKIN", category: "skins", status: "active", popular: false },
+                { id: 10, name: "Epic Skin", amount: "Skin", price: 15000, discount: 20, type: "SKIN", category: "skins", status: "active", popular: true },
+                { id: 11, name: "Special Skin", amount: "Skin", price: 10000, discount: 0, type: "SKIN", category: "skins", status: "active", popular: false },
+                { id: 12, name: "Elite Skin", amount: "Skin", price: 5000, discount: 0, type: "SKIN", category: "skins", status: "active", popular: false },
+                { id: 13, name: "Starlight Basic", amount: "Skin", price: 5000, discount: 0, type: "SKIN", category: "skins", status: "active", popular: false },
+                { id: 14, name: "Starlight Premium", amount: "Skin", price: 10000, discount: 0, type: "SKIN", category: "skins", status: "active", popular: false },
+                { id: 15, name: "Rename Card", amount: "Item", price: 5000, discount: 0, type: "ITEM", category: "skins", status: "active", popular: false },
+                { id: 16, name: "Flag Card", amount: "Item", price: 5000, discount: 0, type: "ITEM", category: "skins", status: "active", popular: false },
+                { id: 17, name: "CN Squad", amount: "Item", price: 5000, discount: 0, type: "ITEM", category: "skins", status: "active", popular: false },
+                { id: 18, name: "Emote", amount: "Item", price: 1000, discount: 50, type: "ITEM", category: "skins", status: "active", popular: false }
+            ],
+            charisma: [
+                { id: 19, name: "Angel Ark", amount: "Charisma", price: 5000, discount: 0, type: "CHARISMA", category: "charisma", status: "active", popular: false },
+                { id: 20, name: "Paradise Island", amount: "Charisma", price: 5000, discount: 0, type: "CHARISMA", category: "charisma", status: "active", popular: false },
+                { id: 21, name: "Goldmoon Lantren", amount: "Charisma", price: 10000, discount: 25, type: "CHARISMA", category: "charisma", status: "active", popular: false }
+            ]
+        };
+
+        // Data Pesanan (Simulasi)
+        let orders = [
+            { id: "ORD-001", product: "10000 BBC", customer: "Player123", amount: 50000, status: "completed", date: "2023-12-01" },
+            { id: "ORD-002", product: "Epic Skin", customer: "Gamer456", amount: 15000, status: "processed", date: "2023-12-02" },
+            { id: "ORD-003", product: "5000 BBC", customer: "MLBBPro", amount: 25000, status: "paid", date: "2023-12-02" },
+            { id: "ORD-004", product: "Lightborn Skin", customer: "SkinLover", amount: 17000, status: "pending", date: "2023-12-03" },
+            { id: "ORD-005", product: "Goldmoon Lantren", customer: "CharismaKing", amount: 10000, status: "completed", date: "2023-12-03" }
+        ];
 
         // Carousel Functionality
         const carousel = document.querySelector('.photo-carousel');
@@ -1189,88 +1757,88 @@
         const dots = document.querySelectorAll('.carousel-dot');
         const prevBtn = document.querySelector('.carousel-arrow.prev');
         const nextBtn = document.querySelector('.carousel-arrow.next');
-        
+
         let currentSlide = 0;
         const totalSlides = slides.length;
-        
+
         // Function to update carousel position
         function updateCarousel() {
             carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
-            
+
             // Update active dot
             dots.forEach((dot, index) => {
                 dot.classList.toggle('active', index === currentSlide);
             });
         }
-        
+
         // Next slide
         function nextSlide() {
             currentSlide = (currentSlide + 1) % totalSlides;
             updateCarousel();
         }
-        
+
         // Previous slide
         function prevSlide() {
             currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
             updateCarousel();
         }
-        
+
         // Go to specific slide
         function goToSlide(slideIndex) {
             currentSlide = slideIndex;
             updateCarousel();
         }
-        
+
         // Event listeners
         prevBtn.addEventListener('click', prevSlide);
         nextBtn.addEventListener('click', nextSlide);
-        
+
         dots.forEach((dot, index) => {
             dot.addEventListener('click', () => goToSlide(index));
         });
-        
+
         // Auto slide every 5 seconds
         let slideInterval = setInterval(nextSlide, 5000);
-        
+
         // Pause auto slide on hover
         const carouselContainer = document.querySelector('.photo-carousel-container');
         carouselContainer.addEventListener('mouseenter', () => {
             clearInterval(slideInterval);
         });
-        
+
         carouselContainer.addEventListener('mouseleave', () => {
             slideInterval = setInterval(nextSlide, 5000);
         });
-        
+
         // Category Button Functionality
         const categoryBtns = document.querySelectorAll('.category-btn');
         const productLists = document.querySelectorAll('.product-list');
-        
+
         categoryBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 // Remove active class from all buttons and lists
                 categoryBtns.forEach(b => b.classList.remove('active'));
                 productLists.forEach(l => l.classList.remove('active'));
-                
+
                 // Add active class to clicked button
                 btn.classList.add('active');
-                
+
                 // Show corresponding product list
                 const category = btn.getAttribute('data-category');
                 document.getElementById(`product-${category}`).classList.add('active');
             });
         });
-        
+
         // WhatsApp Functionality
         const hubungiKamiBtn = document.getElementById('hubungiKamiBtn');
         const footerWhatsAppBtn = document.getElementById('footerWhatsAppBtn');
-        
+
         // Function to open WhatsApp
         function openWhatsApp(phoneNumber = "6289521142740", message = "Halo, saya ingin bertanya tentang Top Up BBC MLBB Advance Server") {
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, '_blank');
         }
-        
+
         // Event listeners for WhatsApp buttons
         if (hubungiKamiBtn) {
             hubungiKamiBtn.addEventListener('click', function(e) {
@@ -1278,20 +1846,20 @@
                 openWhatsApp();
             });
         }
-        
+
         if (footerWhatsAppBtn) {
             footerWhatsAppBtn.addEventListener('click', function(e) {
                 e.preventDefault();
                 openWhatsApp();
             });
         }
-        
+
         // Load data dari website_data.json
         async function loadWebsiteData() {
             try {
                 const response = await fetch('./website_data.json');
                 if (!response.ok) throw new Error('File tidak ditemukan');
-                
+
                 websiteData = await response.json();
                 updateWebsiteContent();
                 console.log('✅ Data website berhasil dimuat');
@@ -1322,10 +1890,10 @@
 
             // Update status stok banner
             updateStockStatusBanner(websiteData.stock_status_with_emoji);
-            
-            // Update harga BBC packages
-            updateBBCPackages(websiteData.prices);
-            
+
+            // Update produk dari data lokal
+            updateAllProducts();
+
             // Update timestamp
             console.log('Data terakhir diupdate:', websiteData.timestamp);
         }
@@ -1335,14 +1903,14 @@
             const banner = document.getElementById('stockStatusBanner');
             const title = document.getElementById('stockStatusTitle');
             const message = document.getElementById('stockStatusMessage');
-            
+
             if (!banner) return;
-            
+
             currentStockStatus = stockStatus;
-            
+
             // Reset classes
             banner.className = 'stock-status-banner';
-            
+
             if (stockStatus.includes('🔴') || stockStatus.toLowerCase().includes('habis')) {
                 banner.classList.add('warning');
                 title.innerHTML = '⚠️ Stok Sedang Habis';
@@ -1355,36 +1923,57 @@
                 title.innerHTML = '✅ Stok Tersedia';
                 message.innerHTML = 'Pembelian BBC dapat dilakukan secara normal.';
             }
-            
+
             banner.style.display = 'block';
         }
 
-        // Update BBC packages dengan harga terbaru
-        function updateBBCPackages(prices) {
-            const packagesContainer = document.getElementById('bbc-packages');
+        // Update semua produk
+        function updateAllProducts() {
+            updateProductPackages('bbc');
+            updateProductPackages('skins');
+            updateProductPackages('charisma');
+            updateAdminProductsTable();
+            updateAdminPriceTable();
+            updateAdminOrdersTable();
+            updateAdminStats();
+        }
+
+        // Update produk packages
+        function updateProductPackages(category) {
+            const packagesContainer = document.getElementById(`${category}-packages`);
             if (!packagesContainer) return;
 
-            // Urutkan amount dari terkecil ke terbesar
-            const sortedAmounts = Object.keys(prices).sort((a, b) => parseInt(a) - parseInt(b));
-            
+            const categoryProducts = products[category];
             let packagesHTML = '';
-            
-            sortedAmounts.forEach((amount, index) => {
-                const price = prices[amount];
-                const isPopular = amount === '10000'; // Tandai 10.000 BBC sebagai popular
-                
+
+            categoryProducts.forEach(product => {
+                const discountedPrice = product.discount > 0 
+                    ? product.price - (product.price * product.discount / 100)
+                    : product.price;
+
                 packagesHTML += `
-                    <div class="package ${isPopular ? 'popular' : ''}">
-                        <h3>Paket ${amount === '1000' ? 'Pemula' : amount === '5000' ? 'Reguler' : amount === '10000' ? 'Advanced' : amount === '15000' ? 'Elite' : amount === '20000' ? 'Pro' : amount === '50000' ? 'Ultimate' : 'Max'}</h3>
-                        <div class="bbc-amount">${parseInt(amount).toLocaleString('id-ID')} BBC</div>
-                        <div class="price">Rp ${price.toLocaleString('id-ID')}</div>
-                        <button class="btn btn-buy" data-bbc="${amount}" data-price="${price}" data-type="BBC">Beli Sekarang</button>
+                    <div class="package ${product.popular ? 'popular' : ''}" data-id="${product.id}">
+                        ${product.discount > 0 ? `<div class="discount-badge">${product.discount}% OFF</div>` : ''}
+                        <h3>${product.name}</h3>
+                        <div class="bbc-amount">${product.amount}</div>
+                        <div class="price">
+                            ${product.discount > 0 ? `<span class="original-price">Rp ${product.price.toLocaleString('id-ID')}</span>` : ''}
+                            Rp ${discountedPrice.toLocaleString('id-ID')}
+                        </div>
+                        <button class="btn btn-buy" 
+                            data-bbc="${product.name}" 
+                            data-price="${discountedPrice}" 
+                            data-type="${product.type}"
+                            data-original-price="${product.price}"
+                            data-discount="${product.discount}">
+                            Beli Sekarang
+                        </button>
                     </div>
                 `;
             });
-            
+
             packagesContainer.innerHTML = packagesHTML;
-            
+
             // Re-attach event listeners untuk tombol beli
             attachBuyButtonEvents();
         }
@@ -1392,24 +1981,28 @@
         // Attach event listeners untuk tombol beli
         function attachBuyButtonEvents() {
             const buyButtons = document.querySelectorAll('.btn-buy');
-            
+
             buyButtons.forEach(button => {
                 button.addEventListener('click', function() {
                     const bbcAmount = this.getAttribute('data-bbc');
                     const price = this.getAttribute('data-price');
                     const type = this.getAttribute('data-type');
-                    
+                    const originalPrice = this.getAttribute('data-original-price');
+                    const discount = this.getAttribute('data-discount');
+
                     selectedPackage = {
                         bbc: bbcAmount,
                         price: price,
-                        type: type
+                        type: type,
+                        originalPrice: originalPrice,
+                        discount: discount
                     };
-                    
+
                     // Update ringkasan pesanan
                     document.getElementById('summaryBBC').textContent = `Paket: ${bbcAmount}`;
                     document.getElementById('summaryPrice').textContent = `Harga: Rp ${parseInt(price).toLocaleString('id-ID')}`;
                     document.getElementById('summaryType').textContent = `Tipe: ${type}`;
-                    
+
                     // Update judul modal berdasarkan tipe produk
                     const modalTitle = document.getElementById('modalTitle');
                     if (type === 'BBC') {
@@ -1421,7 +2014,7 @@
                     } else {
                         modalTitle.textContent = 'Beli Produk';
                     }
-                    
+
                     // Tampilkan/sembunyikan fields Event/Collab
                     const eventCollabFields = document.getElementById('eventCollabFields');
                     if (bbcAmount === 'Event/Collab') {
@@ -1431,11 +2024,11 @@
                     } else {
                         eventCollabFields.style.display = 'none';
                     }
-                    
+
                     // Tampilkan peringatan berdasarkan tipe produk
                     const warningMessage = document.getElementById('warningMessage');
                     const warningText = document.getElementById('warningText');
-                    
+
                     if (type === 'BBC') {
                         warningText.innerHTML = '<strong>PERINGATAN UNTUK TOP UP BBC:</strong><br>Pastikan id server anda benar dan jangan lupa untuk aktifkan fitur live di mlbb anda';
                         warningMessage.style.display = 'block';
@@ -1445,7 +2038,7 @@
                     } else {
                         warningMessage.style.display = 'none';
                     }
-                    
+
                     // Reset form
                     document.getElementById('playerId').value = '';
                     document.getElementById('serverId').value = '';
@@ -1455,14 +2048,14 @@
                     document.getElementById('customPrice').value = '';
                     document.getElementById('paymentInstruction').style.display = 'none';
                     document.getElementById('successMessage').style.display = 'none';
-                    
+
                     // Reset error states
                     const errorMessages = document.querySelectorAll('.error-message');
                     errorMessages.forEach(error => error.style.display = 'none');
-                    
+
                     const errorInputs = document.querySelectorAll('.error');
                     errorInputs.forEach(input => input.classList.remove('error'));
-                    
+
                     // Tampilkan modal
                     document.getElementById('purchaseModal').style.display = 'flex';
                 });
@@ -1489,17 +2082,17 @@
             const whatsapp = document.getElementById('whatsapp').value;
             const type = selectedPackage.type;
             const price = selectedPackage.price;
-            
+
             // Tambahkan informasi khusus untuk Event/Collab
             let eventCollabInfo = "";
             if (bbcAmount === 'Event/Collab') {
                 const skinName = document.getElementById('skinName').value;
                 eventCollabInfo = `Nama Skin Collab: ${skinName}\n`;
             }
-            
+
             // Tambahkan peringatan berdasarkan status stok
             const stockWarning = showStockWarning();
-            
+
             // Tambahkan peringatan berdasarkan tipe produk
             let productWarning = "";
             if (type === "BBC") {
@@ -1507,7 +2100,7 @@
             } else if (type === "SKIN" || type === "ITEM") {
                 productWarning = "⚠️ *PERINGATAN UNTUK GIVE SKINS/ITEM:*\nUntuk pembelian SKINS/ITEM wajib berteman selama 7 hari\nBeli = paham!\n\n";
             }
-            
+
             const message = `Halo, saya sudah melakukan pembayaran untuk ${type}:
 
 ${stockWarning}${productWarning}*DETAIL PESANAN:*
@@ -1524,41 +2117,621 @@ Nickname: ${nickname}
 Status Stok Saat Ini: ${currentStockStatus}
 
 Silakan proses pesanan saya. Bukti transfer akan saya kirimkan di chat ini.`;
-            
+
             openWhatsApp(phoneNumber, message);
         }
+
+        // Fungsi untuk membuka dashboard admin
+        function openAdminDashboard() {
+            isAdminLoggedIn = true;
+            document.getElementById('adminDashboard').classList.add('active');
+            document.getElementById('adminDashboard').style.display = 'block';
+            
+            // Reset form login
+            document.getElementById('adminUsername').value = '';
+            document.getElementById('adminPassword').value = '';
+            document.getElementById('loginError').style.display = 'none';
+            
+            // Tampilkan notifikasi
+            showNotification('Selamat datang di Dashboard Admin!', 'success');
+            
+            // Update data admin
+            updateAdminStats();
+            updateAdminProductsTable();
+            updateAdminPriceTable();
+            updateAdminOrdersTable();
+        }
+
+        // Fungsi untuk logout admin
+        function logoutAdmin() {
+            isAdminLoggedIn = false;
+            document.getElementById('adminDashboard').classList.remove('active');
+            document.getElementById('adminDashboard').style.display = 'none';
+            showNotification('Anda telah logout dari dashboard admin.', 'info');
+        }
+
+        // Fungsi untuk validasi login admin
+        function validateAdminLogin(username, password) {
+            return username === ADMIN_CREDENTIALS.username && password === ADMIN_CREDENTIALS.password;
+        }
+
+        // Fungsi untuk update admin stats
+        function updateAdminStats() {
+            const totalProducts = Object.values(products).flat().length;
+            const totalOrders = orders.length;
+            const totalRevenue = orders.reduce((sum, order) => sum + order.amount, 0);
+            const activeUsers = new Set(orders.map(order => order.customer)).size;
+
+            document.getElementById('totalProducts').textContent = totalProducts;
+            document.getElementById('totalOrders').textContent = totalOrders;
+            document.getElementById('totalRevenue').textContent = `Rp ${totalRevenue.toLocaleString('id-ID')}`;
+            document.getElementById('activeUsers').textContent = activeUsers;
+        }
+
+        // Fungsi untuk update admin products table
+        function updateAdminProductsTable() {
+            const tableBody = document.getElementById('productsTable');
+            if (!tableBody) return;
+
+            let allProducts = [...products.bbc, ...products.skins, ...products.charisma];
+            let tableHTML = '';
+
+            allProducts.forEach(product => {
+                tableHTML += `
+                    <tr>
+                        <td><input type="checkbox" class="product-checkbox" data-id="${product.id}"></td>
+                        <td>${product.name}</td>
+                        <td>${product.category.toUpperCase()}</td>
+                        <td>${product.amount}</td>
+                        <td>Rp ${product.price.toLocaleString('id-ID')}</td>
+                        <td>${product.discount}%</td>
+                        <td>
+                            <span class="status-badge ${product.status === 'active' ? 'active' : 'inactive'}">
+                                ${product.status === 'active' ? 'Aktif' : 'Nonaktif'}
+                            </span>
+                        </td>
+                        <td>
+                            <div class="admin-action-buttons">
+                                <button class="btn btn-secondary edit-product" data-id="${product.id}">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="btn btn-danger delete-product" data-id="${product.id}">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                `;
+            });
+
+            tableBody.innerHTML = tableHTML;
+
+            // Attach event listeners untuk tombol edit/hapus
+            document.querySelectorAll('.edit-product').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const productId = parseInt(this.getAttribute('data-id'));
+                    editProduct(productId);
+                });
+            });
+
+            document.querySelectorAll('.delete-product').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const productId = parseInt(this.getAttribute('data-id'));
+                    deleteProduct(productId);
+                });
+            });
+        }
+
+        // Fungsi untuk update admin price table
+        function updateAdminPriceTable() {
+            const tableBody = document.getElementById('priceTable');
+            if (!tableBody) return;
+
+            let bbcProducts = products.bbc;
+            let tableHTML = '';
+
+            bbcProducts.forEach(product => {
+                const discountedPrice = product.discount > 0 
+                    ? product.price - (product.price * product.discount / 100)
+                    : product.price;
+
+                tableHTML += `
+                    <tr>
+                        <td>${product.amount} BBC</td>
+                        <td>Rp ${product.price.toLocaleString('id-ID')}</td>
+                        <td>Rp ${discountedPrice.toLocaleString('id-ID')}</td>
+                        <td>${product.discount}%</td>
+                        <td>
+                            <button class="btn btn-secondary edit-price" data-id="${product.id}">
+                                <i class="fas fa-edit"></i> Edit
+                            </button>
+                        </td>
+                    </tr>
+                `;
+            });
+
+            tableBody.innerHTML = tableHTML;
+        }
+
+        // Fungsi untuk update admin orders table
+        function updateAdminOrdersTable() {
+            const tableBody = document.getElementById('ordersTable');
+            if (!tableBody) return;
+
+            let tableHTML = '';
+
+            orders.forEach(order => {
+                tableHTML += `
+                    <tr>
+                        <td>${order.id}</td>
+                        <td>${order.product}</td>
+                        <td>${order.customer}</td>
+                        <td>Rp ${order.amount.toLocaleString('id-ID')}</td>
+                        <td>
+                            <span class="status-badge ${order.status}">
+                                ${order.status === 'pending' ? 'Pending' : 
+                                  order.status === 'paid' ? 'Sudah Bayar' : 
+                                  order.status === 'processed' ? 'Diproses' : 
+                                  order.status === 'completed' ? 'Selesai' : 'Dibatalkan'}
+                            </span>
+                        </td>
+                        <td>${order.date}</td>
+                        <td>
+                            <button class="btn btn-secondary view-order" data-id="${order.id}">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </td>
+                    </tr>
+                `;
+            });
+
+            tableBody.innerHTML = tableHTML;
+        }
+
+        // Fungsi untuk edit produk
+        function editProduct(productId) {
+            let allProducts = [...products.bbc, ...products.skins, ...products.charisma];
+            const product = allProducts.find(p => p.id === productId);
+            
+            if (!product) return;
+
+            currentEditingProduct = product;
+
+            document.getElementById('productModalTitle').textContent = 'Edit Produk';
+            document.getElementById('productName').value = product.name;
+            document.getElementById('productCategory').value = product.category;
+            document.getElementById('productType').value = product.type;
+            document.getElementById('bbcAmount').value = product.amount;
+            document.getElementById('productPrice').value = product.price;
+            document.getElementById('productDiscount').value = product.discount;
+            document.getElementById('productDescription').value = product.description || '';
+            document.getElementById('productStatus').value = product.status;
+            document.getElementById('isPopular').value = product.popular.toString();
+
+            document.getElementById('productModal').style.display = 'flex';
+        }
+
+        // Fungsi untuk menghapus produk
+        function deleteProduct(productId) {
+            if (!confirm('Apakah Anda yakin ingin menghapus produk ini?')) return;
+
+            // Hapus dari semua kategori
+            Object.keys(products).forEach(category => {
+                products[category] = products[category].filter(p => p.id !== productId);
+            });
+
+            updateAllProducts();
+            showNotification('Produk berhasil dihapus!', 'success');
+        }
+
+        // Fungsi untuk menyimpan produk
+        function saveProduct() {
+            const productName = document.getElementById('productName').value.trim();
+            const productCategory = document.getElementById('productCategory').value;
+            const productType = document.getElementById('productType').value;
+            const bbcAmount = document.getElementById('bbcAmount').value.trim();
+            const productPrice = parseInt(document.getElementById('productPrice').value);
+            const productDiscount = parseInt(document.getElementById('productDiscount').value) || 0;
+            const productStatus = document.getElementById('productStatus').value;
+            const isPopular = document.getElementById('isPopular').value === 'true';
+
+            if (!productName || !productPrice) {
+                showNotification('Nama produk dan harga harus diisi!', 'error');
+                return;
+            }
+
+            if (currentEditingProduct) {
+                // Update existing product
+                Object.keys(products).forEach(category => {
+                    products[category] = products[category].map(p => {
+                        if (p.id === currentEditingProduct.id) {
+                            return {
+                                ...p,
+                                name: productName,
+                                category: productCategory,
+                                type: productType,
+                                amount: bbcAmount,
+                                price: productPrice,
+                                discount: productDiscount,
+                                status: productStatus,
+                                popular: isPopular
+                            };
+                        }
+                        return p;
+                    });
+                });
+                showNotification('Produk berhasil diperbarui!', 'success');
+            } else {
+                // Add new product
+                const newProduct = {
+                    id: Date.now(), // Simple ID generation
+                    name: productName,
+                    category: productCategory,
+                    type: productType,
+                    amount: bbcAmount,
+                    price: productPrice,
+                    discount: productDiscount,
+                    status: productStatus,
+                    popular: isPopular
+                };
+
+                products[productCategory].push(newProduct);
+                showNotification('Produk berhasil ditambahkan!', 'success');
+            }
+
+            updateAllProducts();
+            document.getElementById('productModal').style.display = 'none';
+            currentEditingProduct = null;
+        }
+
+        // Fungsi untuk menerapkan diskon
+        function applyDiscount() {
+            const discountType = document.getElementById('discountType').value;
+            const discountValue = parseFloat(document.getElementById('discountValue').value);
+            const applyTo = document.getElementById('applyTo').value;
+
+            if (!discountValue || discountValue < 0) {
+                showNotification('Masukkan nilai diskon yang valid!', 'error');
+                return;
+            }
+
+            let selectedProducts = [];
+
+            if (applyTo === 'all') {
+                selectedProducts = [...products.bbc, ...products.skins, ...products.charisma];
+            } else if (applyTo === 'selected') {
+                // Implement checkbox selection logic
+                const checkboxes = document.querySelectorAll('.product-checkbox:checked');
+                if (checkboxes.length === 0) {
+                    showNotification('Pilih produk terlebih dahulu!', 'error');
+                    return;
+                }
+                
+                checkboxes.forEach(checkbox => {
+                    const productId = parseInt(checkbox.getAttribute('data-id'));
+                    let allProducts = [...products.bbc, ...products.skins, ...products.charisma];
+                    const product = allProducts.find(p => p.id === productId);
+                    if (product) selectedProducts.push(product);
+                });
+            } else {
+                selectedProducts = products[applyTo];
+            }
+
+            // Apply discount
+            selectedProducts.forEach(product => {
+                if (discountType === 'percentage') {
+                    product.discount = Math.min(100, Math.max(0, discountValue));
+                } else {
+                    // For fixed discount, calculate percentage based on price
+                    const discountPercentage = (discountValue / product.price) * 100;
+                    product.discount = Math.min(100, Math.max(0, discountPercentage));
+                }
+            });
+
+            updateAllProducts();
+            showNotification(`Diskon berhasil diterapkan ke ${selectedProducts.length} produk!`, 'success');
+        }
+
+        // Fungsi untuk menghapus diskon
+        function removeDiscount() {
+            const applyTo = document.getElementById('applyTo').value;
+
+            let selectedProducts = [];
+
+            if (applyTo === 'all') {
+                selectedProducts = [...products.bbc, ...products.skins, ...products.charisma];
+            } else if (applyTo === 'selected') {
+                // Implement checkbox selection logic
+                const checkboxes = document.querySelectorAll('.product-checkbox:checked');
+                if (checkboxes.length === 0) {
+                    showNotification('Pilih produk terlebih dahulu!', 'error');
+                    return;
+                }
+                
+                checkboxes.forEach(checkbox => {
+                    const productId = parseInt(checkbox.getAttribute('data-id'));
+                    let allProducts = [...products.bbc, ...products.skins, ...products.charisma];
+                    const product = allProducts.find(p => p.id === productId);
+                    if (product) selectedProducts.push(product);
+                });
+            } else {
+                selectedProducts = products[applyTo];
+            }
+
+            // Remove discount
+            selectedProducts.forEach(product => {
+                product.discount = 0;
+            });
+
+            updateAllProducts();
+            showNotification(`Diskon berhasil dihapus dari ${selectedProducts.length} produk!`, 'success');
+        }
+
+        // Fungsi untuk menampilkan notifikasi
+        function showNotification(message, type = 'info') {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.innerHTML = `
+                <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-circle' : 'info-circle'}"></i>
+                <span>${message}</span>
+            `;
+
+            // Add styles
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: ${type === 'success' ? 'rgba(40, 167, 69, 0.9)' : 
+                            type === 'error' ? 'rgba(255, 65, 108, 0.9)' : 
+                            'rgba(255, 193, 7, 0.9)'};
+                color: white;
+                padding: 15px 20px;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                z-index: 2000;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+                animation: slideIn 0.3s ease;
+            `;
+
+            document.body.appendChild(notification);
+
+            // Remove after 3 seconds
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 300);
+            }, 3000);
+        }
+
+        // Add animation styles
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+            .status-badge {
+                padding: 3px 10px;
+                border-radius: 12px;
+                font-size: 12px;
+                font-weight: bold;
+            }
+            .status-badge.active {
+                background: rgba(40, 167, 69, 0.2);
+                color: #28a745;
+            }
+            .status-badge.inactive {
+                background: rgba(255, 193, 7, 0.2);
+                color: #ffc107;
+            }
+            .status-badge.pending {
+                background: rgba(255, 193, 7, 0.2);
+                color: #ffc107;
+            }
+            .status-badge.paid {
+                background: rgba(0, 123, 255, 0.2);
+                color: #007bff;
+            }
+            .status-badge.processed {
+                background: rgba(23, 162, 184, 0.2);
+                color: #17a2b8;
+            }
+            .status-badge.completed {
+                background: rgba(40, 167, 69, 0.2);
+                color: #28a745;
+            }
+            .status-badge.cancelled {
+                background: rgba(220, 53, 69, 0.2);
+                color: #dc3545;
+            }
+        `;
+        document.head.appendChild(style);
 
         // Load data saat halaman dimuat
         document.addEventListener('DOMContentLoaded', function() {
             loadWebsiteData();
-            
+
             // Attach event listeners untuk tombol beli yang statis
             attachBuyButtonEvents();
-            
+
             // Auto-refresh data setiap 30 detik
             setInterval(loadWebsiteData, 30000);
-            
+
             // Modal functionality
             const modal = document.getElementById('purchaseModal');
             const closeBtn = document.querySelector('.close');
-            
-            // Tutup modal
+
+            // Admin login modal
+            const adminModal = document.getElementById('adminLoginModal');
+            const adminLoginIcon = document.getElementById('adminLoginIcon');
+            const closeAdminBtn = document.querySelector('.close-admin');
+            const submitLoginBtn = document.getElementById('submitLogin');
+
+            // Product modal
+            const productModal = document.getElementById('productModal');
+            const closeProductBtn = document.querySelector('.close-product');
+            const saveProductBtn = document.getElementById('saveProductBtn');
+            const cancelProductBtn = document.getElementById('cancelProductBtn');
+
+            // Buka modal login admin
+            adminLoginIcon.addEventListener('click', function() {
+                adminModal.style.display = 'flex';
+                // Reset form dan error
+                document.getElementById('adminUsername').value = '';
+                document.getElementById('adminPassword').value = '';
+                document.getElementById('loginError').style.display = 'none';
+            });
+
+            // Tutup modal login admin
+            closeAdminBtn.addEventListener('click', function() {
+                adminModal.style.display = 'none';
+            });
+
+            // Tutup modal login admin jika klik di luar
+            window.addEventListener('click', function(event) {
+                if (event.target === adminModal) {
+                    adminModal.style.display = 'none';
+                }
+                if (event.target === productModal) {
+                    productModal.style.display = 'none';
+                    currentEditingProduct = null;
+                }
+            });
+
+            // Submit login admin
+            submitLoginBtn.addEventListener('click', function() {
+                const username = document.getElementById('adminUsername').value.trim();
+                const password = document.getElementById('adminPassword').value.trim();
+                const loginError = document.getElementById('loginError');
+
+                if (!username || !password) {
+                    loginError.textContent = "Username dan password harus diisi!";
+                    loginError.style.display = 'block';
+                    return;
+                }
+
+                if (validateAdminLogin(username, password)) {
+                    adminModal.style.display = 'none';
+                    openAdminDashboard();
+                } else {
+                    loginError.textContent = "Username atau password salah!";
+                    loginError.style.display = 'block';
+                }
+            });
+
+            // Juga bisa submit dengan Enter
+            document.getElementById('adminPassword').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    submitLoginBtn.click();
+                }
+            });
+
+            // Admin Tab Navigation
+            document.querySelectorAll('.admin-tab').forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const tabId = this.getAttribute('data-tab');
+                    
+                    // Update active tab
+                    document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show corresponding content
+                    document.querySelectorAll('.admin-tab-content').forEach(content => {
+                        content.classList.remove('active');
+                    });
+                    document.getElementById(`${tabId}Tab`).classList.add('active');
+                });
+            });
+
+            // Admin Controls
+            document.getElementById('logoutAdmin').addEventListener('click', logoutAdmin);
+            document.getElementById('refreshStats').addEventListener('click', updateAdminStats);
+            document.getElementById('addNewProduct').addEventListener('click', function() {
+                currentEditingProduct = null;
+                document.getElementById('productModalTitle').textContent = 'Tambah Produk Baru';
+                // Reset form
+                document.getElementById('productName').value = '';
+                document.getElementById('productCategory').value = 'bbc';
+                document.getElementById('productType').value = 'BBC';
+                document.getElementById('bbcAmount').value = '';
+                document.getElementById('productPrice').value = '';
+                document.getElementById('productDiscount').value = '0';
+                document.getElementById('productDescription').value = '';
+                document.getElementById('productStatus').value = 'active';
+                document.getElementById('isPopular').value = 'false';
+                
+                productModal.style.display = 'flex';
+            });
+
+            document.getElementById('updatePrices').addEventListener('click', function() {
+                showNotification('Fitur update harga sedang dikembangkan!', 'info');
+            });
+
+            document.getElementById('addDiscount').addEventListener('click', function() {
+                document.querySelector('.admin-tab[data-tab="prices"]').click();
+            });
+
+            // Product Modal Controls
+            closeProductBtn.addEventListener('click', function() {
+                productModal.style.display = 'none';
+                currentEditingProduct = null;
+            });
+
+            saveProductBtn.addEventListener('click', saveProduct);
+            cancelProductBtn.addEventListener('click', function() {
+                productModal.style.display = 'none';
+                currentEditingProduct = null;
+            });
+
+            // Add Product Button
+            document.getElementById('addProductBtn').addEventListener('click', function() {
+                currentEditingProduct = null;
+                document.getElementById('productModalTitle').textContent = 'Tambah Produk Baru';
+                // Reset form
+                document.getElementById('productName').value = '';
+                document.getElementById('productCategory').value = 'bbc';
+                document.getElementById('productType').value = 'BBC';
+                document.getElementById('bbcAmount').value = '';
+                document.getElementById('productPrice').value = '';
+                document.getElementById('productDiscount').value = '0';
+                document.getElementById('productDescription').value = '';
+                document.getElementById('productStatus').value = 'active';
+                document.getElementById('isPopular').value = 'false';
+                
+                productModal.style.display = 'flex';
+            });
+
+            // Apply Discount Button
+            document.getElementById('applyDiscountBtn').addEventListener('click', applyDiscount);
+            document.getElementById('removeDiscountBtn').addEventListener('click', removeDiscount);
+
+            // Tutup modal pembelian
             closeBtn.addEventListener('click', function() {
                 modal.style.display = 'none';
             });
-            
+
             // Tutup modal jika klik di luar konten
             window.addEventListener('click', function(event) {
                 if (event.target === modal) {
                     modal.style.display = 'none';
                 }
             });
-            
+
             // Tombol Pembayaran QRIS
             document.getElementById('payQRIS').addEventListener('click', function() {
                 startPaymentProcess('QRIS');
             });
-            
+
             // Tombol Sudah Membayar
             document.getElementById('alreadyPaid').addEventListener('click', function() {
                 // Validasi jika belum memilih metode pembayaran
@@ -1566,25 +2739,25 @@ Silakan proses pesanan saya. Bukti transfer akan saya kirimkan di chat ini.`;
                     alert('Silakan pilih metode pembayaran terlebih dahulu!');
                     return;
                 }
-                
+
                 // Tampilkan pesan sukses
                 document.getElementById('paymentInstruction').style.display = 'none';
                 document.getElementById('successMessage').style.display = 'block';
-                
+
                 // Simulasi pengiriman notifikasi WhatsApp
                 console.log(`Notifikasi WhatsApp dikirim`);
-                
+
                 // Redirect ke WhatsApp setelah 3 detik
                 setTimeout(function() {
                     sendPaymentConfirmation();
-                    
+
                     // Reset form dan tutup modal setelah 5 detik
                     setTimeout(function() {
                         modal.style.display = 'none';
                         document.getElementById('successMessage').style.display = 'none';
-                        
+
                         // Tampilkan notifikasi
-                        alert(`Pembelian ${selectedPackage.bbc} ${selectedPackage.type} berhasil! Pesanan akan diproses dalam 5 menit.`);
+                        showNotification(`Pembelian ${selectedPackage.bbc} ${selectedPackage.type} berhasil! Pesanan akan diproses dalam 5 menit.`, 'success');
                     }, 2000);
                 }, 3000);
             });
@@ -1597,25 +2770,25 @@ Silakan proses pesanan saya. Bukti transfer akan saya kirimkan di chat ini.`;
                 alert('Harap perbaiki data yang masih error sebelum melanjutkan!');
                 return;
             }
-            
+
             const playerId = document.getElementById('playerId').value.trim();
             const serverId = document.getElementById('serverId').value.trim();
             const nickname = document.getElementById('nickname').value.trim();
             const whatsapp = document.getElementById('whatsapp').value;
-            
+
             selectedPaymentMethod = method;
-            
+
             // Generate kode pembayaran dengan nomor WhatsApp
             const paymentCode = `QRIS-${Math.floor(1000 + Math.random() * 9000)}`;
             document.getElementById('paymentCode').textContent = paymentCode;
             document.getElementById('paymentAmount').textContent = `Rp ${parseInt(selectedPackage.price).toLocaleString('id-ID')}`;
-            
+
             // Tampilkan QRIS yang sudah ditentukan
             document.getElementById('paymentQr').src = "https://files.catbox.moe/v1494f.jpg";
-            
+
             // Tampilkan instruksi pembayaran
             document.getElementById('paymentInstruction').style.display = 'block';
-            
+
             // Scroll ke instruksi pembayaran
             document.getElementById('paymentInstruction').scrollIntoView({ behavior: 'smooth' });
         }
@@ -1623,14 +2796,14 @@ Silakan proses pesanan saya. Bukti transfer akan saya kirimkan di chat ini.`;
         // Fungsi validasi form
         function validateForm() {
             let isValid = true;
-            
+
             // Reset error messages
             const errorMessages = document.querySelectorAll('.error-message');
             errorMessages.forEach(error => error.style.display = 'none');
-            
+
             const errorInputs = document.querySelectorAll('.error');
             errorInputs.forEach(input => input.classList.remove('error'));
-            
+
             // Validasi Player ID
             const playerIdInput = document.getElementById('playerId');
             if (!playerIdInput.value.trim() || playerIdInput.value.trim().length < 9) {
@@ -1638,7 +2811,7 @@ Silakan proses pesanan saya. Bukti transfer akan saya kirimkan di chat ini.`;
                 playerIdInput.classList.add('error');
                 isValid = false;
             }
-            
+
             // Validasi Server ID
             const serverIdInput = document.getElementById('serverId');
             if (!serverIdInput.value.trim()) {
@@ -1646,7 +2819,7 @@ Silakan proses pesanan saya. Bukti transfer akan saya kirimkan di chat ini.`;
                 serverIdInput.classList.add('error');
                 isValid = false;
             }
-            
+
             // Validasi khusus untuk Event/Collab
             if (selectedPackage.bbc === 'Event/Collab') {
                 // Validasi Nama Skin
@@ -1656,7 +2829,7 @@ Silakan proses pesanan saya. Bukti transfer akan saya kirimkan di chat ini.`;
                     skinNameInput.classList.add('error');
                     isValid = false;
                 }
-                
+
                 // Validasi Harga Custom
                 const customPriceInput = document.getElementById('customPrice');
                 const customPrice = parseInt(customPriceInput.value);
@@ -1669,7 +2842,7 @@ Silakan proses pesanan saya. Bukti transfer akan saya kirimkan di chat ini.`;
                     selectedPackage.price = customPrice;
                 }
             }
-            
+
             // Validasi Nickname
             const nicknameInput = document.getElementById('nickname');
             if (!nicknameInput.value.trim()) {
@@ -1677,7 +2850,7 @@ Silakan proses pesanan saya. Bukti transfer akan saya kirimkan di chat ini.`;
                 nicknameInput.classList.add('error');
                 isValid = false;
             }
-            
+
             // Validasi WhatsApp
             const whatsappInput = document.getElementById('whatsapp');
             const whatsappValidation = validateWhatsApp(whatsappInput.value);
@@ -1687,7 +2860,7 @@ Silakan proses pesanan saya. Bukti transfer akan saya kirimkan di chat ini.`;
                 whatsappInput.classList.add('error');
                 isValid = false;
             }
-            
+
             return isValid;
         }
 
@@ -1695,17 +2868,17 @@ Silakan proses pesanan saya. Bukti transfer akan saya kirimkan di chat ini.`;
         function validateWhatsApp(number) {
             // Hapus karakter selain angka
             const cleaned = number.replace(/[^0-9]/g, '');
-            
+
             // Validasi panjang nomor dan kode negara
             if (cleaned.length < 10 || cleaned.length > 15) {
                 return { isValid: false, message: "Nomor WhatsApp harus 10-15 digit" };
             }
-            
+
             // Pastikan diawali 62
             if (!cleaned.startsWith('62')) {
                 return { isValid: false, message: "Harus menggunakan kode negara 62" };
             }
-            
+
             return { isValid: true, cleaned: cleaned };
         }
     </script>
