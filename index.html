@@ -26,40 +26,28 @@
             padding: 0 20px;
         }
 
-        /* Photo Carousel Styles */
-        .photo-carousel-container {
+        /* Banner Styles */
+        .banner {
             width: 100%;
-            height: 500px;
+            height: 400px;
             position: relative;
             overflow: hidden;
             margin-bottom: 0;
         }
 
-        .photo-carousel {
-            display: flex;
-            transition: transform 0.5s ease;
-            height: 100%;
-        }
-
-        .photo-slide {
-            min-width: 100%;
-            height: 100%;
-            position: relative;
-        }
-
-        .photo-slide img {
+        .banner img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-        .photo-overlay {
+        .banner-overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.4);
+            background: rgba(0, 0, 0, 0.6);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -68,74 +56,48 @@
             padding: 20px;
         }
 
-        .photo-overlay h2 {
+        .banner-overlay h2 {
             font-size: 36px;
             margin-bottom: 15px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: #ff9a00;
         }
 
-        .photo-overlay p {
-            font-size: 18px;
-            max-width: 600px;
-            margin-bottom: 20px;
+        .banner-overlay p {
+            font-size: 24px;
+            max-width: 800px;
+            margin-bottom: 25px;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            line-height: 1.6;
+            font-weight: bold;
         }
 
-        .carousel-nav {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            position: absolute;
-            bottom: 20px;
-            left: 0;
-            right: 0;
-            z-index: 10;
-        }
-
-        .carousel-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.5);
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .carousel-dot.active {
-            background: #ff9a00;
-            transform: scale(1.2);
-        }
-
-        .carousel-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            font-size: 20px;
-            cursor: pointer;
+        .banner-whatsapp {
             display: flex;
             align-items: center;
-            justify-content: center;
+            gap: 15px;
+            background: rgba(37, 211, 102, 0.2);
+            padding: 15px 30px;
+            border-radius: 50px;
+            border: 2px solid #25D366;
+            margin-top: 20px;
             transition: all 0.3s;
-            z-index: 10;
         }
 
-        .carousel-arrow:hover {
-            background: rgba(0, 0, 0, 0.8);
-            transform: translateY(-50%) scale(1.1);
+        .banner-whatsapp:hover {
+            background: rgba(37, 211, 102, 0.3);
+            transform: scale(1.05);
         }
 
-        .carousel-arrow.prev {
-            left: 20px;
+        .banner-whatsapp i {
+            font-size: 28px;
+            color: #25D366;
         }
 
-        .carousel-arrow.next {
-            right: 20px;
+        .banner-whatsapp span {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
         }
 
         header {
@@ -687,58 +649,276 @@
             border-radius: 4px;
         }
 
-        /* Stock Status Banner */
-        .stock-status-banner {
-            background: rgba(255, 193, 7, 0.1);
-            border: 1px solid rgba(255, 193, 7, 0.3);
-            border-radius: 10px;
-            padding: 15px;
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        .stock-status-banner.warning {
-            background: rgba(255, 87, 87, 0.1);
-            border: 1px solid rgba(255, 87, 87, 0.3);
-        }
-
-        .stock-status-banner.info {
-            background: rgba(0, 150, 255, 0.1);
-            border: 1px solid rgba(0, 150, 255, 0.3);
-        }
-
-        .stock-status-content {
+        /* Live Chat Styles */
+        .live-chat-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #0088cc, #00aced);
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 15px;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4);
+            transition: all 0.3s;
+            z-index: 999;
         }
 
-        .stock-status-content i {
+        .live-chat-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 136, 204, 0.6);
+        }
+
+        .live-chat-modal {
+            display: none;
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 350px;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+            overflow: hidden;
+        }
+
+        .live-chat-header {
+            background: linear-gradient(90deg, #0088cc, #00aced);
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .live-chat-header h3 {
+            margin: 0;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .live-chat-header .close-chat {
+            color: white;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .live-chat-body {
+            padding: 20px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .chat-messages {
+            margin-bottom: 20px;
+        }
+
+        .message {
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            border-radius: 10px;
+            max-width: 80%;
+            word-wrap: break-word;
+        }
+
+        .message.user {
+            background: rgba(0, 136, 204, 0.2);
+            margin-left: auto;
+            border: 1px solid rgba(0, 136, 204, 0.3);
+        }
+
+        .message.bot {
+            background: rgba(255, 255, 255, 0.1);
+            margin-right: auto;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .message.admin {
+            background: rgba(255, 154, 0, 0.2);
+            margin-right: auto;
+            border: 1px solid rgba(255, 154, 0, 0.3);
+            border-left: 4px solid #ff9a00;
+        }
+
+        .message.admin::before {
+            content: "Admin";
+            display: block;
+            font-size: 12px;
+            color: #ff9a00;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .message-time {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 5px;
+            text-align: right;
+        }
+
+        .chat-input-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .chat-input {
+            flex: 1;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .chat-input:focus {
+            outline: none;
+            border-color: #0088cc;
+        }
+
+        .send-btn {
+            background: #0088cc;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 0 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .send-btn:hover {
+            background: #00aced;
+        }
+
+        /* Typing Indicator */
+        .typing-indicator {
+            display: none;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            width: fit-content;
+        }
+
+        .typing-indicator span {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 50%;
+            margin: 0 2px;
+            opacity: 0.4;
+            animation: typing 1.4s infinite both;
+        }
+
+        .typing-indicator span:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .typing-indicator span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .typing-indicator span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes typing {
+            0%, 100% {
+                opacity: 0.4;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        /* Notification Badge */
+        .notification-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #ff2e63;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Developer Credits */
+        .developer-credits {
+            text-align: center;
+            margin: 40px 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            border-left: 4px solid #ff9a00;
+            border-right: 4px solid #ff9a00;
+        }
+
+        .developer-credits h3 {
+            color: #ff9a00;
+            margin-bottom: 15px;
             font-size: 24px;
         }
 
-        .stock-status-banner.warning i {
-            color: #ff5757;
-        }
-
-        .stock-status-banner.info i {
-            color: #0096ff;
-        }
-
-        .stock-status-text h4 {
-            margin-bottom: 5px;
+        .developer-credits p {
+            margin: 10px 0;
             font-size: 16px;
+            line-height: 1.6;
         }
 
-        .stock-status-text p {
-            margin: 0;
-            line-height: 1.5;
-            font-size: 14px;
+        .dev-line {
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #ff9a00, #ff2e63, #ff9a00, transparent);
+            margin: 20px 0;
+            border-radius: 2px;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            .banner {
+                height: 300px;
+            }
+
+            .banner-overlay h2 {
+                font-size: 28px;
+            }
+
+            .banner-overlay p {
+                font-size: 20px;
+            }
+
+            .banner-whatsapp {
+                padding: 12px 20px;
+            }
+
+            .banner-whatsapp i {
+                font-size: 24px;
+            }
+
+            .banner-whatsapp span {
+                font-size: 18px;
+            }
+
             .header-content {
                 flex-direction: column;
                 gap: 15px;
@@ -749,35 +929,9 @@
                 justify-content: center;
             }
 
-            .photo-carousel-container {
-                height: 300px;
-            }
-
-            .photo-overlay h2 {
-                font-size: 28px;
-            }
-
-            .photo-overlay p {
-                font-size: 16px;
-            }
-
             .modal-content {
                 padding: 20px;
                 width: 95%;
-            }
-
-            .carousel-arrow {
-                width: 40px;
-                height: 40px;
-                font-size: 18px;
-            }
-
-            .carousel-arrow.prev {
-                left: 10px;
-            }
-
-            .carousel-arrow.next {
-                right: 10px;
             }
 
             .contact-info {
@@ -813,69 +967,30 @@
                 font-size: 12px;
                 padding: 8px 12px;
             }
+
+            .live-chat-modal {
+                width: 90%;
+                right: 5%;
+                left: 5%;
+                bottom: 80px;
+            }
+
+            .live-chat-btn {
+                bottom: 20px;
+                right: 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Photo Carousel -->
-    <div class="photo-carousel-container">
-        <div class="photo-carousel">
-            <!-- Slide 1 -->
-            <div class="photo-slide">
-                <img src="https://files.catbox.moe/95b7n5.jpg" alt="MLBB Gameplay">
-                <div class="photo-overlay">
-                    <h2>Top Up BBC MLBB Advance Server</h2>
-                    <p>Dapatkan BBC dengan harga terbaik untuk meningkatkan pengalaman bermain MLBB Advance Server Anda</p>
-                    <a href="#packages" class="btn">Lihat Paket</a>
-                </div>
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="photo-slide">
-                <img src="https://files.catbox.moe/t7gzw6.jpg" alt="Gaming Setup">
-                <div class="photo-overlay">
-                    <h2>Proses Cepat & Aman</h2>
-                    <p>BBC akan dikirim ke akun Anda dalam waktu 5 menit setelah pembayaran berhasil</p>
-                    <a href="#packages" class="btn">Pilih Paket</a>
-                </div>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="photo-slide">
-                <img src="https://files.catbox.moe/4e7dz2.jpg" alt="MLBB Characters">
-                <div class="photo-overlay">
-                    <h2>Berbagai Paket Tersedia</h2>
-                    <p>Dari paket pemula hingga ultimate, pilih sesuai kebutuhan dan budget Anda</p>
-                    <a href="#packages" class="btn">Pilih Paket</a>
-                </div>
-            </div>
-
-            <!-- Slide 4 -->
-            <div class="photo-slide">
-                <img src="https://files.catbox.moe/4zds36.jpg" alt="Gaming Community">
-                <div class="photo-overlay">
-                    <h2>Support 24/7</h2>
-                    <p>Tim support kami siap membantu Anda kapan saja melalui WhatsApp</p>
-                    <a href="#" class="btn btn-whatsapp" id="hubungiKamiBtn">
-                        <i class="fab fa-whatsapp"></i> Hubungi Kami
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Carousel Navigation -->
-        <button class="carousel-arrow prev">
-            <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="carousel-arrow next">
-            <i class="fas fa-chevron-right"></i>
-        </button>
-
-        <div class="carousel-nav">
-            <div class="carousel-dot active" data-slide="0"></div>
-            <div class="carousel-dot" data-slide="1"></div>
-            <div class="carousel-dot" data-slide="2"></div>
-            <div class="carousel-dot" data-slide="3"></div>
+    <!-- Banner -->
+    <div class="banner">
+        <img src="https://files.catbox.moe/b98vra.jpg" alt="Top Up BBC MLBB Advance Server">
+        <div class="banner-overlay">
+         <a href="https://wa.me/6289521142740" class="banner-whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                <span>Chat via WhatsApp</span>
+            </a>
         </div>
     </div>
 
@@ -892,22 +1007,21 @@
                         <li><a href="#">Beranda</a></li>
                         <li><a href="#packages">Paket BBC</a></li>
                         <li><a href="#contact">Kontak</a></li>
+                        <li><a href="#" id="whatsappDevBtn">WhatsApp Dev</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-    <!-- Status Stok Banner -->
+    <!-- Developer Credits -->
     <div class="container">
-        <div id="stockStatusBanner" class="stock-status-banner" style="display: none;">
-            <div class="stock-status-content">
-                <i class="fas fa-info-circle"></i>
-                <div class="stock-status-text">
-                    <h4 id="stockStatusTitle">Status Stok</h4>
-                    <p id="stockStatusMessage">Memuat status stok...</p>
-                </div>
-            </div>
+        <div class="developer-credits">
+            <div class="dev-line"></div>
+            <h3>Terima Kasih Kepada</h3>
+            <p>RizzDev - Developer Website</p>
+            <p>Atas kontribusi dan dukungannya dalam pengembangan website ini</p>
+            <div class="dev-line"></div>
         </div>
     </div>
 
@@ -925,7 +1039,7 @@
                 <span>GIVE SKINS/ITEM</span>
             </button>
             <button class="category-btn" data-category="charisma">
-                <i class="fas fa-gem"></i>
+                <i class="fas fa-star"></i>
                 <span>CHARISMA</span>
             </button>
         </div>
@@ -933,56 +1047,9 @@
         <!-- BBC Product List -->
         <div id="product-bbc" class="product-list active">
             <div class="packages" id="bbc-packages">
-                <!-- BBC Packages -->
-                <!-- BBC Packages -->
-<div class="package">
-    <h3>Paket Pemula</h3>
-    <div class="bbc-amount">1,000 BBC</div>
-    <div class="price">Rp 4,000</div>
-    <button class="btn btn-buy" data-bbc="1000" data-price="4000" data-type="BBC">Beli Sekarang</button>
-</div>
-
-<div class="package">
-    <h3>Paket Reguler</h3>
-    <div class="bbc-amount">5,000 BBC</div>
-    <div class="price">Rp 18,000</div>
-    <button class="btn btn-buy" data-bbc="5000" data-price="18000" data-type="BBC">Beli Sekarang</button>
-</div>
-
-<div class="package popular">
-    <h3>Paket Advanced</h3>
-    <div class="bbc-amount">10,000 BBC</div>
-    <div class="price">Rp 36,000</div>
-    <button class="btn btn-buy" data-bbc="10000" data-price="36000" data-type="BBC">Beli Sekarang</button>
-</div>
-
-<div class="package">
-    <h3>Paket Elite</h3>
-    <div class="bbc-amount">15,000 BBC</div>
-    <div class="price">Rp 54,000</div>
-    <button class="btn btn-buy" data-bbc="15000" data-price="54000" data-type="BBC">Beli Sekarang</button>
-</div>
-
-<div class="package">
-    <h3>Paket Pro</h3>
-    <div class="bbc-amount">20,000 BBC</div>
-    <div class="price">Rp 72,000</div>
-    <button class="btn btn-buy" data-bbc="20000" data-price="72000" data-type="BBC">Beli Sekarang</button>
-</div>
-
-<div class="package">
-    <h3>Paket Ultimate</h3>
-    <div class="bbc-amount">50,000 BBC</div>
-    <div class="price">Rp 180,000</div>
-    <button class="btn btn-buy" data-bbc="50000" data-price="180000" data-type="BBC">Beli Sekarang</button>
-</div>
-
-<div class="package">
-    <h3>Paket Max</h3>
-    <div class="bbc-amount">100,000 BBC</div>
-    <div class="price">Rp 360,000</div>
-    <button class="btn btn-buy" data-bbc="100000" data-price="360000" data-type="BBC">Beli Sekarang</button>
-</div>
+                <!-- Packages akan di-load secara dinamis -->
+            </div>
+        </div>
 
         <!-- Skins/Items Product List -->
         <div id="product-skins" class="product-list">
@@ -1070,24 +1137,24 @@
         <div id="product-charisma" class="product-list">
             <div class="packages">
                 <div class="package">
-                    <h3>Angel Ark</h3>
-                    <div class="bbc-amount">Charisma</div>
+                    <h3>Charisma</h3>
+                    <div class="bbc-amount">Angel Ark</div>
                     <div class="price">Rp 5.000</div>
                     <button class="btn btn-buy" data-bbc="Angel Ark" data-price="5000" data-type="CHARISMA">Beli Sekarang</button>
                 </div>
 
                 <div class="package">
-                    <h3>Paradise Island</h3>
-                    <div class="bbc-amount">Charisma</div>
+                    <h3>Charisma</h3>
+                    <div class="bbc-amount">Paradise Island</div>
                     <div class="price">Rp 5.000</div>
                     <button class="btn btn-buy" data-bbc="Paradise Island" data-price="5000" data-type="CHARISMA">Beli Sekarang</button>
                 </div>
 
-                <div class="package">
-                    <h3>Goldmoon Lantren</h3>
-                    <div class="bbc-amount">Charisma</div>
+                <div class="package popular">
+                    <h3>Charisma</h3>
+                    <div class="bbc-amount">Goldmoon Lantern</div>
                     <div class="price">Rp 10.000</div>
-                    <button class="btn btn-buy" data-bbc="Goldmoon Lantren" data-price="10000" data-type="CHARISMA">Beli Sekarang</button>
+                    <button class="btn btn-buy" data-bbc="Goldmoon Lantern" data-price="10000" data-type="CHARISMA">Beli Sekarang</button>
                 </div>
             </div>
         </div>
@@ -1102,10 +1169,40 @@
             </div>
             <div class="contact-item whatsapp">
                 <i class="fab fa-whatsapp"></i>
-                <a href="#" id="footerWhatsAppBtn">WhatsApp: 6289521142740</a>
+                <a href="#" id="footerWhatsAppBtn">WhatsApp: +62 895-2114-2740</a>
             </div>
         </div>
     </footer>
+
+    <!-- Live Chat Button -->
+    <div class="live-chat-btn" id="liveChatBtn">
+        <i class="fab fa-telegram"></i>
+        <span class="notification-badge" id="chatNotification" style="display:none;"></span>
+    </div>
+
+    <!-- Live Chat Modal -->
+    <div class="live-chat-modal" id="liveChatModal">
+        <div class="live-chat-header">
+            <h3><i class="fab fa-telegram"></i> Live Chat Support</h3>
+            <span class="close-chat">&times;</span>
+        </div>
+        <div class="live-chat-body">
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot">
+                    Halo! Selamat datang di Live Chat Support. Silakan tanyakan apa yang Anda butuhkan.
+                </div>
+            </div>
+            <div class="typing-indicator" id="typingIndicator">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" class="chat-input" id="chatInput" placeholder="Ketik pesan Anda...">
+                <button class="send-btn" id="sendChatBtn">Kirim</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Modal Pembelian -->
     <div id="purchaseModal" class="modal">
@@ -1226,68 +1323,19 @@
     <script>
         // Data untuk website
         let websiteData = null;
-        let currentStockStatus = '';
         let selectedPackage = null;
         let selectedPaymentMethod = null;
-
-        // Carousel Functionality
-        const carousel = document.querySelector('.photo-carousel');
-        const slides = document.querySelectorAll('.photo-slide');
-        const dots = document.querySelectorAll('.carousel-dot');
-        const prevBtn = document.querySelector('.carousel-arrow.prev');
-        const nextBtn = document.querySelector('.carousel-arrow.next');
-
-        let currentSlide = 0;
-        const totalSlides = slides.length;
-
-        // Function to update carousel position
-        function updateCarousel() {
-            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
-
-            // Update active dot
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentSlide);
-            });
-        }
-
-        // Next slide
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            updateCarousel();
-        }
-
-        // Previous slide
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            updateCarousel();
-        }
-
-        // Go to specific slide
-        function goToSlide(slideIndex) {
-            currentSlide = slideIndex;
-            updateCarousel();
-        }
-
-        // Event listeners
-        prevBtn.addEventListener('click', prevSlide);
-        nextBtn.addEventListener('click', nextSlide);
-
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => goToSlide(index));
-        });
-
-        // Auto slide every 5 seconds
-        let slideInterval = setInterval(nextSlide, 5000);
-
-        // Pause auto slide on hover
-        const carouselContainer = document.querySelector('.photo-carousel-container');
-        carouselContainer.addEventListener('mouseenter', () => {
-            clearInterval(slideInterval);
-        });
-
-        carouselContainer.addEventListener('mouseleave', () => {
-            slideInterval = setInterval(nextSlide, 5000);
-        });
+        
+        // Telegram Bot Configuration
+        const TELEGRAM_BOT_TOKEN = "8173829476:AAGmI0qkofU9PSKz8yzdc9dqOyzAzOEPZK0";
+        const TELEGRAM_CHAT_ID = "7235188932";
+        const DEV_WHATSAPP = "6282130455080";
+        
+        // Live Chat Configuration
+        let chatSessionId = null;
+        let lastUpdateId = 0;
+        let chatPollingInterval = null;
+        let chatOpen = false;
 
         // Category Button Functionality
         const categoryBtns = document.querySelectorAll('.category-btn');
@@ -1311,6 +1359,7 @@
         // WhatsApp Functionality
         const hubungiKamiBtn = document.getElementById('hubungiKamiBtn');
         const footerWhatsAppBtn = document.getElementById('footerWhatsAppBtn');
+        const whatsappDevBtn = document.getElementById('whatsappDevBtn');
 
         // Function to open WhatsApp
         function openWhatsApp(phoneNumber = "6289521142740", message = "Halo, saya ingin bertanya tentang Top Up BBC MLBB Advance Server") {
@@ -1333,167 +1382,226 @@
             });
         }
 
-        // Load data dari website_data.json
-        async function loadWebsiteData() {
-            try {
-                const response = await fetch('./website_data.json');
-                if (!response.ok) throw new Error('File tidak ditemukan');
-
-                websiteData = await response.json();
-                updateWebsiteContent();
-                console.log('✅ Data website berhasil dimuat');
-            } catch (error) {
-                console.error('❌ Gagal memuat data website:', error);
-                // // Update bagian websiteData default:
-websiteData = {
-    prices: {
-        '1000': 4000,
-        '5000': 18000,
-        '10000': 36000,
-        '15000': 54000,
-        '20000': 72000,
-        '50000': 180000,
-        '100000': 360000
-    },
-    stock_status: 'Tersedia',
-    stock_status_with_emoji: '🟢 Tersedia',
-    timestamp: new Date().toLocaleString('id-ID')
-};
-                updateWebsiteContent();
-            }
-        }
-
-        // Update konten website dengan data terbaru
-        function updateWebsiteContent() {
-            if (!websiteData) return;
-
-            // Update status stok banner
-            updateStockStatusBanner(websiteData.stock_status_with_emoji);
-
-            // Update timestamp
-            console.log('Data terakhir diupdate:', websiteData.timestamp);
-        }
-
-        // Update status stok banner
-        function updateStockStatusBanner(stockStatus) {
-            const banner = document.getElementById('stockStatusBanner');
-            const title = document.getElementById('stockStatusTitle');
-            const message = document.getElementById('stockStatusMessage');
-
-            if (!banner) return;
-
-            currentStockStatus = stockStatus;
-
-            // Reset classes
-            banner.className = 'stock-status-banner';
-
-            if (stockStatus.includes('🔴') || stockStatus.toLowerCase().includes('habis')) {
-                banner.classList.add('warning');
-                title.innerHTML = '⚠️ Stok Sedang Habis';
-                message.innerHTML = 'Pembelian BBC sementara tidak dapat diproses. Silakan coba lagi nanti.';
-            } else if (stockStatus.includes('🟡') || stockStatus.toLowerCase().includes('diisi')) {
-                banner.classList.add('info');
-                title.innerHTML = 'ℹ️ Stok Sedang Diisi Ulang';
-                message.innerHTML = 'Proses pembelian mungkin memakan waktu lebih lama dari biasanya.';
-            } else {
-                title.innerHTML = '✅ Stok Tersedia';
-                message.innerHTML = 'Pembelian BBC dapat dilakukan secara normal.';
-            }
-
-            banner.style.display = 'block';
-        }
-
-        // Attach event listeners untuk tombol beli
-        function attachBuyButtonEvents() {
-            const buyButtons = document.querySelectorAll('.btn-buy');
-
-            buyButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const bbcAmount = this.getAttribute('data-bbc');
-                    const price = this.getAttribute('data-price');
-                    const type = this.getAttribute('data-type');
-
-                    selectedPackage = {
-                        bbc: bbcAmount,
-                        price: price,
-                        type: type
-                    };
-
-                    // Update ringkasan pesanan
-                    document.getElementById('summaryBBC').textContent = `Paket: ${bbcAmount}`;
-                    document.getElementById('summaryPrice').textContent = `Harga: Rp ${parseInt(price).toLocaleString('id-ID')}`;
-                    document.getElementById('summaryType').textContent = `Tipe: ${type}`;
-
-                    // Update judul modal berdasarkan tipe produk
-                    const modalTitle = document.getElementById('modalTitle');
-                    if (type === 'BBC') {
-                        modalTitle.textContent = 'Top Up BBC';
-                    } else if (type === 'SKIN' || type === 'ITEM') {
-                        modalTitle.textContent = 'Beli Skin/Item';
-                    } else if (type === 'CHARISMA') {
-                        modalTitle.textContent = 'Beli Charisma';
-                    } else {
-                        modalTitle.textContent = 'Beli Produk';
-                    }
-
-                    // Tampilkan/sembunyikan fields Event/Collab
-                    const eventCollabFields = document.getElementById('eventCollabFields');
-                    if (bbcAmount === 'Event/Collab') {
-                        eventCollabFields.style.display = 'block';
-                        // Set placeholder harga berdasarkan data-price
-                        document.getElementById('customPrice').placeholder = `Masukkan harga (minimal Rp ${parseInt(price).toLocaleString('id-ID')})`;
-                    } else {
-                        eventCollabFields.style.display = 'none';
-                    }
-
-                    // Tampilkan peringatan berdasarkan tipe produk
-                    const warningMessage = document.getElementById('warningMessage');
-                    const warningText = document.getElementById('warningText');
-
-                    if (type === 'BBC') {
-                        warningText.innerHTML = '<strong>PERINGATAN UNTUK TOP UP BBC:</strong><br>Pastikan id server anda benar dan jangan lupa untuk aktifkan fitur live di mlbb anda';
-                        warningMessage.style.display = 'block';
-                    } else if (type === 'SKIN' || type === 'ITEM') {
-                        warningText.innerHTML = '<strong>PERINGATAN UNTUK GIVE SKINS/ITEM:</strong><br>Untuk pembelian SKINS/ITEM wajib berteman selama 7 hari<br><strong>Beli = paham!</strong>';
-                        warningMessage.style.display = 'block';
-                    } else {
-                        warningMessage.style.display = 'none';
-                    }
-
-                    // Reset form
-                    document.getElementById('playerId').value = '';
-                    document.getElementById('serverId').value = '';
-                    document.getElementById('nickname').value = '';
-                    document.getElementById('whatsapp').value = '';
-                    document.getElementById('skinName').value = '';
-                    document.getElementById('customPrice').value = '';
-                    document.getElementById('paymentInstruction').style.display = 'none';
-                    document.getElementById('successMessage').style.display = 'none';
-
-                    // Reset error states
-                    const errorMessages = document.querySelectorAll('.error-message');
-                    errorMessages.forEach(error => error.style.display = 'none');
-
-                    const errorInputs = document.querySelectorAll('.error');
-                    errorInputs.forEach(input => input.classList.remove('error'));
-
-                    // Tampilkan modal
-                    document.getElementById('purchaseModal').style.display = 'flex';
-                });
+        if (whatsappDevBtn) {
+            whatsappDevBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                openWhatsApp(DEV_WHATSAPP, "Halo RizzDev, saya dari website TopUp BBC MLBB Advance Server");
             });
         }
 
-        // Fungsi untuk menampilkan peringatan berdasarkan status stok
-        function showStockWarning() {
-            if (currentStockStatus.includes('🔴') || currentStockStatus.toLowerCase().includes('habis')) {
-                return "⚠️ *PERINGATAN:* Stok BBC sedang habis. Pembelian sementara tidak dapat diproses.\n\n";
-            } else if (currentStockStatus.includes('🟡') || currentStockStatus.toLowerCase().includes('diisi')) {
-                return "ℹ️ *INFORMASI:* Stok BBC sedang diisi ulang. Proses pembelian mungkin sedikit lebih lambat.\n\n";
-            }
-            return "";
+        // Live Chat Functionality
+        const liveChatBtn = document.getElementById('liveChatBtn');
+        const liveChatModal = document.getElementById('liveChatModal');
+        const closeChatBtn = document.querySelector('.close-chat');
+        const chatInput = document.getElementById('chatInput');
+        const sendChatBtn = document.getElementById('sendChatBtn');
+        const chatMessages = document.getElementById('chatMessages');
+        const typingIndicator = document.getElementById('typingIndicator');
+        const chatNotification = document.getElementById('chatNotification');
+
+        // Generate unique session ID for this chat
+        function generateSessionId() {
+            return 'chat-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9);
         }
 
-        // Modifikasi fungsi sendPaymentConfirmation untuk menambahkan peringatan stok
+        // Get current time in readable format
+        function getCurrentTime() {
+            const now = new Date();
+            return now.toLocaleTimeString('id-ID', { 
+                hour: '2-digit', 
+                minute: '2-digit',
+                hour12: false 
+            });
+        }
+
+        // Toggle live chat modal
+        liveChatBtn.addEventListener('click', () => {
+            if (liveChatModal.style.display === 'block') {
+                liveChatModal.style.display = 'none';
+                chatOpen = false;
+                stopPollingForMessages();
+            } else {
+                liveChatModal.style.display = 'block';
+                chatOpen = true;
+                // Generate new session ID when opening chat
+                chatSessionId = generateSessionId();
+                startPollingForMessages();
+                // Hide notification badge when opening chat
+                chatNotification.style.display = 'none';
+                liveChatBtn.style.animation = 'none';
+                // Focus on input field
+                setTimeout(() => {
+                    chatInput.focus();
+                }, 100);
+            }
+        });
+
+        closeChatBtn.addEventListener('click', () => {
+            liveChatModal.style.display = 'none';
+            chatOpen = false;
+            stopPollingForMessages();
+        });
+
+        // Close chat when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === liveChatModal) {
+                liveChatModal.style.display = 'none';
+                chatOpen = false;
+                stopPollingForMessages();
+            }
+        });
+
+        // Add message to chat
+        function addMessage(text, sender = 'bot', timestamp = null) {
+            const messageDiv = document.createElement('div');
+            
+            if (sender === 'user') {
+                messageDiv.className = 'message user';
+                messageDiv.textContent = text;
+            } else if (sender === 'admin') {
+                messageDiv.className = 'message admin';
+                messageDiv.textContent = text;
+            } else {
+                messageDiv.className = 'message bot';
+                messageDiv.textContent = text;
+            }
+            
+            // Add timestamp
+            const timeDiv = document.createElement('div');
+            timeDiv.className = 'message-time';
+            timeDiv.textContent = timestamp || getCurrentTime();
+            
+            messageDiv.appendChild(timeDiv);
+            chatMessages.appendChild(messageDiv);
+            
+            // Scroll to bottom
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+            
+            // Hide typing indicator
+            typingIndicator.style.display = 'none';
+        }
+
+        // Show typing indicator
+        function showTypingIndicator() {
+            typingIndicator.style.display = 'block';
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // Hide typing indicator
+        function hideTypingIndicator() {
+            typingIndicator.style.display = 'none';
+        }
+
+        // Send message to Telegram (simplified version)
+        async function sendToTelegram(message) {
+            try {
+                const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        chat_id: TELEGRAM_CHAT_ID,
+                        text: `💬 *PESAN DARI LIVE CHAT*\n\nSession ID: ${chatSessionId}\n\nPesan: ${message}\n\n📍 Dari: Website TopUp BBC`,
+                        parse_mode: 'Markdown'
+                    })
+                });
+
+                const data = await response.json();
+                return data.ok ? data.result.message_id : false;
+            } catch (error) {
+                console.error('Error sending to Telegram:', error);
+                return false;
+            }
+        }
+
+        // Get updates from Telegram (admin replies) - simplified version
+        async function getTelegramUpdates() {
+            try {
+                const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/getUpdates?offset=${lastUpdateId + 1}`);
+                const data = await response.json();
+                
+                if (data.ok && data.result.length > 0) {
+                    data.result.forEach(update => {
+                        // Update last update ID
+                        lastUpdateId = update.update_id;
+                        
+                        // Check if this is a message from admin
+                        if (update.message && update.message.chat.id.toString() === TELEGRAM_CHAT_ID) {
+                            const adminMessage = update.message.text;
+                            
+                            // Show notification if chat is not open
+                            if (!chatOpen) {
+                                chatNotification.style.display = 'block';
+                                chatNotification.textContent = '1';
+                                liveChatBtn.style.animation = 'pulse 1s infinite';
+                            }
+                            
+                            // Display admin message in chat if chat is open
+                            if (chatOpen) {
+                                addMessage(adminMessage, 'admin');
+                            }
+                        }
+                    });
+                }
+            } catch (error) {
+                console.error('Error getting Telegram updates:', error);
+            }
+        }
+
+        // Start polling for messages from admin
+        function startPollingForMessages() {
+            // Clear any existing interval
+            if (chatPollingInterval) {
+                clearInterval(chatPollingInterval);
+            }
+            
+            // Poll for new messages every 3 seconds
+            chatPollingInterval = setInterval(getTelegramUpdates, 3000);
+        }
+
+        // Stop polling for messages
+        function stopPollingForMessages() {
+            if (chatPollingInterval) {
+                clearInterval(chatPollingInterval);
+                chatPollingInterval = null;
+            }
+        }
+
+        // Send chat message
+        sendChatBtn.addEventListener('click', async () => {
+            const message = chatInput.value.trim();
+            if (!message) return;
+
+            // Add user message
+            addMessage(message, 'user');
+            chatInput.value = '';
+            
+            // Show typing indicator
+            showTypingIndicator();
+
+            // Send to Telegram
+            const messageId = await sendToTelegram(message);
+            
+            // Add bot response based on success
+            setTimeout(() => {
+                hideTypingIndicator();
+                if (messageId) {
+                    addMessage('✅ Pesan Anda telah terkirim. Admin akan membalas segera melalui chat ini.');
+                } else {
+                    addMessage('❌ Gagal mengirim pesan. Silakan hubungi admin melalui WhatsApp langsung.');
+                }
+            }, 1000);
+        });
+
+        // Send on Enter key
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendChatBtn.click();
+            }
+        });
+
+        // Modifikasi fungsi untuk handle produk Charisma
         function sendPaymentConfirmation() {
             const phoneNumber = "6289521142740";
             const bbcAmount = selectedPackage.bbc;
@@ -1511,20 +1619,19 @@ websiteData = {
                 eventCollabInfo = `Nama Skin Collab: ${skinName}\n`;
             }
 
-            // Tambahkan peringatan berdasarkan status stok
-            const stockWarning = showStockWarning();
-
             // Tambahkan peringatan berdasarkan tipe produk
             let productWarning = "";
             if (type === "BBC") {
                 productWarning = "⚠️ *PERINGATAN UNTUK TOP UP BBC:*\nPastikan id server anda benar dan jangan lupa untuk aktifkan fitur live di mlbb anda\n\n";
             } else if (type === "SKIN" || type === "ITEM") {
                 productWarning = "⚠️ *PERINGATAN UNTUK GIVE SKINS/ITEM:*\nUntuk pembelian SKINS/ITEM wajib berteman selama 7 hari\nBeli = paham!\n\n";
+            } else if (type === "CHARISMA") {
+                productWarning = "⚠️ *PERINGATAN UNTUK CHARISMA:*\nUntuk pembelian CHARISMA wajib berteman selama 7 hari\nBeli = paham!\n\n";
             }
 
             const message = `Halo, saya sudah melakukan pembayaran untuk ${type}:
 
-${stockWarning}${productWarning}*DETAIL PESANAN:*
+${productWarning}*DETAIL PESANAN:*
 Nominal pembelian: ${bbcAmount}
 ${eventCollabInfo}Harga: Rp ${parseInt(price).toLocaleString('id-ID')}
 Tipe: ${type}
@@ -1535,8 +1642,6 @@ ID Server: ${serverId}
 WhatsApp: ${whatsapp}
 Nickname: ${nickname}
 
-Status Stok Saat Ini: ${currentStockStatus}
-
 Silakan proses pesanan saya. Bukti transfer akan saya kirimkan di chat ini.`;
 
             openWhatsApp(phoneNumber, message);
@@ -1546,7 +1651,7 @@ Silakan proses pesanan saya. Bukti transfer akan saya kirimkan di chat ini.`;
         document.addEventListener('DOMContentLoaded', function() {
             loadWebsiteData();
 
-            // Attach event listeners untuk tombol beli
+            // Attach event listeners untuk tombol beli yang statis
             attachBuyButtonEvents();
 
             // Auto-refresh data setiap 30 detik
@@ -1604,6 +1709,172 @@ Silakan proses pesanan saya. Bukti transfer akan saya kirimkan di chat ini.`;
             });
         });
 
+        // Load data dari website_data.json
+        async function loadWebsiteData() {
+            try {
+                // Harga baru yang diminta
+                const newPrices = {
+                    '1000': 4000,    // 1k BBC = 4k
+                    '5000': 18000,   // 5k BBC = 18k
+                    '10000': 36000,  // 10k BBC = 36k
+                    '15000': 54000,  // 15k BBC = 54k
+                    '20000': 72000,  // 20k BBC = 72k
+                    '50000': 180000, // 50k BBC = 180k
+                    '100000': 360000 // 100k BBC = 360k
+                };
+
+                websiteData = {
+                    prices: newPrices,
+                    stock_status: 'Tersedia',
+                    stock_status_with_emoji: '✅ Tersedia',
+                    timestamp: new Date().toLocaleString('id-ID')
+                };
+
+                updateWebsiteContent();
+                console.log('✅ Data website berhasil dimuat dengan harga baru');
+            } catch (error) {
+                console.error('❌ Gagal memuat data website:', error);
+                // Gunakan data default jika gagal load
+                websiteData = {
+                    prices: {
+                        '1000': 4000,
+                        '5000': 18000,
+                        '10000': 36000,
+                        '15000': 54000,
+                        '20000': 72000,
+                        '50000': 180000,
+                        '100000': 360000
+                    },
+                    stock_status: 'Tersedia',
+                    stock_status_with_emoji: '✅ Tersedia',
+                    timestamp: new Date().toLocaleString('id-ID')
+                };
+                updateWebsiteContent();
+            }
+        }
+
+        // Update konten website dengan data terbaru
+        function updateWebsiteContent() {
+            if (!websiteData) return;
+
+            // Update harga BBC packages
+            updateBBCPackages(websiteData.prices);
+
+            // Update timestamp
+            console.log('Data terakhir diupdate:', websiteData.timestamp);
+        }
+
+        // Update BBC packages dengan harga terbaru
+        function updateBBCPackages(prices) {
+            const packagesContainer = document.getElementById('bbc-packages');
+            if (!packagesContainer) return;
+
+            // Urutkan amount dari terkecil ke terbesar
+            const sortedAmounts = Object.keys(prices).sort((a, b) => parseInt(a) - parseInt(b));
+
+            let packagesHTML = '';
+
+            sortedAmounts.forEach((amount, index) => {
+                const price = prices[amount];
+                const isPopular = amount === '10000'; // Tandai 10.000 BBC sebagai popular
+
+                packagesHTML += `
+                    <div class="package ${isPopular ? 'popular' : ''}">
+                        <h3>Paket ${amount === '1000' ? 'Pemula' : amount === '5000' ? 'Reguler' : amount === '10000' ? 'Advanced' : amount === '15000' ? 'Elite' : amount === '20000' ? 'Pro' : amount === '50000' ? 'Ultimate' : 'Max'}</h3>
+                        <div class="bbc-amount">${parseInt(amount).toLocaleString('id-ID')} BBC</div>
+                        <div class="price">Rp ${price.toLocaleString('id-ID')}</div>
+                        <button class="btn btn-buy" data-bbc="${amount} BBC" data-price="${price}" data-type="BBC">Beli Sekarang</button>
+                    </div>
+                `;
+            });
+
+            packagesContainer.innerHTML = packagesHTML;
+
+            // Re-attach event listeners untuk tombol beli
+            attachBuyButtonEvents();
+        }
+
+        // Attach event listeners untuk tombol beli
+        function attachBuyButtonEvents() {
+            const buyButtons = document.querySelectorAll('.btn-buy');
+
+            buyButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const bbcAmount = this.getAttribute('data-bbc');
+                    const price = this.getAttribute('data-price');
+                    const type = this.getAttribute('data-type');
+
+                    selectedPackage = {
+                        bbc: bbcAmount,
+                        price: price,
+                        type: type
+                    };
+
+                    // Update ringkasan pesanan
+                    document.getElementById('summaryBBC').textContent = `Paket: ${bbcAmount}`;
+                    document.getElementById('summaryPrice').textContent = `Harga: Rp ${parseInt(price).toLocaleString('id-ID')}`;
+                    document.getElementById('summaryType').textContent = `Tipe: ${type}`;
+
+                    // Update judul modal berdasarkan tipe produk
+                    const modalTitle = document.getElementById('modalTitle');
+                    if (type === 'BBC') {
+                        modalTitle.textContent = 'Top Up BBC';
+                    } else if (type === 'SKIN' || type === 'ITEM' || type === 'CHARISMA') {
+                        modalTitle.textContent = 'Beli Item';
+                    } else {
+                        modalTitle.textContent = 'Beli Produk';
+                    }
+
+                    // Tampilkan/sembunyikan fields Event/Collab
+                    const eventCollabFields = document.getElementById('eventCollabFields');
+                    if (bbcAmount === 'Event/Collab') {
+                        eventCollabFields.style.display = 'block';
+                        // Set placeholder harga berdasarkan data-price
+                        document.getElementById('customPrice').placeholder = `Masukkan harga (minimal Rp ${parseInt(price).toLocaleString('id-ID')})`;
+                    } else {
+                        eventCollabFields.style.display = 'none';
+                    }
+
+                    // Tampilkan peringatan berdasarkan tipe produk
+                    const warningMessage = document.getElementById('warningMessage');
+                    const warningText = document.getElementById('warningText');
+
+                    if (type === 'BBC') {
+                        warningText.innerHTML = '<strong>PERINGATAN UNTUK TOP UP BBC:</strong><br>Pastikan id server anda benar dan jangan lupa untuk aktifkan fitur live di mlbb anda';
+                        warningMessage.style.display = 'block';
+                    } else if (type === 'SKIN' || type === 'ITEM') {
+                        warningText.innerHTML = '<strong>PERINGATAN UNTUK GIVE SKINS/ITEM:</strong><br>Untuk pembelian SKINS/ITEM wajib berteman selama 7 hari<br><strong>Beli = paham!</strong>';
+                        warningMessage.style.display = 'block';
+                    } else if (type === 'CHARISMA') {
+                        warningText.innerHTML = '<strong>PERINGATAN UNTUK CHARISMA:</strong><br>Untuk pembelian CHARISMA wajib berteman selama 7 hari<br><strong>Beli = paham!</strong>';
+                        warningMessage.style.display = 'block';
+                    } else {
+                        warningMessage.style.display = 'none';
+                    }
+
+                    // Reset form
+                    document.getElementById('playerId').value = '';
+                    document.getElementById('serverId').value = '';
+                    document.getElementById('nickname').value = '';
+                    document.getElementById('whatsapp').value = '';
+                    document.getElementById('skinName').value = '';
+                    document.getElementById('customPrice').value = '';
+                    document.getElementById('paymentInstruction').style.display = 'none';
+                    document.getElementById('successMessage').style.display = 'none';
+
+                    // Reset error states
+                    const errorMessages = document.querySelectorAll('.error-message');
+                    errorMessages.forEach(error => error.style.display = 'none');
+
+                    const errorInputs = document.querySelectorAll('.error');
+                    errorInputs.forEach(input => input.classList.remove('error'));
+
+                    // Tampilkan modal
+                    document.getElementById('purchaseModal').style.display = 'flex';
+                });
+            });
+        }
+
         // Fungsi untuk memulai proses pembayaran
         function startPaymentProcess(method) {
             // Validasi form sebelum melanjutkan
@@ -1618,6 +1889,12 @@ Silakan proses pesanan saya. Bukti transfer akan saya kirimkan di chat ini.`;
             const whatsapp = document.getElementById('whatsapp').value;
 
             selectedPaymentMethod = method;
+
+            // Update ringkasan dengan data terbaru
+            document.getElementById('summaryPlayerId').textContent = `ID MLBB Advance: ${playerId}`;
+            document.getElementById('summaryServerId').textContent = `ID Server: ${serverId}`;
+            document.getElementById('summaryNickname').textContent = `Nickname: ${nickname}`;
+            document.getElementById('summaryWhatsApp').textContent = `WhatsApp: ${whatsapp}`;
 
             // Generate kode pembayaran dengan nomor WhatsApp
             const paymentCode = `QRIS-${Math.floor(1000 + Math.random() * 9000)}`;
@@ -1681,6 +1958,7 @@ Silakan proses pesanan saya. Bukti transfer akan saya kirimkan di chat ini.`;
                 } else {
                     // Update harga yang dipilih dengan harga custom
                     selectedPackage.price = customPrice;
+                    document.getElementById('summaryPrice').textContent = `Harga: Rp ${customPrice.toLocaleString('id-ID')}`;
                 }
             }
 
